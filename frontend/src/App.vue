@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
+import Searchbar from "./components/Searchbar.vue";
 </script>
 
 <template>
   <Header/>
+  <Searchbar />
   <div class = main-container>
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -19,6 +21,13 @@ import Header from './components/Header.vue'
 </template>
 
 <style scoped>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .main-container {
   margin-top: 70px;
 }
