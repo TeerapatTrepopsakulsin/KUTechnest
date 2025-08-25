@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('jobs.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    path("admin/", admin.site.urls),   # ← vain kerran koko projektissa
+    path("api/", include("jobs.urls")),
+
 ]
+
