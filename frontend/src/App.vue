@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 </script>
 
 <template>
+  <Header/>
+  <div class = main-container>
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -12,9 +15,13 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+    </div>
 </template>
 
 <style scoped>
+.main-container {
+  margin-top: 70px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
