@@ -18,27 +18,27 @@ const totalPages = posts.length
     <Searchbar/>
   </div>
   <JobCardList :jobs="posts[currentPage]" />
-    <div class="flex justify-center gap-4 mt-6">
-      <button
-        @click="currentPage--"
-        :disabled="currentPage === 0"
-        class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
-      >
-        Prev
-      </button>
+  <div class="flex justify-center gap-4 mt-6 pb-5">
+    <button
+      @click="currentPage--"
+      :disabled="currentPage === 0"
+      class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+    >
+      Prev
+    </button>
 
-      <span class="text-black text-lg pt-1.5">
-        Page {{ currentPage + 1 }} of {{ totalPages }}
-      </span>
+    <span class="text-black text-lg pt-1.5">
+      Page {{ currentPage + 1 }} of {{ totalPages }}
+    </span>
 
-      <button
-        @click="currentPage++"
-        :disabled="currentPage === totalPages - 1"
-        class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
-      >
-        Next
-      </button>
-    </div>
+    <button
+      @click="currentPage++"
+      :disabled="currentPage === totalPages - 1"
+      class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+    >
+      Next
+    </button>
+  </div>
 </template>
 
 <style scoped>
