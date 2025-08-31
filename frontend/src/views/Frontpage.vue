@@ -14,8 +14,8 @@ const totalPages = posts.length
     <h1 class="text-7xl font-bold text-white text-center pt-[7%]">Connecting students and companies</h1>
     <Searchbar/>
   <div class="bg-white w-full left-0 top-0 z-0 mt-40 min-h-full">
-  <JobCardList :jobs="posts[currentPage]" />
-    <div class="flex justify-center gap-4 mt-6">
+    <JobCardList :jobs="posts[currentPage]" />
+    <div class="flex justify-center gap-4 mt-6 pb-5">
       <button
         @click="currentPage--"
         :disabled="currentPage === 0"
@@ -36,7 +36,7 @@ const totalPages = posts.length
         Next
       </button>
     </div>
-    </div>
+  </div>
 </template>
 
 <style scoped>
