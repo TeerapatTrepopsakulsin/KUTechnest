@@ -14,7 +14,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@1ct*-farz#ou3$dtso-a-4n&%yjz8#%y9fri%c8-dett($mj='
 DEBUG = True
 
-# Salli paikalliset hostit devissä
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
@@ -44,7 +43,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE':12
 }
 
 MIDDLEWARE = [
@@ -101,6 +100,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
