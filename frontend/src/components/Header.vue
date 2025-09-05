@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full top-0 left-0 right-0 h-[70px] bg-white text-black ">
+  <header class="fixed w-full top-0 left-0 right-0 z-50 h-[70px] bg-white text-black ">
     <div class="relative left-1/2 -translate-x-1/2 w-screen max-w-none px-4 flex items-center justify-between h-full">
       <img src="../assets/kutechnest_logo.png" class="w-[10%] h-auto rounded-none ml-[10px]" alt="KUTechnest logo" />
       <nav class="flex items-center gap-5 mr-10">
