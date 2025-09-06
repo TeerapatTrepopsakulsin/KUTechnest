@@ -6,7 +6,7 @@
         <a href="/jobs" class="nav-link">Job Search</a>
         <a href="/about" class="nav-link">About Us</a>
         <div v-if="!isAuthenticated" class="flex items-center gap-x-2">
-          <a href="/signin" class="nav-link">Sign In</a>
+          <a href="/login" class="nav-link">Sign In</a>
           <span class="divider">/</span>
           <a href="/register" class="nav-link last:mr-0">Register</a>
         </div>
