@@ -16,10 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from jobs.views import google_login_api, me_api, register_api
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("jobs.urls")),
 
+    path("api/auth/register/", register_api, name="register"),
+    path("api/auth/token/", TokenObtainPairView.as_view(), name="jwt"),
+    path("api/auth/refresh/", TokenRefreshView.as_view(), name="jwt-refresh"),
+
+    # Google flow (ID token -> our JWT)
+    path("api/auth/google/", google_login_api, name="google-login"),
+
+    # Auth check
+    path("api/me/", me_api, name="me"),
 ]
 
