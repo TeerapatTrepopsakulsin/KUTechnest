@@ -1,5 +1,4 @@
-# jobs/views.py
-from django.db.models import F, IntegerField
+from django.db.models import F, IntegerField, Value
 from django.db.models.functions import Cast, Replace
 from rest_framework import viewsets, filters, status
 from rest_framework.decorators import action
@@ -7,31 +6,43 @@ from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
 from .models import Company, Post
-from .serializers import CompanySerializer, PostSerializer
+from .serializers import (
+    CompanySerializer,
+    PostListSerializer,
+    PostDetailSerializer,
+    PostCreateSerializer,
+)
 
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.select_related("company").order_by("-id")
-    serializer_class = PostSerializer
     permission_classes = [AllowAny]
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
-    search_fields = ["title", "description", "company__name", "location", "salary", "work_field"]
-    ordering_fields = ["id", "created_at"]  # salary is handled via a custom annotation
+    search_fields = [
+        "title", "description", "long_description",
+        "company__name", "location", "salary", "work_field"
+    ]
+    ordering_fields = ["id", "created_at"]  # salary handled via annotation
     ordering = ["-id"]
 
+    filterset_fields = ["employment_type"]
+
     def get_permissions(self):
-        # Allow writes only for authenticated users (tweak as needed)
         if self.action in ["create", "update", "partial_update", "destroy"]:
             return [IsAuthenticatedOrReadOnly()]
         return [AllowAny()]
 
+    def get_serializer_class(self):
+        if self.action == "list":
+            return PostListSerializer
+        if self.action == "retrieve":
+            return PostDetailSerializer
+        if self.action in ["create", "update", "partial_update"]:
+            return PostCreateSerializer
+        return PostDetailSerializer
+
     def _with_salary_number(self, qs):
-        """
-        Add a numeric annotation `salary_num` by stripping commas and 'THB'
-        from the salary string and casting the result to an integer.
-        Supports values like '60,000', 'THB 45,000', or '45000'.
-        """
         cleaned = Replace(
             Replace(
                 Replace(F("salary"), Value("THB"), Value("")),
@@ -46,8 +57,7 @@ class PostViewSet(viewsets.ModelViewSet):
         qs = self.filter_queryset(self.get_queryset().filter(onsite=False))
         page = self.paginate_queryset(qs)
         if page is not None:
-            ser = self.get_serializer(page, many=True)
-            return self.get_paginated_response(ser.data)
+            return self.get_paginated_response(self.get_serializer(page, many=True).data)
         return Response(self.get_serializer(qs, many=True).data)
 
     @action(detail=False, methods=["get"], permission_classes=[AllowAny])
@@ -55,16 +65,13 @@ class PostViewSet(viewsets.ModelViewSet):
         qs = self.filter_queryset(self.get_queryset().filter(onsite=True))
         page = self.paginate_queryset(qs)
         if page is not None:
-            ser = self.get_serializer(page, many=True)
-            return self.get_paginated_response(ser.data)
+            return self.get_paginated_response(self.get_serializer(page, many=True).data)
         return Response(self.get_serializer(qs, many=True).data)
 
     @action(detail=False, methods=["get"], permission_classes=[AllowAny])
     def by_salary_range(self, request):
         """
         GET /api/posts/by_salary_range/?min=30000&max=60000
-
-        Returns posts whose `salary_num` falls within the given bounds.
         """
         try:
             min_s = int(request.query_params.get("min", 0))
@@ -78,21 +85,15 @@ class PostViewSet(viewsets.ModelViewSet):
         qs = self._with_salary_number(self.get_queryset()).filter(
             salary_num__gte=min_s, salary_num__lte=max_s
         )
-
-        # Run the same search & ordering backends on this list
         qs = self.filter_queryset(qs)
         page = self.paginate_queryset(qs)
         if page is not None:
-            ser = self.get_serializer(page, many=True)
-            return self.get_paginated_response(ser.data)
+            return self.get_paginated_response(self.get_serializer(page, many=True).data)
         return Response(self.get_serializer(qs, many=True).data)
 
 
-from django.db.models import Value  # kept here intentionally for clarity
-
-
 class CompanyViewSet(viewsets.ModelViewSet):
-    queryset = Company.objects.all().order_by("id")  # keep ordered to avoid UnorderedObjectListWarning
+    queryset = Company.objects.all().order_by("id")
     serializer_class = CompanySerializer
     permission_classes = [AllowAny]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
@@ -102,17 +103,10 @@ class CompanyViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=["get"], permission_classes=[AllowAny])
     def posts(self, request, pk=None):
-        """
-        GET /api/companies/{id}/posts/
-
-        List this company's posts, newest first.
-        """
-        company = self.get_object()
-        qs = Post.objects.filter(company=company).order_by("-created_at")
-        # Paginate and serialize using PostSerializer
+        qs = Post.objects.filter(company=self.get_object()).order_by("-created_at")
         page = self.paginate_queryset(qs)
         if page is not None:
-            data = PostSerializer(page, many=True, context=self.get_serializer_context()).data
+            data = PostDetailSerializer(page, many=True, context=self.get_serializer_context()).data
             return self.get_paginated_response(data)
-        data = PostSerializer(qs, many=True, context=self.get_serializer_context()).data
+        data = PostDetailSerializer(qs, many=True, context=self.get_serializer_context()).data
         return Response(data)
