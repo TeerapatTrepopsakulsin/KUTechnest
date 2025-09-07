@@ -44,12 +44,15 @@ onMounted(() => {
 </script>
 
 <template>
-    <h1 class="text-7xl font-bold text-white text-center pt-[7%]">Connecting students and companies</h1>
-    <Searchbar/>
+  <h1 class="text-7xl font-bold text-white text-center pt-[7%]">Connecting students and companies</h1>
+  <Searchbar/>
   <div class="bg-white w-full left-0 top-0 z-0 mt-40 min-h-full">
     <div v-if="loading" class="text-black">Loading...</div>
     <div v-else-if="error" class="text-red-500">Error: {{ error }}</div>
-    <JobCardList v-else :jobs="jobs" />
+    <div v-else>
+      <h3 class="text-left text-2xl text-black font-semibold mb-4 pl-5">Suggested For You</h3>
+      <JobCardList :jobs="jobs" />
+    </div>
     <div class="flex justify-center gap-4 mt-6 pb-5">
       <button
         @click="currentPage--"

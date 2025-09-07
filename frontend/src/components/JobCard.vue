@@ -1,17 +1,22 @@
 <script setup lang="ts">
-// import type {Job} from '../types/job.ts'
+import type {Job} from '../types/job.ts'
 
 const props = defineProps<{
-  job: any
+  job: Job
 }>();
 </script>
 
 <template>
-  <a href="">
+  <router-link :to="'/posts/' + props.job.id">
     <div
-      class="w-[20] h-[20vw] rounded-lg border border-#d9d9d9-200 bg-white p-4 shadow-sm flex flex-col items-start text-left transition-transform duration-200 ease-in-out hover:-translate-y-1 hover:shadow-lg"
-    >
-      <img v-if="props.job.image_url" :src="props.job.image_url" alt="Company logo"
+    class="w-full sm:h-[40vh] md:h-[30vh] lg:h-[25vh]
+         rounded-lg border border-gray-200 bg-white p-4 shadow-sm
+         flex flex-col items-start text-left
+         overflow-auto
+         transition-transform duration-200 ease-in-out
+         hover:-translate-y-1 hover:shadow-lg">
+    <!-- sm:h-[40vh]  -->
+      <img v-if="props.job?.image_url" :src="props.job.image_url" alt="Company logo"
           class="w-25 h-25 object-contain rounded-md mb-3" />
       <h2 class="text-xl font-semibold text-gray-900 mb-1">
         {{ props.job.title }}
@@ -23,5 +28,5 @@ const props = defineProps<{
         {{ props.job.description }}
       </p>
     </div>
-</a>
+  </router-link>
 </template>
