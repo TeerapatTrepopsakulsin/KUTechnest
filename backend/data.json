@@ -2046,11 +2046,12 @@
     "onsite": false,
     "salary": 1800,
     "min_year": 2,
-    "requirement": "-",
-    "description": "Design intuitive and modern interfaces for mobile apps.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T08:47:42.806Z",
     "updated_at": "2025-08-30T14:31:25.865Z",
-    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960"
+    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -2064,11 +2065,12 @@
     "onsite": true,
     "salary": 32000,
     "min_year": 2,
-    "requirement": "",
-    "description": "Develop REST APIs and manage scalable backend services.",
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
     "created_at": "2025-08-30T08:47:43.806Z",
     "updated_at": "2025-08-30T08:47:42.837Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
   }
 },
 {
@@ -2082,11 +2084,12 @@
     "onsite": false,
     "salary": 46000,
     "min_year": 0,
-    "requirement": "",
-    "description": "Build responsive UIs with Vue and TailwindCSS.",
+    "requirement": "- Solid JavaScript/TypeScript and modern framework experience\n- Responsive, accessible UI implementation (ARIA, WCAG basics)\n- API integration and state management best practices\n- Tooling familiarity (bundlers, linters, tests)",
+    "description": "Build responsive UIs with modern JS frameworks.",
     "created_at": "2025-08-30T08:47:44.806Z",
     "updated_at": "2025-08-30T08:47:42.840Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a Frontend Developer, you’ll implement responsive, performant user interfaces, integrate APIs, and maintain component libraries. You ensure cross-browser/device compatibility and accessible UX using modern tooling."
   }
 },
 {
@@ -2100,11 +2103,12 @@
     "onsite": false,
     "salary": 59000,
     "min_year": 2,
-    "requirement": "",
-    "description": "Develop end-to-end features for food delivery platforms.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T08:47:45.806Z",
     "updated_at": "2025-08-30T08:47:42.842Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -2118,11 +2122,12 @@
     "onsite": true,
     "salary": 51000,
     "min_year": 0,
-    "requirement": "",
-    "description": "Build cross-platform apps for electric scooter rentals.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T08:47:46.806Z",
     "updated_at": "2025-08-30T08:47:42.844Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -2136,11 +2141,12 @@
     "onsite": true,
     "salary": 66000,
     "min_year": 0,
-    "requirement": "",
-    "description": "Analyze customer data to drive better business decisions.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T08:47:47.806Z",
     "updated_at": "2025-08-30T08:47:42.847Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -2154,11 +2160,12 @@
     "onsite": false,
     "salary": 38000,
     "min_year": 1,
-    "requirement": "",
+    "requirement": "- Hands-on with a major cloud (AWS/GCP/Azure)\n- Networking, IAM, and security best practices\n- Observability and capacity planning\n- Automation with scripts or IaC",
     "description": "Maintain cloud infrastructure and CI/CD pipelines.",
     "created_at": "2025-08-30T08:47:48.806Z",
     "updated_at": "2025-08-30T08:47:42.849Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "As a Cloud Engineer, you’ll design and operate cloud resources, enforce cost/security best practices, and support teams with reliable environments."
   }
 },
 {
@@ -2172,11 +2179,12 @@
     "onsite": true,
     "salary": 57000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Implement and monitor enterprise security policies.",
+    "requirement": "- Threat modeling and control implementation\n- Vulnerability management and remediation\n- Identity/access, secrets, and network security\n- Compliance awareness and secure SDLC",
+    "description": "Implement and monitor enterprise security controls.",
     "created_at": "2025-08-30T08:47:49.806Z",
     "updated_at": "2025-08-30T08:47:42.851Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "You’ll harden systems, enforce security policies, perform reviews, and lead incident response to protect company data and infrastructure."
   }
 },
 {
@@ -2190,11 +2198,12 @@
     "onsite": true,
     "salary": 37000,
     "min_year": 2,
-    "requirement": "",
-    "description": "Research NLP models and assist in AI experiments.",
+    "requirement": "- Familiarity with NLP/ML literature and experimentation\n- Reproducible pipelines and result documentation\n- Model evaluation and error analysis\n- Collaboration with engineering for handoff",
+    "description": "Research models and assist with AI experiments.",
     "created_at": "2025-08-30T08:47:50.806Z",
     "updated_at": "2025-08-30T08:47:42.853Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "You’ll run experiments, evaluate models, tune hyperparameters, and document results. You’ll collaborate with senior researchers and help move promising ideas toward production."
   }
 },
 {
@@ -2208,11 +2217,12 @@
     "onsite": true,
     "salary": 46000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Develop 2D/3D games using Unity and Unreal Engine.",
+    "requirement": "- Unity/Unreal experience (C# or C++ as relevant)\n- Gameplay systems and tools development\n- Performance profiling and optimization\n- Collaboration with art/design for polished feel",
+    "description": "Develop engaging gameplay and tools.",
     "created_at": "2025-08-30T08:47:51.806Z",
     "updated_at": "2025-08-30T08:47:42.855Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888879.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888879.png",
+    "long_description": "As a Game Developer, you’ll build gameplay systems, tools, and pipelines in Unity/Unreal, optimize performance, and collaborate with art/design for polished experiences."
   }
 },
 {
@@ -2226,11 +2236,12 @@
     "onsite": false,
     "salary": 45000,
     "min_year": 2,
-    "requirement": "",
+    "requirement": "- Hands-on with ads platforms and analytics\n- Campaign planning, execution, and optimization\n- Copy, creatives, and landing page iteration\n- ROI mindset and clear reporting",
     "description": "Plan and execute digital marketing campaigns.",
     "created_at": "2025-08-30T08:47:52.806Z",
     "updated_at": "2025-08-30T08:47:42.858Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
+    "long_description": "As a Marketing Specialist, you’ll run multi-channel campaigns, analyze performance, optimize spend/creatives, and grow brand awareness and conversions."
   }
 },
 {
@@ -2244,11 +2255,12 @@
     "onsite": true,
     "salary": 43000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Define product vision and lead agile development teams.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T08:47:53.806Z",
     "updated_at": "2025-08-30T08:47:42.859Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -2262,11 +2274,12 @@
     "onsite": false,
     "salary": 44000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Perform manual and automated testing of web apps.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T08:47:54.806Z",
     "updated_at": "2025-08-30T08:47:42.863Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -2280,11 +2293,12 @@
     "onsite": true,
     "salary": 57000,
     "min_year": 3,
-    "requirement": "",
-    "description": "Automate deployments and monitor server health.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T08:47:55.806Z",
     "updated_at": "2025-08-30T08:47:42.865Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -2298,11 +2312,12 @@
     "onsite": true,
     "salary": 53000,
     "min_year": 0,
-    "requirement": "",
-    "description": "Create blog posts and SEO-optimized website content.",
+    "requirement": "- Strong writing and editing skills\n- SEO best practices and keyword research\n- Content briefs, outlines, and style guide adherence\n- Collaborate with design/marketing for distribution",
+    "description": "Write clear, SEO-friendly content.",
     "created_at": "2025-08-30T08:47:56.806Z",
     "updated_at": "2025-08-30T08:47:42.867Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll produce articles, landing pages, and in-product copy aligned with tone and SEO goals, collaborating with design/marketing for compelling narratives."
   }
 },
 {
@@ -2316,11 +2331,12 @@
     "onsite": true,
     "salary": 46000,
     "min_year": 3,
-    "requirement": "",
-    "description": "Design creative assets for ads, websites, and social media.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:47:57.806Z",
     "updated_at": "2025-08-30T08:47:42.869Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2334,11 +2350,12 @@
     "onsite": true,
     "salary": 62000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Manage recruitment pipelines and employee onboarding.",
+    "requirement": "- Recruiting coordination and ATS familiarity\n- Interview scheduling and candidate experience\n- Onboarding checklist and documentation\n- Strong organization and communication",
+    "description": "Support hiring and onboarding processes.",
     "created_at": "2025-08-30T08:47:58.806Z",
     "updated_at": "2025-08-30T08:47:42.871Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "You’ll coordinate recruiting pipelines, schedule interviews, assist with onboarding, and help improve people operations and employee experience."
   }
 },
 {
@@ -2352,11 +2369,12 @@
     "onsite": true,
     "salary": 38000,
     "min_year": 2,
-    "requirement": "",
-    "description": "Evaluate investments and prepare financial reports.",
+    "requirement": "- Financial modeling and forecasting\n- Variance analysis and KPI tracking\n- Excel/Sheets proficiency; BI tools a plus\n- Clear executive-level reporting",
+    "description": "Analyze financials and support decisions.",
     "created_at": "2025-08-30T08:47:59.806Z",
     "updated_at": "2025-08-30T08:47:42.874Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "You’ll build models, track KPIs, support budgeting/forecasting, and prepare insights that guide strategic choices."
   }
 },
 {
@@ -2370,11 +2388,12 @@
     "onsite": true,
     "salary": 52000,
     "min_year": 1,
-    "requirement": ".",
-    "description": "Assist users with troubleshooting and product guidance.",
+    "requirement": "- Empathetic, clear customer communication\n- Ticket tooling and knowledge base updates\n- Troubleshooting and escalation judgment\n- Feedback loop with product/engineering",
+    "description": "Help users with troubleshooting and guidance.",
     "created_at": "2025-08-30T08:48:00.806Z",
     "updated_at": "2025-08-30T08:49:03.891Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+    "long_description": "You’ll resolve tickets, document solutions, escalate complex cases, and advocate for user needs to improve product quality."
   }
 },
 {
@@ -2388,11 +2407,12 @@
     "onsite": false,
     "salary": 57000,
     "min_year": 1,
-    "requirement": "",
-    "description": "Deploy ML models into production environments.",
+    "requirement": "- Feature engineering and model lifecycle management\n- Serving, monitoring, and retraining pipelines\n- Latency/throughput trade-offs in production\n- Practical MLOps tools familiarity",
+    "description": "Build and deploy ML models into production.",
     "created_at": "2025-08-30T08:48:01.806Z",
     "updated_at": "2025-08-30T08:47:42.881Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As an ML Engineer, you’ll take models from notebooks to production: feature pipelines, inference services, monitoring, and continuous improvement of accuracy and latency."
   }
 },
 {
@@ -2406,11 +2426,12 @@
     "onsite": true,
     "salary": 44000,
     "min_year": 1,
-    "requirement": "- SIEM\n- IR basics\n- hardening\n- OWASP",
-    "description": "This role is onsite • location: nakhon-si-thammarat at Grab Thailand.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T08:54:02.320Z",
     "updated_at": "2025-08-30T08:54:02.322Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -2424,11 +2445,12 @@
     "onsite": true,
     "salary": 66000,
     "min_year": 3,
-    "requirement": "- IR basics\n- OWASP\n- SIEM\n- hardening",
-    "description": "This role is onsite • location: prachinburi at PipeOps.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T08:54:03.320Z",
     "updated_at": "2025-08-30T08:54:02.325Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -2442,11 +2464,12 @@
     "onsite": true,
     "salary": 73000,
     "min_year": 0,
-    "requirement": "- Docker\n- tests\n- SQL\n- CI/CD\n- REST+UI\n- Git",
-    "description": "This role is onsite • location: chiang-rai at SmartMart.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T08:54:04.320Z",
     "updated_at": "2025-08-30T08:54:02.326Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -2460,11 +2483,12 @@
     "onsite": true,
     "salary": 45000,
     "min_year": 0,
-    "requirement": "- automation\n- bug reporting\n- test planning\n- API testing",
-    "description": "This role is onsite • location: songkhla at PeopleFirst.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will ensure quality through smart manual and automated testing.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T08:54:05.320Z",
     "updated_at": "2025-08-30T08:54:02.328Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -2478,11 +2502,12 @@
     "onsite": false,
     "salary": 64000,
     "min_year": 2,
-    "requirement": "- auth/JWT\n- Docker\n- Git/CI\n- SQL/ORM\n- REST APIs\n- tests",
-    "description": "This role is remote at StoryLine Media.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will build and maintain APIs with performance and security in mind.",
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
     "created_at": "2025-08-30T08:54:06.320Z",
     "updated_at": "2025-08-30T08:54:02.329Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
   }
 },
 {
@@ -2496,11 +2521,12 @@
     "onsite": true,
     "salary": 87000,
     "min_year": 2,
-    "requirement": "- monitoring\n- IaC\n- Docker/K8s\n- security basics\n- CI/CD",
-    "description": "This role is onsite • location: surat-thani at SCB TechX.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T08:54:07.320Z",
     "updated_at": "2025-08-30T08:54:02.330Z",
-    "image_url": "https://logo.clearbit.com/scbtechx.io"
+    "image_url": "https://logo.clearbit.com/scbtechx.io",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -2514,11 +2540,12 @@
     "onsite": true,
     "salary": 48000,
     "min_year": 0,
-    "requirement": "- tests\n- SQL/ORM\n- REST APIs\n- auth/JWT\n- Git/CI\n- Docker",
-    "description": "This role is onsite • location: phatthalung at ColorLab.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will build and maintain APIs with performance and security in mind.",
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
     "created_at": "2025-08-30T08:54:08.320Z",
     "updated_at": "2025-08-30T08:54:02.332Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
   }
 },
 {
@@ -2532,11 +2559,12 @@
     "onsite": true,
     "salary": 54000,
     "min_year": 2,
-    "requirement": "- store publish\n- API integration\n- tests\n- state mgmt\n- iOS/Android",
-    "description": "This role is onsite • location: uthai-thani at ColorLab.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T08:54:09.320Z",
     "updated_at": "2025-08-30T08:54:02.333Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -2550,11 +2578,12 @@
     "onsite": true,
     "salary": 50000,
     "min_year": 2,
-    "requirement": "- agile rituals\n- roadmap\n- stakeholders\n- backlog",
-    "description": "This role is onsite • location: nan at Bluebik.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T08:54:10.320Z",
     "updated_at": "2025-08-30T08:54:02.334Z",
-    "image_url": "https://logo.clearbit.com/bluebik.com"
+    "image_url": "https://logo.clearbit.com/bluebik.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -2568,11 +2597,12 @@
     "onsite": true,
     "salary": 74000,
     "min_year": 1,
-    "requirement": "- REST+UI\n- SQL\n- tests\n- CI/CD\n- Docker\n- Git",
-    "description": "This role is onsite • location: chumphon at FoodieTech.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T08:54:11.320Z",
     "updated_at": "2025-08-30T08:54:02.336Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -2586,11 +2616,12 @@
     "onsite": false,
     "salary": 60000,
     "min_year": 0,
-    "requirement": "- prototyping\n- design system\n- a11y\n- Figma",
-    "description": "This role is remote at SecureIT.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:54:12.320Z",
     "updated_at": "2025-08-30T08:54:02.337Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2604,11 +2635,12 @@
     "onsite": true,
     "salary": 61000,
     "min_year": 1,
-    "requirement": "- BI dashboards\n- SQL\n- metrics\n- storytelling",
-    "description": "This role is onsite • location: sa-kaeo at InnovateX.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T08:54:13.320Z",
     "updated_at": "2025-08-30T08:54:02.339Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -2622,11 +2654,12 @@
     "onsite": false,
     "salary": 56000,
     "min_year": 2,
-    "requirement": "- prototyping\n- a11y\n- Figma\n- design system",
-    "description": "This role is remote at Agoda.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:54:14.320Z",
     "updated_at": "2025-08-30T08:54:02.341Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2640,11 +2673,12 @@
     "onsite": true,
     "salary": 79000,
     "min_year": 1,
-    "requirement": "- observability\n- AWS/Azure/GCP\n- VPC/IAM\n- serverless",
-    "description": "This role is onsite • location: yala at KBTG (Kasikorn Business-Technology Group).\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will design secure, scalable cloud architectures.",
+    "requirement": "- Hands-on with a major cloud (AWS/GCP/Azure)\n- Networking, IAM, and security best practices\n- Observability and capacity planning\n- Automation with scripts or IaC",
+    "description": "Maintain cloud infrastructure and CI/CD pipelines.",
     "created_at": "2025-08-30T08:54:15.320Z",
     "updated_at": "2025-08-30T08:54:02.342Z",
-    "image_url": "https://logo.clearbit.com/kbtg.tech"
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "As a Cloud Engineer, you’ll design and operate cloud resources, enforce cost/security best practices, and support teams with reliable environments."
   }
 },
 {
@@ -2658,11 +2692,12 @@
     "onsite": false,
     "salary": 32000,
     "min_year": 1,
-    "requirement": "- Figma\n- a11y\n- prototyping\n- design system",
-    "description": "This role is remote at InnovateX.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:54:16.320Z",
     "updated_at": "2025-08-30T08:54:02.343Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2676,11 +2711,12 @@
     "onsite": true,
     "salary": 67000,
     "min_year": 2,
-    "requirement": "- hardening\n- SIEM\n- IR basics\n- OWASP",
-    "description": "This role is onsite • location: sa-kaeo at SkyNet Cloud.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T08:54:17.320Z",
     "updated_at": "2025-08-30T08:54:02.345Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -2694,11 +2730,12 @@
     "onsite": true,
     "salary": 74000,
     "min_year": 3,
-    "requirement": "- monitoring\n- security basics\n- CI/CD\n- IaC\n- Docker/K8s",
-    "description": "This role is onsite • location: phitsanulok at LINE MAN Wongnai.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T08:54:18.320Z",
     "updated_at": "2025-08-30T08:54:02.347Z",
-    "image_url": "https://logo.clearbit.com/wongnai.com"
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -2712,11 +2749,12 @@
     "onsite": false,
     "salary": 87000,
     "min_year": 1,
-    "requirement": "- Docker/K8s\n- monitoring\n- IaC\n- security basics\n- CI/CD",
-    "description": "This role is remote at HelpDesk Co..\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T08:54:19.320Z",
     "updated_at": "2025-08-30T08:54:02.349Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -2730,11 +2768,12 @@
     "onsite": true,
     "salary": 41000,
     "min_year": 0,
-    "requirement": "- SQL\n- Git\n- Docker\n- CI/CD\n- tests\n- REST+UI",
-    "description": "This role is onsite • location: prachinburi at SmartMart.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
     "created_at": "2025-08-30T08:54:20.320Z",
     "updated_at": "2025-08-30T08:54:02.350Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
   }
 },
 {
@@ -2748,11 +2787,12 @@
     "onsite": true,
     "salary": 63000,
     "min_year": 2,
-    "requirement": "- test planning\n- bug reporting\n- automation\n- API testing",
-    "description": "This role is onsite • location: prachinburi at SmartMart.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will ensure quality through smart manual and automated testing.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T08:54:21.320Z",
     "updated_at": "2025-08-30T08:54:02.351Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -2766,11 +2806,12 @@
     "onsite": false,
     "salary": 60000,
     "min_year": 3,
-    "requirement": "- prototyping\n- Figma\n- a11y\n- design system",
-    "description": "This role is remote at Bitkub.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:54:22.320Z",
     "updated_at": "2025-08-30T08:54:02.353Z",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Bitkub_Capital_Logo.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Bitkub_Capital_Logo.svg",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2784,11 +2825,12 @@
     "onsite": true,
     "salary": 53000,
     "min_year": 2,
-    "requirement": "- prototyping\n- design system\n- a11y\n- Figma",
-    "description": "This role is onsite • location: pattani at MoneyMind.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T08:54:23.320Z",
     "updated_at": "2025-08-30T08:54:02.354Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -2802,11 +2844,12 @@
     "onsite": false,
     "salary": 65000,
     "min_year": 1,
-    "requirement": "- Docker\n- CI/CD\n- tests\n- REST+UI\n- Git\n- SQL",
-    "description": "This role is remote at Wisesight.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T08:54:24.320Z",
     "updated_at": "2025-08-30T08:54:02.356Z",
-    "image_url": "https://logo.clearbit.com/wisesight.com"
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -2820,11 +2863,12 @@
     "onsite": true,
     "salary": 58000,
     "min_year": 2,
-    "requirement": "- agile rituals\n- stakeholders\n- backlog\n- roadmap",
-    "description": "This role is onsite • location: loei at Wisesight.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T08:54:25.320Z",
     "updated_at": "2025-08-30T08:54:02.357Z",
-    "image_url": "https://logo.clearbit.com/wisesight.com"
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -2838,11 +2882,12 @@
     "onsite": false,
     "salary": 45000,
     "min_year": 1,
-    "requirement": "- SIEM\n- IR basics\n- OWASP\n- hardening",
-    "description": "This role is remote at DeepThink Labs.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T08:54:26.320Z",
     "updated_at": "2025-08-30T08:54:02.358Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -2856,11 +2901,12 @@
     "onsite": false,
     "salary": 47000,
     "min_year": 1,
-    "requirement": "- Docker/K8s\n- security basics\n- IaC\n- CI/CD\n- monitoring",
-    "description": "This role is remote at SkyNet Cloud.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T08:54:27.320Z",
     "updated_at": "2025-08-30T08:54:02.360Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -2874,11 +2920,12 @@
     "onsite": true,
     "salary": 49000,
     "min_year": 3,
-    "requirement": "- security basics\n- CI/CD\n- IaC\n- Docker/K8s\n- monitoring",
-    "description": "This role is onsite • location: phichit at NeuroNet.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T08:54:28.320Z",
     "updated_at": "2025-08-30T08:54:02.361Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -2892,11 +2939,12 @@
     "onsite": true,
     "salary": 74000,
     "min_year": 2,
-    "requirement": "- stakeholders\n- roadmap\n- agile rituals\n- backlog",
-    "description": "This role is onsite • location: sakon-nakhon at PTT Digital.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T08:54:29.320Z",
     "updated_at": "2025-08-30T08:54:02.362Z",
-    "image_url": "https://logo.clearbit.com/pttdigital.com"
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -2910,11 +2958,12 @@
     "onsite": false,
     "salary": 85000,
     "min_year": 2,
-    "requirement": "- Docker/K8s\n- security basics\n- CI/CD\n- monitoring\n- IaC",
-    "description": "This role is remote at G-Able.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T08:54:30.320Z",
     "updated_at": "2025-08-30T08:54:02.364Z",
-    "image_url": "https://logo.clearbit.com/g-able.com"
+    "image_url": "https://logo.clearbit.com/g-able.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -2928,11 +2977,12 @@
     "onsite": false,
     "salary": 82000,
     "min_year": 3,
-    "requirement": "- Docker\n- REST+UI\n- Git\n- tests\n- SQL\n- CI/CD",
-    "description": "This role is remote at StoryLine Media.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
     "created_at": "2025-08-30T08:54:31.320Z",
     "updated_at": "2025-08-30T08:54:02.365Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
   }
 },
 {
@@ -2946,11 +2996,12 @@
     "onsite": false,
     "salary": 58000,
     "min_year": 3,
-    "requirement": "- Figma\n- a11y\n- design system\n- prototyping",
-    "description": "This role is remote at GCOO.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T08:54:32.320Z",
     "updated_at": "2025-08-30T08:54:02.367Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -2964,11 +3015,12 @@
     "onsite": false,
     "salary": 44000,
     "min_year": 1,
-    "requirement": "- security basics\n- IaC\n- monitoring\n- Docker/K8s\n- CI/CD",
-    "description": "This role is remote at SCB TechX.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T08:54:33.320Z",
     "updated_at": "2025-08-30T08:54:02.368Z",
-    "image_url": "https://logo.clearbit.com/scbtechx.io"
+    "image_url": "https://logo.clearbit.com/scbtechx.io",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -2982,11 +3034,12 @@
     "onsite": true,
     "salary": 40000,
     "min_year": 2,
-    "requirement": "- REST APIs\n- Docker\n- tests\n- SQL/ORM\n- Git/CI\n- auth/JWT",
-    "description": "This role is onsite • location: mae-hong-son at DeepThink Labs.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will build and maintain APIs with performance and security in mind.",
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
     "created_at": "2025-08-30T08:54:34.320Z",
     "updated_at": "2025-08-30T08:54:02.369Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
   }
 },
 {
@@ -3000,11 +3053,12 @@
     "onsite": false,
     "salary": 71000,
     "min_year": 0,
-    "requirement": "- Airflow/DBT\n- Spark/Kafka\n- ETL/ELT\n- Warehouses",
-    "description": "This role is remote at AIS.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will build reliable data pipelines and models.",
+    "requirement": "- ETL/ELT pipeline design and orchestration\n- Data quality, lineage, and schema management\n- Batch/stream processing and storage optimization\n- Infrastructure as code and CI for data workflows",
+    "description": "Build reliable data pipelines and warehouses.",
     "created_at": "2025-08-30T08:54:35.320Z",
     "updated_at": "2025-08-30T08:54:02.370Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Data Engineer, you’ll design ETL/ELT pipelines, manage schemas and orchestration, and ensure data quality, lineage, and performance for analytics and ML teams."
   }
 },
 {
@@ -3018,11 +3072,12 @@
     "onsite": true,
     "salary": 41000,
     "min_year": 2,
-    "requirement": "- Figma\n- a11y\n- design system\n- prototyping",
-    "description": "This role is onsite • location: saraburi at KBTG (Kasikorn Business-Technology Group).\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T08:54:36.320Z",
     "updated_at": "2025-08-30T08:54:02.372Z",
-    "image_url": "https://logo.clearbit.com/kbtg.tech"
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -3036,11 +3091,12 @@
     "onsite": true,
     "salary": 70000,
     "min_year": 2,
-    "requirement": "- storytelling\n- metrics\n- SQL\n- BI dashboards",
-    "description": "This role is onsite • location: nakhon-nayok at SecureIT.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T08:54:37.320Z",
     "updated_at": "2025-08-30T08:54:02.373Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3054,11 +3110,12 @@
     "onsite": false,
     "salary": 34000,
     "min_year": 3,
-    "requirement": "- SQL\n- metrics\n- BI dashboards\n- storytelling",
-    "description": "This role is remote at Bluebik.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T08:54:38.320Z",
     "updated_at": "2025-08-30T08:54:02.374Z",
-    "image_url": "https://logo.clearbit.com/bluebik.com"
+    "image_url": "https://logo.clearbit.com/bluebik.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3072,11 +3129,12 @@
     "onsite": true,
     "salary": 65000,
     "min_year": 2,
-    "requirement": "- API integration\n- store publish\n- tests\n- iOS/Android\n- state mgmt",
-    "description": "This role is onsite • location: ang-thong at DeepThink Labs.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T08:54:39.320Z",
     "updated_at": "2025-08-30T08:54:02.375Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3090,11 +3148,12 @@
     "onsite": true,
     "salary": 34000,
     "min_year": 2,
-    "requirement": "- iOS/Android\n- store publish\n- API integration\n- tests\n- state mgmt",
-    "description": "This role is onsite • location: nan at PTT Digital.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T08:54:40.320Z",
     "updated_at": "2025-08-30T08:54:02.377Z",
-    "image_url": "https://logo.clearbit.com/pttdigital.com"
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3108,11 +3167,12 @@
     "onsite": false,
     "salary": 65000,
     "min_year": 3,
-    "requirement": "- IaC\n- security basics\n- Docker/K8s\n- monitoring\n- CI/CD",
-    "description": "This role is remote at KBTG (Kasikorn Business-Technology Group).\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T08:54:41.320Z",
     "updated_at": "2025-08-30T08:54:02.380Z",
-    "image_url": "https://logo.clearbit.com/kbtg.tech"
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -3126,11 +3186,12 @@
     "onsite": true,
     "salary": 79000,
     "min_year": 1,
-    "requirement": "- tests\n- REST+UI\n- CI/CD\n- Git\n- Docker\n- SQL",
-    "description": "This role is onsite • location: prachinburi at ColorLab.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
     "created_at": "2025-08-30T13:54:01.500Z",
     "updated_at": "2025-08-30T13:54:01.505Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
   }
 },
 {
@@ -3144,11 +3205,12 @@
     "onsite": false,
     "salary": 60000,
     "min_year": 2,
-    "requirement": "- IaC\n- security basics\n- CI/CD\n- Docker/K8s\n- monitoring",
-    "description": "This role is remote at ทุเรียนสวนคุณยาย.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T13:54:02.500Z",
     "updated_at": "2025-08-30T13:54:01.509Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -3162,11 +3224,12 @@
     "onsite": true,
     "salary": 58000,
     "min_year": 3,
-    "requirement": "- store publish\n- state mgmt\n- tests\n- API integration\n- iOS/Android",
-    "description": "This role is onsite • location: lampang at ทุเรียนสวนคุณยาย.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:03.500Z",
     "updated_at": "2025-08-30T13:54:01.511Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3180,11 +3243,12 @@
     "onsite": true,
     "salary": 52000,
     "min_year": 0,
-    "requirement": "- tests\n- API integration\n- iOS/Android\n- store publish\n- state mgmt",
-    "description": "This role is onsite • location: lamphun at PeopleFirst.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:04.500Z",
     "updated_at": "2025-08-30T13:54:01.513Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3198,11 +3262,12 @@
     "onsite": true,
     "salary": 81000,
     "min_year": 2,
-    "requirement": "- agile rituals\n- roadmap\n- backlog\n- stakeholders",
-    "description": "This role is onsite • location: nakhon-phanom at StoryLine Media.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T13:54:05.500Z",
     "updated_at": "2025-08-30T13:54:01.515Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -3216,11 +3281,12 @@
     "onsite": true,
     "salary": 45000,
     "min_year": 2,
-    "requirement": "- tests\n- SQL\n- Git\n- CI/CD\n- Docker\n- REST+UI",
-    "description": "This role is onsite • location: bangkok at ทุเรียนสวนคุณยาย.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
     "created_at": "2025-08-30T13:54:06.500Z",
     "updated_at": "2025-08-30T13:54:01.517Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
   }
 },
 {
@@ -3234,11 +3300,12 @@
     "onsite": false,
     "salary": 56000,
     "min_year": 1,
-    "requirement": "- Docker\n- Git\n- REST+UI\n- tests\n- SQL\n- CI/CD",
-    "description": "This role is remote at BugSquashers.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T13:54:07.500Z",
     "updated_at": "2025-08-30T13:54:01.518Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -3252,11 +3319,12 @@
     "onsite": false,
     "salary": 46000,
     "min_year": 2,
-    "requirement": "- BI dashboards\n- metrics\n- SQL\n- storytelling",
-    "description": "This role is remote at AIS.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T13:54:08.500Z",
     "updated_at": "2025-08-30T13:54:01.520Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3270,11 +3338,12 @@
     "onsite": true,
     "salary": 31000,
     "min_year": 3,
-    "requirement": "- a11y\n- Figma\n- design system\n- prototyping",
-    "description": "This role is onsite • location: phrae at Gogo Bike.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T13:54:09.500Z",
     "updated_at": "2025-08-30T13:54:01.522Z",
-    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960"
+    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -3288,11 +3357,12 @@
     "onsite": false,
     "salary": 43000,
     "min_year": 1,
-    "requirement": "- Docker\n- SQL\n- tests\n- Git\n- CI/CD\n- REST+UI",
-    "description": "This role is remote at DeepThink Labs.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T13:54:10.500Z",
     "updated_at": "2025-08-30T13:54:01.524Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -3306,11 +3376,12 @@
     "onsite": false,
     "salary": 45000,
     "min_year": 1,
-    "requirement": "- bug reporting\n- API testing\n- automation\n- test planning",
-    "description": "This role is remote at PTT Digital.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will ensure quality through smart manual and automated testing.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T13:54:11.500Z",
     "updated_at": "2025-08-30T13:54:01.525Z",
-    "image_url": "https://logo.clearbit.com/pttdigital.com"
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -3324,11 +3395,12 @@
     "onsite": true,
     "salary": 82000,
     "min_year": 3,
-    "requirement": "- monitoring\n- security basics\n- IaC\n- Docker/K8s\n- CI/CD",
-    "description": "This role is onsite • location: nakhon-ratchasima at LINE MAN Wongnai.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T13:54:12.500Z",
     "updated_at": "2025-08-30T13:54:01.527Z",
-    "image_url": "https://logo.clearbit.com/wongnai.com"
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -3342,11 +3414,12 @@
     "onsite": true,
     "salary": 27000,
     "min_year": 1,
-    "requirement": "- automation\n- test planning\n- API testing\n- bug reporting",
-    "description": "This role is onsite • location: chiang-mai at ทุเรียนสวนคุณยาย.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will ensure quality through smart manual and automated testing.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T13:54:13.500Z",
     "updated_at": "2025-08-30T13:54:01.528Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -3360,11 +3433,12 @@
     "onsite": true,
     "salary": 66000,
     "min_year": 1,
-    "requirement": "- backlog\n- agile rituals\n- stakeholders\n- roadmap",
-    "description": "This role is onsite • location: satun at G-Able.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T13:54:14.500Z",
     "updated_at": "2025-08-30T13:54:01.529Z",
-    "image_url": "https://logo.clearbit.com/g-able.com"
+    "image_url": "https://logo.clearbit.com/g-able.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -3378,11 +3452,12 @@
     "onsite": true,
     "salary": 55000,
     "min_year": 2,
-    "requirement": "- prototyping\n- Figma\n- design system\n- a11y",
-    "description": "This role is onsite • location: phayao at ทุเรียนสวนคุณยาย.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T13:54:15.500Z",
     "updated_at": "2025-08-30T13:54:01.531Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -3396,11 +3471,12 @@
     "onsite": false,
     "salary": 58000,
     "min_year": 1,
-    "requirement": "- security basics\n- Docker/K8s\n- monitoring\n- CI/CD\n- IaC",
-    "description": "This role is remote at Wisesight.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T13:54:16.500Z",
     "updated_at": "2025-08-30T13:54:01.532Z",
-    "image_url": "https://logo.clearbit.com/wisesight.com"
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -3414,11 +3490,12 @@
     "onsite": true,
     "salary": 40000,
     "min_year": 0,
-    "requirement": "- SIEM\n- hardening\n- OWASP\n- IR basics",
-    "description": "This role is onsite • location: sa-kaeo at StoryLine Media.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T13:54:17.500Z",
     "updated_at": "2025-08-30T13:54:01.533Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -3432,11 +3509,12 @@
     "onsite": false,
     "salary": 48000,
     "min_year": 2,
-    "requirement": "- storytelling\n- BI dashboards\n- metrics\n- SQL",
-    "description": "This role is remote at LINE MAN Wongnai.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T13:54:18.500Z",
     "updated_at": "2025-08-30T13:54:01.534Z",
-    "image_url": "https://logo.clearbit.com/wongnai.com"
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3450,11 +3528,12 @@
     "onsite": true,
     "salary": 76000,
     "min_year": 3,
-    "requirement": "- IaC\n- security basics\n- CI/CD\n- monitoring\n- Docker/K8s",
-    "description": "This role is onsite • location: narathiwat at Grab Thailand.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T13:54:19.500Z",
     "updated_at": "2025-08-30T13:54:01.535Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -3468,11 +3547,12 @@
     "onsite": true,
     "salary": 42000,
     "min_year": 0,
-    "requirement": "- REST APIs\n- tests\n- auth/JWT\n- Docker\n- Git/CI\n- SQL/ORM",
-    "description": "This role is onsite • location: uthai-thani at AIS.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will build and maintain APIs with performance and security in mind.",
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
     "created_at": "2025-08-30T13:54:20.500Z",
     "updated_at": "2025-08-30T13:54:01.538Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
   }
 },
 {
@@ -3486,11 +3566,12 @@
     "onsite": false,
     "salary": 48000,
     "min_year": 2,
-    "requirement": "- security basics\n- CI/CD\n- Docker/K8s\n- IaC\n- monitoring",
-    "description": "This role is remote at Agoda.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
     "created_at": "2025-08-30T13:54:21.500Z",
     "updated_at": "2025-08-30T13:54:01.540Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
   }
 },
 {
@@ -3504,11 +3585,12 @@
     "onsite": false,
     "salary": 61000,
     "min_year": 0,
-    "requirement": "- SIEM\n- IR basics\n- OWASP\n- hardening",
-    "description": "This role is remote at MoneyMind.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T13:54:22.500Z",
     "updated_at": "2025-08-30T13:54:01.541Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -3522,11 +3604,12 @@
     "onsite": true,
     "salary": 85000,
     "min_year": 2,
-    "requirement": "- monitoring\n- security basics\n- Docker/K8s\n- CI/CD\n- IaC",
-    "description": "This role is onsite • location: maha-sarakham at True Digital Group.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will improve CI/CD and infrastructure reliability.",
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
     "created_at": "2025-08-30T13:54:23.500Z",
     "updated_at": "2025-08-30T13:54:01.542Z",
-    "image_url": "https://logo.clearbit.com/truedigital.com"
+    "image_url": "https://logo.clearbit.com/truedigital.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
   }
 },
 {
@@ -3540,11 +3623,12 @@
     "onsite": true,
     "salary": 50000,
     "min_year": 1,
-    "requirement": "- design system\n- a11y\n- Figma\n- prototyping",
-    "description": "This role is onsite • location: suphan-buri at DeepThink Labs.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T13:54:24.500Z",
     "updated_at": "2025-08-30T13:54:01.543Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -3558,11 +3642,12 @@
     "onsite": true,
     "salary": 57000,
     "min_year": 1,
-    "requirement": "- automation\n- test planning\n- API testing\n- bug reporting",
-    "description": "This role is onsite • location: phitsanulok at BugSquashers.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will ensure quality through smart manual and automated testing.",
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
     "created_at": "2025-08-30T13:54:25.500Z",
     "updated_at": "2025-08-30T13:54:01.544Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
   }
 },
 {
@@ -3576,11 +3661,12 @@
     "onsite": false,
     "salary": 63000,
     "min_year": 0,
-    "requirement": "- responsive UI\n- API-handling\n- state mgmt\n- a11y\n- tests\n- Vue/React",
-    "description": "This role is remote at SmartMart.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will ship polished, responsive UIs from Figma to production.",
+    "requirement": "- Solid JavaScript/TypeScript and modern framework experience\n- Responsive, accessible UI implementation (ARIA, WCAG basics)\n- API integration and state management best practices\n- Tooling familiarity (bundlers, linters, tests)",
+    "description": "Build responsive UIs with modern JS frameworks.",
     "created_at": "2025-08-30T13:54:26.500Z",
     "updated_at": "2025-08-30T13:54:01.546Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Frontend Developer, you’ll implement responsive, performant user interfaces, integrate APIs, and maintain component libraries. You ensure cross-browser/device compatibility and accessible UX using modern tooling."
   }
 },
 {
@@ -3594,11 +3680,12 @@
     "onsite": true,
     "salary": 72000,
     "min_year": 3,
-    "requirement": "- Spark/Kafka\n- Airflow/DBT\n- ETL/ELT\n- Warehouses",
-    "description": "This role is onsite • location: nakhon-phanom at SecureIT.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will build reliable data pipelines and models.",
+    "requirement": "- ETL/ELT pipeline design and orchestration\n- Data quality, lineage, and schema management\n- Batch/stream processing and storage optimization\n- Infrastructure as code and CI for data workflows",
+    "description": "Build reliable data pipelines and warehouses.",
     "created_at": "2025-08-30T13:54:27.500Z",
     "updated_at": "2025-08-30T13:54:01.547Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Data Engineer, you’ll design ETL/ELT pipelines, manage schemas and orchestration, and ensure data quality, lineage, and performance for analytics and ML teams."
   }
 },
 {
@@ -3612,11 +3699,12 @@
     "onsite": true,
     "salary": 49000,
     "min_year": 0,
-    "requirement": "- tests\n- API integration\n- store publish\n- state mgmt\n- iOS/Android",
-    "description": "This role is onsite • location: chai-nat at ZenRide.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:28.500Z",
     "updated_at": "2025-08-30T13:54:01.548Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3630,11 +3718,12 @@
     "onsite": false,
     "salary": 40000,
     "min_year": 3,
-    "requirement": "- prototyping\n- design system\n- Figma\n- a11y",
-    "description": "This role is remote at SecureIT.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T13:54:29.500Z",
     "updated_at": "2025-08-30T13:54:01.549Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -3648,11 +3737,12 @@
     "onsite": false,
     "salary": 55000,
     "min_year": 2,
-    "requirement": "- prototyping\n- Figma\n- design system\n- a11y",
-    "description": "This role is remote at Grab Thailand.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
     "created_at": "2025-08-30T13:54:30.500Z",
     "updated_at": "2025-08-30T13:54:01.550Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
   }
 },
 {
@@ -3666,11 +3756,12 @@
     "onsite": true,
     "salary": 59000,
     "min_year": 1,
-    "requirement": "- iOS/Android\n- store publish\n- state mgmt\n- API integration\n- tests",
-    "description": "This role is onsite • location: sa-kaeo at StoryLine Media.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:31.500Z",
     "updated_at": "2025-08-30T13:54:01.551Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3684,11 +3775,12 @@
     "onsite": true,
     "salary": 35000,
     "min_year": 3,
-    "requirement": "- API integration\n- iOS/Android\n- store publish\n- state mgmt\n- tests",
-    "description": "This role is onsite • location: uttaradit at InnovateX.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:32.500Z",
     "updated_at": "2025-08-30T13:54:01.552Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3702,11 +3794,12 @@
     "onsite": true,
     "salary": 47000,
     "min_year": 1,
-    "requirement": "- CI/CD\n- Docker\n- SQL\n- Git\n- REST+UI\n- tests",
-    "description": "This role is onsite • location: phuket at PTT Digital.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will work across API and UI to deliver end-to-end features.",
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
     "created_at": "2025-08-30T13:54:33.500Z",
     "updated_at": "2025-08-30T13:54:01.555Z",
-    "image_url": "https://logo.clearbit.com/pttdigital.com"
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
   }
 },
 {
@@ -3720,11 +3813,12 @@
     "onsite": false,
     "salary": 46000,
     "min_year": 1,
-    "requirement": "- IR basics\n- OWASP\n- SIEM\n- hardening",
-    "description": "This role is remote at GCOO.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will raise the security bar across systems and teams.",
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
     "created_at": "2025-08-30T13:54:34.500Z",
     "updated_at": "2025-08-30T13:54:01.556Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
   }
 },
 {
@@ -3738,11 +3832,12 @@
     "onsite": true,
     "salary": 46000,
     "min_year": 2,
-    "requirement": "- backlog\n- roadmap\n- agile rituals\n- stakeholders",
-    "description": "This role is onsite • location: nan at SecureIT.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T13:54:35.500Z",
     "updated_at": "2025-08-30T13:54:01.557Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -3756,11 +3851,12 @@
     "onsite": true,
     "salary": 71000,
     "min_year": 2,
-    "requirement": "- store publish\n- state mgmt\n- tests\n- API integration\n- iOS/Android",
-    "description": "This role is onsite • location: yasothon at GCOO.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will craft smooth mobile experiences and stable releases.",
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
     "created_at": "2025-08-30T13:54:36.500Z",
     "updated_at": "2025-08-30T13:54:01.559Z",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
   }
 },
 {
@@ -3774,11 +3870,12 @@
     "onsite": true,
     "salary": 29000,
     "min_year": 2,
-    "requirement": "- Figma\n- prototyping\n- a11y\n- design system",
-    "description": "This role is onsite • location: loei at LINE MAN Wongnai.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will partner with PM/Eng to craft delightful user experiences.",
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
     "created_at": "2025-08-30T13:54:37.500Z",
     "updated_at": "2025-08-30T13:54:01.560Z",
-    "image_url": "https://logo.clearbit.com/wongnai.com"
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
   }
 },
 {
@@ -3792,11 +3889,12 @@
     "onsite": true,
     "salary": 41000,
     "min_year": 3,
-    "requirement": "- BI dashboards\n- storytelling\n- SQL\n- metrics",
-    "description": "This role is onsite • location: nakhon-ratchasima at True Digital Group.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T13:54:38.500Z",
     "updated_at": "2025-08-30T13:54:01.561Z",
-    "image_url": "https://logo.clearbit.com/truedigital.com"
+    "image_url": "https://logo.clearbit.com/truedigital.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3810,11 +3908,12 @@
     "onsite": false,
     "salary": 69000,
     "min_year": 3,
-    "requirement": "- storytelling\n- metrics\n- BI dashboards\n- SQL",
-    "description": "This role is remote at DeepThink Labs.\n\nWe value ownership, clear communication, and learning.\n\nJoin the team to build real features with tight feedback loops.\n\nYou will turn data into insights and dashboards.",
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
     "created_at": "2025-08-30T13:54:39.500Z",
     "updated_at": "2025-08-30T13:54:01.562Z",
-    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
   }
 },
 {
@@ -3828,11 +3927,12 @@
     "onsite": true,
     "salary": 66000,
     "min_year": 3,
-    "requirement": "- agile rituals\n- stakeholders\n- roadmap\n- backlog",
-    "description": "This role is onsite • location: phichit at Agoda.\n\nJoin the team to build real features with tight feedback loops.\n\nWe value ownership, clear communication, and learning.\n\nYou will align stakeholders and drive the product roadmap.",
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
     "created_at": "2025-08-30T13:54:40.500Z",
     "updated_at": "2025-08-30T13:54:01.563Z",
-    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220"
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
   }
 },
 {
@@ -3846,11 +3946,12 @@
     "onsite": true,
     "salary": 15000,
     "min_year": 0,
-    "requirement": "-Hardworking mentality\r\n- Learn new things quick",
-    "description": "Searching for IT trainee.",
+    "requirement": "- Willingness to learn and take feedback\n- Basic familiarity with relevant tools/stack\n- Reliable communication and ownership",
+    "description": "Learn and contribute to real projects.",
     "created_at": "2025-08-31T13:19:12.260Z",
     "updated_at": "2025-08-31T13:19:12.260Z",
-    "image_url": null
+    "image_url": null,
+    "long_description": "You’ll work with mentors, pick up tooling and best practices, and ship scoped tasks while growing your skills."
   }
 },
 {
@@ -3864,11 +3965,12 @@
     "onsite": true,
     "salary": 15000,
     "min_year": 0,
-    "requirement": "-Hardworking mentality\r\n- Learn new things quick",
-    "description": "Searching for IT trainee.",
+    "requirement": "- Willingness to learn and take feedback\n- Basic familiarity with relevant tools/stack\n- Reliable communication and ownership",
+    "description": "Learn and contribute to real projects.",
     "created_at": "2025-08-31T13:21:12.179Z",
     "updated_at": "2025-08-31T13:21:12.180Z",
-    "image_url": null
+    "image_url": null,
+    "long_description": "You’ll work with mentors, pick up tooling and best practices, and ship scoped tasks while growing your skills."
   }
 }
 ]

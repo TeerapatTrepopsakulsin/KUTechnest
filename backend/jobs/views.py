@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from .models import Company, Post
 from .serializers import CompanySerializer, PostSerializer
 
+
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.select_related("company").order_by("-id")
     serializer_class = PostSerializer
@@ -16,19 +17,20 @@ class PostViewSet(viewsets.ModelViewSet):
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ["title", "description", "company__name", "location", "salary", "work_field"]
-    ordering_fields = ["id", "created_at"]  # salary käsitellään customissa
+    ordering_fields = ["id", "created_at"]  # salary is handled via a custom annotation
     ordering = ["-id"]
 
     def get_permissions(self):
-
+        # Allow writes only for authenticated users (tweak as needed)
         if self.action in ["create", "update", "partial_update", "destroy"]:
             return [IsAuthenticatedOrReadOnly()]
         return [AllowAny()]
 
     def _with_salary_number(self, qs):
         """
-        Luo annotaation salary_num poistamalla pilkut ja 'THB' ja castaa intiksi.
-        Tukee muotoja esim: '60,000', 'THB 45,000', '45000'
+        Add a numeric annotation `salary_num` by stripping commas and 'THB'
+        from the salary string and casting the result to an integer.
+        Supports values like '60,000', 'THB 45,000', or '45000'.
         """
         cleaned = Replace(
             Replace(
@@ -61,7 +63,8 @@ class PostViewSet(viewsets.ModelViewSet):
     def by_salary_range(self, request):
         """
         GET /api/posts/by_salary_range/?min=30000&max=60000
-        Palauttaa postaukset joiden salary_num on rajojen sisällä.
+
+        Returns posts whose `salary_num` falls within the given bounds.
         """
         try:
             min_s = int(request.query_params.get("min", 0))
@@ -76,7 +79,7 @@ class PostViewSet(viewsets.ModelViewSet):
             salary_num__gte=min_s, salary_num__lte=max_s
         )
 
-        # Salli hakusanat & järjestys myös tälle listalle
+        # Run the same search & ordering backends on this list
         qs = self.filter_queryset(qs)
         page = self.paginate_queryset(qs)
         if page is not None:
@@ -85,12 +88,11 @@ class PostViewSet(viewsets.ModelViewSet):
         return Response(self.get_serializer(qs, many=True).data)
 
 
-from django.db.models import Value
-
+from django.db.models import Value  # kept here intentionally for clarity
 
 
 class CompanyViewSet(viewsets.ModelViewSet):
-    queryset = Company.objects.all().order_by("id")  # poistaa UnorderedObjectListWarningin
+    queryset = Company.objects.all().order_by("id")  # keep ordered to avoid UnorderedObjectListWarning
     serializer_class = CompanySerializer
     permission_classes = [AllowAny]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
@@ -102,11 +104,12 @@ class CompanyViewSet(viewsets.ModelViewSet):
     def posts(self, request, pk=None):
         """
         GET /api/companies/{id}/posts/
-        Listaa yrityksen postaukset uusin ensin.
+
+        List this company's posts, newest first.
         """
         company = self.get_object()
         qs = Post.objects.filter(company=company).order_by("-created_at")
-        # Paginate + serialisoi PostSerializerillä
+        # Paginate and serialize using PostSerializer
         page = self.paginate_queryset(qs)
         if page is not None:
             data = PostSerializer(page, many=True, context=self.get_serializer_context()).data
