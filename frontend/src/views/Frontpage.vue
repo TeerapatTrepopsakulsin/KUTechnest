@@ -11,6 +11,7 @@ const error = ref(null)
 const totalPages = ref(1)
 const jobsPerPage = 12
 
+console.log(`${import.meta.env.BACKEND_URL}`)
 
 const fetchJobs = async (page = currentPage) => {
   try {
@@ -18,7 +19,7 @@ const fetchJobs = async (page = currentPage) => {
     error.value = null
     totalPages.value = 1
 
-    const res = await fetch(`http://127.0.0.1:8000/api/posts/?page=${page.value}`)
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/posts/?page=${page.value}`)
     if (!res.ok) throw new Error("Failed to fetch jobs.");
     
     const data = await res.json()
@@ -53,7 +54,7 @@ onMounted(() => {
     <div class="flex justify-center gap-4 mt-6 pb-5">
       <button
         @click="currentPage--"
-        :disabled="currentPage === 0"
+        :disabled="currentPage <= 1"
         class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
       >
         Prev
@@ -65,7 +66,7 @@ onMounted(() => {
 
       <button
         @click="currentPage++"
-        :disabled="currentPage === totalPages - 1"
+        :disabled="currentPage >= totalPages"
         class="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
       >
         Next
