@@ -149,12 +149,21 @@ class Post(models.Model):
     onsite = models.BooleanField(default=False, help_text="True if onsite, False if remote")
     salary = models.IntegerField(help_text="Salary in your local currency")
     min_year = models.IntegerField(help_text="Minimum years of experience required")
+    EMPLOYMENT_TYPE_CHOICES = [
+        ("full_time", "Full Time"),
+        ("part_time", "Part Time"),
+    ]
+    employment_type = models.CharField(
+        max_length=20,
+        choices=EMPLOYMENT_TYPE_CHOICES,
+        default="full_time"
+    )
     requirement = models.TextField(help_text="Job requirements and qualifications")
-    description = models.TextField(help_text="Detailed job description")
+    description = models.TextField(blank=True, null=True, default="")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image_url = models.URLField(blank=True, null=True)
-
+    long_description = models.TextField(blank=True, null=True, default="")
     class Meta:
         ordering = ['-created_at']
 

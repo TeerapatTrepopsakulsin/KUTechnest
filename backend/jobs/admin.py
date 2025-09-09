@@ -33,9 +33,13 @@ class StudentAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('logo', 'title', 'company', 'location', 'onsite', 'salary', 'min_year', 'created_at')
+    list_display = ('logo', 'title', 'company', 'location', 'onsite',
+                    'employment_type',
+                    'salary', 'min_year', 'created_at',
+                    )
     list_filter = ('onsite', 'company', 'location', 'min_year', 'created_at')
-    search_fields = ('title', 'company__name', 'requirement', 'description')
+    search_fields = ('title', 'company__name', 'requirement', 'description',
+                     )
     readonly_fields = ('created_at', 'updated_at')
 
     def logo(self, obj):
@@ -57,7 +61,9 @@ class PostAdmin(admin.ModelAdmin):
             basic.append('image_url')
         return (
             ('Basic Information', {'fields': tuple(basic)}),
-            ('Job Details', {'fields': ('location', 'onsite', 'salary', 'min_year')}),
-            ('Job Content', {'fields': ('requirement', 'description')}),
+            ('Job Details', {'fields': ('location', 'onsite', 'salary',
+                                        'min_year','employment_type',
+                                        'description')}),
+            ('Job Content', {'fields': ('long_description','requirement')}),
             ('Timestamps', {'fields': ('created_at', 'updated_at'), 'classes': ('collapse',)}),
         )

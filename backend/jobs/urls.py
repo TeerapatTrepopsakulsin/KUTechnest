@@ -1,11 +1,12 @@
-from django.urls import path, include
+
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from .views import CompanyViewSet, PostViewSet
-from django.contrib import admin
 
 router = DefaultRouter()
-router.register(r'companies', CompanyViewSet)
-router.register(r'posts', PostViewSet)
+router.register(r"posts", PostViewSet, basename="post")
+router.register(r"companies", CompanyViewSet, basename="company")
 
-urlpatterns = router.urls
-
+urlpatterns = [
+    path("", include(router.urls)),
+]
