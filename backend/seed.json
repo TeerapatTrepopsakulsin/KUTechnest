@@ -1,0 +1,1209 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$pEgFVWioZxkYhyyR4Pq1Sx$2Er09+ipxW5QFk6mcBtEqxwVBkX3LFPxaVDkQQehgC0=",
+    "last_login": "2025-09-09T02:46:24.025Z",
+    "is_superuser": true,
+    "username": "katharinaviik",
+    "first_name": "",
+    "last_name": "",
+    "email": "katharina.viik@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:23:20.578Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "acme",
+    "first_name": "",
+    "last_name": "",
+    "email": "acme@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:26:23.108Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "!ONK60NJcB2sefTZHNUq6WfqHpey5UxrgNI3kJsCc",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "example",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:34:53.050Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2yOcemIkZBeabSn7WNchww$JVJunvimBz6aubob81uAHu+Z+6o/hqG1fzI59s0iIa4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kbtgkasikornbusinesstechnologygroup",
+    "first_name": "",
+    "last_name": "",
+    "email": "kbtgkasikornbusinesstechnologygroup@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:32.032Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CUUO9zoPRITeJyRDRhgicq$b60/9slWR30jWpb1a0ldzi9foA5ZpQ5QbRTxED9vTD4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "scbtechx",
+    "first_name": "",
+    "last_name": "",
+    "email": "scbtechx@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:32.874Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$J2yJjyf8LiDRS5R85gQd8M$cln/JOG3y/VKZxCxNzyl1TXDGdjtAonqGeRyTmQq20M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pttdigital",
+    "first_name": "",
+    "last_name": "",
+    "email": "pttdigital@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:33.690Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qEzMLEMlGaJWm0UKZClO2z$PNX8YkCCp7vkRjwFIQ3L/31cJ1Ee5cJf3VfSZjnDwfU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "truedigitalgroup",
+    "first_name": "",
+    "last_name": "",
+    "email": "truedigitalgroup@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:34.502Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$0XkfV6tAdvhqLaqJTNyGvk$WfEn+yH9zw2ir/6K3iuI8ZFy2K+KItJzDXplOSnnetM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ais",
+    "first_name": "",
+    "last_name": "",
+    "email": "ais@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:35.259Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$l661qNsrTx1mHHH3MK0RD4$Tv99qKrlmyco7uTgAdHaWG96SxKIn75HMb4DZQ6b5SQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "linemanwongnai",
+    "first_name": "",
+    "last_name": "",
+    "email": "linemanwongnai@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:36.061Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kCC3Lu4ghaHK5KyLJ97MbJ$AJRvSUXUZPQIKIVI33giYQG16WdKohHvQU1y2M25+PA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "agoda",
+    "first_name": "",
+    "last_name": "",
+    "email": "agoda@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:36.825Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$w64p4fUF47xzMQjPTVL4Oc$8pBLwEXVUxjb0QOhcuUH8AnEn9CB4APRcaKjGKFRlWw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "grabthailand",
+    "first_name": "",
+    "last_name": "",
+    "email": "grabthailand@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:37.614Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$A4zHsf3syQHHfi9kAfio6x$27OVaIUF4AAbvnS6rLRxvSwouwQZs3gVrVJudvpNnwE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bluebik",
+    "first_name": "",
+    "last_name": "",
+    "email": "bluebik@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:38.392Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CBcdCnVpJwSj1Mwp5dLn3g$WCSkBNZJEFQMvzpYw/0pILOM2WZoU2izUHEZJ8M25Dg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bitkub",
+    "first_name": "",
+    "last_name": "",
+    "email": "bitkub@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:39.168Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2HLLOF1LAp1jzamhy7UtSl$5PnEpFQ/2Elsh5KRIUpYnfP3OHcj3OWW7XxSCUSsli4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gable",
+    "first_name": "",
+    "last_name": "",
+    "email": "gable@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:39.953Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jCUsSO2xYOaCY80ncLQKk7$P1WsPbef+t3+pMlkHOWYYOMQ1EKda0D7PuGmEJnksRg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "wisesight",
+    "first_name": "",
+    "last_name": "",
+    "email": "wisesight@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:40.751Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xAjQg7N7UaUYbfbJIgbwA6$X5HmjoAtbTc3gzgxaV8QPt3sEbVzYsc0ND0MC/OgNzg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gogo-bike",
+    "first_name": "",
+    "last_name": "",
+    "email": "gogo-bike@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:29.468Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$X5a7BQtVwj4LW3B2HY5iRD$nxlzXddOB/kR2++iSLOs+rAejFn3k6aF44bvTKHbgzk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gcoo",
+    "first_name": "",
+    "last_name": "",
+    "email": "gcoo@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:30.225Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$0InzX5ximaAAKSL3ypNAnU$D3+klM37e75MLvpNxw7vzA4jYSsGHY5aMjjc1LjIOGs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "company",
+    "first_name": "",
+    "last_name": "",
+    "email": "company@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:30.953Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yULuPaRbWxKePAcr3jtIrr$FtafmTOfy3eP1rugSZ832vkClwbI5ciCDpWq+lQFOAg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "foodietech",
+    "first_name": "",
+    "last_name": "",
+    "email": "foodietech@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:31.685Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$aqcKt6bskHXSOP7bMZAAXi$1owbVF392MFTOrmTh4ECjTIgrEaNh+U17YTB6wzK+v8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zenride",
+    "first_name": "",
+    "last_name": "",
+    "email": "zenride@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:32.414Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$frUwKrS0TSg4eR5UTDJL4b$eRg3HxSxUAe/U1dUfXVRZNlvZoYnokKG1bPah7TEU2U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "smartmart",
+    "first_name": "",
+    "last_name": "",
+    "email": "smartmart@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:33.173Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cExOmAMkjXgHFfjBnTDd1L$jMl5Gecx97L3Dcbw2r8+QD5kZOc6rVGbur7++52mlVE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "skynet-cloud",
+    "first_name": "",
+    "last_name": "",
+    "email": "skynet-cloud@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:33.905Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7xBsQKQDZkWyacRUasvS6r$nAqIwVlF6MOc2kNNb+z6nRQFDgMTiVrWZqlTruRAums=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "secureit",
+    "first_name": "",
+    "last_name": "",
+    "email": "secureit@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:34.640Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$VzhdlWGLnSgFlHrzz1Vv9n$KduaYGx9F2IW9epdchKuoc7V9PwVXKLckJJH2wKbPdw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "deepthink-labs",
+    "first_name": "",
+    "last_name": "",
+    "email": "deepthink-labs@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:35.370Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6SOIP7zUYBYUGWkerc2phP$L+l9CSVDFp752TlDw/C/Z3gfWAOB3zDmzuy9h7o0OiE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pixelplay-studio",
+    "first_name": "",
+    "last_name": "",
+    "email": "pixelplay-studio@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:36.117Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$8xOG0WhpmCDDYbg67QZK0t$h7vYTozzqOrELm1o1KphZ17LPko7p6yTIUhXi/Oy/nM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "brandify",
+    "first_name": "",
+    "last_name": "",
+    "email": "brandify@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:36.911Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rErIMejmVvop1UombXnb7o$OcR81qi9hUNbe4LqqBP/pq7/nAr5fspvOYIb77NnAEw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "innovatex",
+    "first_name": "",
+    "last_name": "",
+    "email": "innovatex@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:37.643Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$JoMDf1CU5x6QZo20rqnHC6$4+xYZtsgy9ZpdEuoqK2Q8PBg65o8ZKxjTr91PGRgga4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bugsquashers",
+    "first_name": "",
+    "last_name": "",
+    "email": "bugsquashers@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:38.375Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XFllaRop8eRLFybTSkzvFT$He6ViVBEdoq188pRYxnO9heiudNJVtf4ThFKQYOY72Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pipeops",
+    "first_name": "",
+    "last_name": "",
+    "email": "pipeops@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:39.106Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qZWwlkN0D7DAByABiIkbJl$YKZOOwgGt5G8+dxQdzWmjDf6G0mHb894PS/SfkuqG08=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "storyline-media",
+    "first_name": "",
+    "last_name": "",
+    "email": "storyline-media@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:39.842Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$KcPmosYCtMPQfYXvQyNOqG$pBogOsyY/gwZD17KErVr2uoE6FikOZju/dI3S4hdMVw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "colorlab",
+    "first_name": "",
+    "last_name": "",
+    "email": "colorlab@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:40.561Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2A5RqrACHJ90ZBtKYLBeOY$WtNOnKh2GgKJxoWawnGUlvegv8Y7qRQiDD3JnjznJfo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "peoplefirst",
+    "first_name": "",
+    "last_name": "",
+    "email": "peoplefirst@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:41.305Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7atEwRkcCTPR4gRaXsTL2b$TEZsfl8LGH/05iFwKHNDTuONWrf1y5I0ueG+FYV/nW0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "moneymind",
+    "first_name": "",
+    "last_name": "",
+    "email": "moneymind@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:42.095Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ZJ479IbyYRW3TyTKWPaZz2$ZU1aq862sIIgLumouia7fTXIyMynGl/0UjEeXpFkvnI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "helpdesk-co",
+    "first_name": "",
+    "last_name": "",
+    "email": "helpdesk-co@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:42.841Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$deg9L3ESS0SYXztzKYOrwR$1bnRKF2iGyT25kTC2+ohb25k4A8e7wx0tenQO549Xok=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "neuronet",
+    "first_name": "",
+    "last_name": "",
+    "email": "neuronet@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:43.571Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 41,
+  "fields": {
+    "password": "!FEzJ7VQs7RSsGYhBMGoeIzks12GkppWyA9jiEGPl",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "acme-co",
+    "first_name": "",
+    "last_name": "",
+    "email": "acme-co@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-30T08:29:17.107Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 42,
+  "fields": {
+    "password": "!q0nnpU9ILWum32ERokKfzIfA829d5aIlloEhIIMr",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "example-inc",
+    "first_name": "",
+    "last_name": "",
+    "email": "example-inc@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-30T08:29:17.113Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 43,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$mD0Lj5e0oUc3xguGr6SXcS$57rsEtt5SQZFfj3mRoA6GoG5n/gctTZ2hp+TFvkMpAM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alice@example.com",
+    "first_name": "Alice",
+    "last_name": "",
+    "email": "alice@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-07T10:31:46.529Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 44,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "katharina.viik",
+    "first_name": "",
+    "last_name": "",
+    "email": "katharina.viik@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-09T02:28:01.017Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 45,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$9L9ExCHBVJ1KukBPCsbj5z$RnO27J3ja8ShsbVm/XjioM252/GSOXr4WETXzGOsFm0=",
+    "last_login": "2025-09-09T06:34:45.933Z",
+    "is_superuser": true,
+    "username": "superuser",
+    "first_name": "",
+    "last_name": "",
+    "email": "example@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-09-09T06:11:20.983Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 46,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$mbJrrlX3COj4ALP3lsEJcr$hDUt+Lq2yUODomj7VaoBSQZ2jBA+jZPGA+VYQ8FzHqA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "you@example.com",
+    "first_name": "Test",
+    "last_name": "User",
+    "email": "you@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-09T06:23:51.960Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jobs.student",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "first_name": "Katharina",
+    "last_name": "Viik",
+    "student_id": "",
+    "nick_name": "Katha",
+    "pronoun": "she/her",
+    "age": 22,
+    "year": 3,
+    "ku_generation": null,
+    "faculty": null,
+    "major": "CPE",
+    "about_me": "",
+    "email": "katharina.viik@gmail.com",
+    "cv": "",
+    "resume": "",
+    "transcript": ""
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 8,
+  "fields": {
+    "user": 9,
+    "name": "KBTG (Kasikorn Business-Technology Group)",
+    "website": "https://www.kbtg.tech",
+    "location": "Bangkok",
+    "description": "KBTG (Kasikorn Business-Technology Group) autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:32.857Z",
+    "updated_at": "2025-08-25T06:55:32.857Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 9,
+  "fields": {
+    "user": 10,
+    "name": "SCB TechX",
+    "website": "https://www.scbtechx.io",
+    "location": "Bangkok",
+    "description": "SCB TechX autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:33.677Z",
+    "updated_at": "2025-08-25T06:55:33.677Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 10,
+  "fields": {
+    "user": 11,
+    "name": "PTT Digital",
+    "website": "https://www.pttdigital.com",
+    "location": "Bangkok",
+    "description": "PTT Digital autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:34.489Z",
+    "updated_at": "2025-08-25T06:55:34.489Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 11,
+  "fields": {
+    "user": 12,
+    "name": "True Digital Group",
+    "website": "https://www.truedigital.com",
+    "location": "Bangkok",
+    "description": "True Digital Group autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:35.248Z",
+    "updated_at": "2025-08-25T06:55:35.248Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 12,
+  "fields": {
+    "user": 13,
+    "name": "AIS",
+    "website": "https://www.ais.th",
+    "location": "Bangkok",
+    "description": "AIS autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:36.051Z",
+    "updated_at": "2025-08-25T06:55:36.051Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 13,
+  "fields": {
+    "user": 14,
+    "name": "LINE MAN Wongnai",
+    "website": "https://www.lmwn.com",
+    "location": "Bangkok",
+    "description": "LINE MAN Wongnai autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:36.817Z",
+    "updated_at": "2025-08-25T06:55:36.817Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 14,
+  "fields": {
+    "user": 15,
+    "name": "Agoda",
+    "website": "https://careers.agoda.com",
+    "location": "Bangkok",
+    "description": "Agoda autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:37.596Z",
+    "updated_at": "2025-08-25T06:55:37.596Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 15,
+  "fields": {
+    "user": 16,
+    "name": "Grab Thailand",
+    "website": "https://www.grab.com",
+    "location": "Bangkok",
+    "description": "Grab Thailand autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:38.376Z",
+    "updated_at": "2025-08-25T06:55:38.376Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 16,
+  "fields": {
+    "user": 17,
+    "name": "Bluebik",
+    "website": "https://www.bluebik.com",
+    "location": "Bangkok",
+    "description": "Bluebik autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:39.153Z",
+    "updated_at": "2025-08-25T06:55:39.153Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 17,
+  "fields": {
+    "user": 18,
+    "name": "Bitkub",
+    "website": "https://www.bitkub.com",
+    "location": "Bangkok",
+    "description": "Bitkub autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:39.939Z",
+    "updated_at": "2025-08-25T06:55:39.939Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 18,
+  "fields": {
+    "user": 19,
+    "name": "G-Able",
+    "website": "https://www.g-able.com",
+    "location": "Bangkok",
+    "description": "G-Able autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:40.740Z",
+    "updated_at": "2025-08-25T06:55:40.740Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 19,
+  "fields": {
+    "user": 20,
+    "name": "Wisesight",
+    "website": "https://wisesight.com",
+    "location": "Bangkok",
+    "description": "Wisesight autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:41.501Z",
+    "updated_at": "2025-08-25T06:55:41.501Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 20,
+  "fields": {
+    "user": 21,
+    "name": "Gogo Bike",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:30.216Z",
+    "updated_at": "2025-08-28T07:02:30.216Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 21,
+  "fields": {
+    "user": 22,
+    "name": "GCOO",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:30.947Z",
+    "updated_at": "2025-08-28T07:02:30.947Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 22,
+  "fields": {
+    "user": 23,
+    "name": "ทุเรียนสวนคุณยาย",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:31.679Z",
+    "updated_at": "2025-08-28T07:02:31.679Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 23,
+  "fields": {
+    "user": 24,
+    "name": "FoodieTech",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:32.409Z",
+    "updated_at": "2025-08-28T07:02:32.409Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 24,
+  "fields": {
+    "user": 25,
+    "name": "ZenRide",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:33.166Z",
+    "updated_at": "2025-08-28T07:02:33.166Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 25,
+  "fields": {
+    "user": 26,
+    "name": "SmartMart",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:33.901Z",
+    "updated_at": "2025-08-28T07:02:33.901Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 26,
+  "fields": {
+    "user": 27,
+    "name": "SkyNet Cloud",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:34.632Z",
+    "updated_at": "2025-08-28T07:02:34.632Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 27,
+  "fields": {
+    "user": 28,
+    "name": "SecureIT",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:35.366Z",
+    "updated_at": "2025-08-28T07:02:35.366Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 28,
+  "fields": {
+    "user": 29,
+    "name": "DeepThink Labs",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:36.109Z",
+    "updated_at": "2025-08-28T07:02:36.109Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 29,
+  "fields": {
+    "user": 30,
+    "name": "PixelPlay Studio",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:36.906Z",
+    "updated_at": "2025-08-28T07:02:36.906Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 30,
+  "fields": {
+    "user": 31,
+    "name": "Brandify",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:37.637Z",
+    "updated_at": "2025-08-28T07:02:37.637Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 31,
+  "fields": {
+    "user": 32,
+    "name": "InnovateX",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:38.371Z",
+    "updated_at": "2025-08-28T07:02:38.371Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 32,
+  "fields": {
+    "user": 33,
+    "name": "BugSquashers",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:39.102Z",
+    "updated_at": "2025-08-28T07:02:39.102Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 33,
+  "fields": {
+    "user": 34,
+    "name": "PipeOps",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:39.838Z",
+    "updated_at": "2025-08-28T07:02:39.838Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 34,
+  "fields": {
+    "user": 35,
+    "name": "StoryLine Media",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:40.557Z",
+    "updated_at": "2025-08-28T07:02:40.557Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 35,
+  "fields": {
+    "user": 36,
+    "name": "ColorLab",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:41.299Z",
+    "updated_at": "2025-08-28T07:02:41.299Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 36,
+  "fields": {
+    "user": 37,
+    "name": "PeopleFirst",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:42.091Z",
+    "updated_at": "2025-08-28T07:02:42.091Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 37,
+  "fields": {
+    "user": 38,
+    "name": "MoneyMind",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:42.837Z",
+    "updated_at": "2025-08-28T07:02:42.837Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 38,
+  "fields": {
+    "user": 39,
+    "name": "HelpDesk Co.",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:43.566Z",
+    "updated_at": "2025-08-28T07:02:43.566Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 39,
+  "fields": {
+    "user": 40,
+    "name": "NeuroNet",
+    "website": "",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:44.306Z",
+    "updated_at": "2025-08-28T07:02:44.306Z"
+  }
+}
