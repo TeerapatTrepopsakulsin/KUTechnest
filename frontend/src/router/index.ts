@@ -1,7 +1,6 @@
-// src/router/index.ts
 import { createRouter, createWebHistory } from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
-import LoginPage from '../views/LoginPage.vue'
+import Loginpage from '../views/Loginpage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,7 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/login',
     name: 'Loginpage',
-    component: LoginPage
+    component: Loginpage
   },
   { 
     path: '/:pathMatch(.*)*',
