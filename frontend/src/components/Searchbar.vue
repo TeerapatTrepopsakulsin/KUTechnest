@@ -121,7 +121,8 @@ const location_options = [
 
                 <div id="dropdown-position" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
                     <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
-                        <option value="">Category</option>
+                        <option value="" disabled selected>Category</option>
+                        <option value="">Any</option>
                         <option 
                             v-for="category_option in category_options"
                             :value="category_option.value"
@@ -133,7 +134,8 @@ const location_options = [
 
                 <div id="dropdown-location" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
                     <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
-                        <option value="">Location</option>
+                        <option value="" disabled selected>Location</option>
+                        <option value="">Any</option>
                         <option 
                             v-for="location_option in location_options"
                             :value="location_option.value"
