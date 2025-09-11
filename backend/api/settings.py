@@ -21,8 +21,9 @@ SECRET_KEY = os.getenv(
     "dev-only-unsafe-secret-key-change-in-production"
 )
 
-# DEBUG=True for local; set DEBUG=0/False in prod
-DEBUG = os.getenv("DEBUG", "1") == "1"
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 # Comma-separated list in env, e.g. "kutechnest.co.th,api.kutechnest.co.th,localhost,127.0.0.1"
 ALLOWED_HOSTS = [h.strip() for h in os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")]
@@ -82,6 +83,10 @@ REST_FRAMEWORK = {
         "rest_framework.filters.SearchFilter",
         "rest_framework.filters.OrderingFilter",
     ],
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':12
+
 }
 
 # JWT configuration
@@ -178,8 +183,11 @@ USE_TZ = True
 # Static / Media
 # ------------------------------------------------------------------------------
 
+
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"

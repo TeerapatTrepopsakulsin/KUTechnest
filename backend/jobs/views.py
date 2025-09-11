@@ -1,11 +1,18 @@
-# jobs/views.py
+
 from rest_framework import viewsets, filters, permissions, status, generics
+from django.db.models import F, IntegerField
+from django.db.models.functions import Cast, Replace
+from rest_framework import viewsets, filters, status
 from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Company, Post, Student
 from rest_framework_simplejwt.views import TokenViewBase
+from django.db.models import Value
+
+
 
 from rest_framework.permissions import IsAdminUser
 from .serializers import (
@@ -316,3 +323,4 @@ class EmailTokenObtainPairView(TokenViewBase):
     """
     serializer_class = EmailTokenObtainPairSerializer
     permission_classes = [permissions.AllowAny]
+
