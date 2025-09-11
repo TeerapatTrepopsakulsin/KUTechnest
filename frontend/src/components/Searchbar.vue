@@ -1,5 +1,99 @@
 <script setup lang="ts">
 
+const category_options = [
+  { value: "software-engineer", label: "Software Engineer" },
+  { value: "product-manager", label: "Product Manager" },
+  { value: "data-scientist", label: "Data Scientist" },
+  { value: "designer", label: "Designer" },
+  { value: "marketing", label: "Marketing" },
+  { value: "sales", label: "Sales" },
+  { value: "hr", label: "Human Resources" },
+  { value: "finance", label: "Finance" },
+  { value: "operations", label: "Operations" },
+  { value: "it-support", label: "IT Support / Helpdesk" },
+  { value: "cloud", label: "Cloud (AWS/GCP/Azure)" },
+  { value: "backend", label: "Backend Engineer" },
+  { value: "frontend", label: "Frontend Developer" },
+  { value: "fullstack", label: "Full-stack Developer" },
+  { value: "devops", label: "DevOps / Platform" },
+  { value: "qa", label: "QA / Test Engineer" },
+  { value: "mobile", label: "Mobile Developer" },
+  { value: "data-analyst", label: "Data Analyst" },
+  { value: "data-engineer", label: "Data Engineer" },
+  { value: "ai-ml", label: "AI / ML" },
+  { value: "security", label: "Security / SecOps" },
+  { value: "network", label: "Network Engineer" },
+  { value: "sysadmin", label: "System Administrator" },
+  { value: "database", label: "Database / DBA" },
+  { value: "ui-ux", label: "UI/UX Designer" },
+  { value: "product-designer", label: "Product Designer" },
+  { value: "game-dev", label: "Game Developer" },
+  { value: "embedded", label: "Embedded / IoT" },
+  { value: "other", label: "Other" }
+];
+
+const location_options = [
+    { value: "remote", label: "Remote" },
+    { value: "bangkok", label: "Bangkok" },
+    { value: "chiang-mai", label: "Chiang Mai" },
+    { value: "chiang-rai", label: "Chiang Rai" },
+    { value: "lampang", label: "Lampang" },
+    { value: "lamphun", label: "Lamphun" },
+    { value: "mae-hong-son", label: "Mae Hong Son" },
+    { value: "nakhon-sawan", label: "Nakhon Sawan" },
+    { value: "nan", label: "Nan" },
+    { value: "phayao", label: "Phayao" },
+    { value: "phetchabun", label: "Phetchabun" },
+    { value: "phichit", label: "Phichit" },
+    { value: "phitsanulok", label: "Phitsanulok" },
+    { value: "phrae", label: "Phrae" },
+    { value: "sukhothai", label: "Sukhothai" },
+    { value: "tak", label: "Tak" },
+    { value: "uthai-thani", label: "Uthai Thani" },
+    { value: "uttaradit", label: "Uttaradit" },
+    { value: "chumphon", label: "Chumphon" },
+    { value: "krabi", label: "Krabi" },
+    { value: "nakhon-si-thammarat", label: "Nakhon Si Thammarat" },
+    { value: "narathiwat", label: "Narathiwat" },
+    { value: "pattani", label: "Pattani" },
+    { value: "phang-nga", label: "Phang Nga" },
+    { value: "phatthalung", label: "Phatthalung" },
+    { value: "phuket", label: "Phuket" },
+    { value: "ranong", label: "Ranong" },
+    { value: "satun", label: "Satun" },
+    { value: "songkhla", label: "Songkhla" },
+    { value: "surat-thani", label: "Surat Thani" },
+    { value: "trang", label: "Trang" },
+    { value: "yala", label: "Yala" },
+    { value: "chachoengsao", label: "Chachoengsao" },
+    { value: "chanthaburi", label: "Chanthaburi" },
+    { value: "chonburi", label: "Chonburi" },
+    { value: "prachinburi", label: "Prachinburi" },
+    { value: "rayong", label: "Rayong" },
+    { value: "sa-kaeo", label: "Sa Kaeo" },
+    { value: "trat", label: "Trat" },
+    { value: "amnat-charoen", label: "Amnat Charoen" },
+    { value: "bueng-kan", label: "Bueng Kan" },
+    { value: "buriram", label: "Buriram" },
+    { value: "chaiyaphum", label: "Chaiyaphum" },
+    { value: "kalasin", label: "Kalasin" },
+    { value: "khon-kaen", label: "Khon Kaen" },
+    { value: "loei", label: "Loei" },
+    { value: "maha-sarakham", label: "Maha Sarakham" },
+    { value: "mukdahan", label: "Mukdahan" },
+    { value: "nakhon-phanom", label: "Nakhon Phanom" },
+    { value: "nakhon-ratchasima", label: "Nakhon Ratchasima" },
+    { value: "nong-bua-lamphu", label: "Nong Bua Lamphu" },
+    { value: "nong-khai", label: "Nong Khai" },
+    { value: "roi-et", label: "Roi Et" },
+    { value: "sakon-nakhon", label: "Sakon Nakhon" },
+    { value: "sisaket", label: "Sisaket" },
+    { value: "surin", label: "Surin" },
+    { value: "ubon-ratchathani", label: "Ubon Ratchathani" },
+    { value: "udon-thani", label: "Udon Thani" },
+    { value: "yasothon", label: "Yasothon" }
+];
+
 </script>
 
 <template>
@@ -27,98 +121,27 @@
 
                 <div id="dropdown-position" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
                     <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
-                        <option value="">Position/Occupation</option>
-                        <option value="software-engineer">Software Engineer</option>
-                        <option value="product-manager">Product Manager</option>
-                        <option value="data-scientist">Data Scientist</option>
-                        <option value="designer">Designer</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="sales">Sales</option>
-                        <option value="hr">Human Resources</option>
-                        <option value="finance">Finance</option>
-                        <option value="operations">Operations</option>
+                        <option value="" disabled selected>Category</option>
+                        <option value="">Any</option>
+                        <option 
+                            v-for="category_option in category_options"
+                            :value="category_option.value"
+                        >
+                            {{ category_option.label }}
+                        </option>
                     </select>
                 </div>
 
                 <div id="dropdown-location" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
                     <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
-                        <option value="">Location</option>
-                        <option value="remote">Remote</option>
-                        <option value="bangkok">Bangkok</option>
-                        <option value="chiang-mai">Chiang Mai</option>
-                        <option value="chiang-rai">Chiang Rai</option>
-                        <option value="lampang">Lampang</option>
-                        <option value="lamphun">Lamphun</option>
-                        <option value="mae-hong-son">Mae Hong Son</option>
-                        <option value="nakhon-sawan">Nakhon Sawan</option>
-                        <option value="nan">Nan</option>
-                        <option value="phayao">Phayao</option>
-                        <option value="phetchabun">Phetchabun</option>
-                        <option value="phichit">Phichit</option>
-                        <option value="phitsanulok">Phitsanulok</option>
-                        <option value="phrae">Phrae</option>
-                        <option value="sukhothai">Sukhothai</option>
-                        <option value="tak">Tak</option>
-                        <option value="uthai-thani">Uthai Thani</option>
-                        <option value="uttaradit">Uttaradit</option>
-                        <option value="chumphon">Chumphon</option>
-                        <option value="krabi">Krabi</option>
-                        <option value="nakhon-si-thammarat">Nakhon Si Thammarat</option>
-                        <option value="narathiwat">Narathiwat</option>
-                        <option value="pattani">Pattani</option>
-                        <option value="phang-nga">Phang Nga</option>
-                        <option value="phatthalung">Phatthalung</option>
-                        <option value="phuket">Phuket</option>
-                        <option value="ranong">Ranong</option>
-                        <option value="satun">Satun</option>
-                        <option value="songkhla">Songkhla</option>
-                        <option value="surat-thani">Surat Thani</option>
-                        <option value="trang">Trang</option>
-                        <option value="yala">Yala</option>
-                        <option value="chachoengsao">Chachoengsao</option>
-                        <option value="chanthaburi">Chanthaburi</option>
-                        <option value="chonburi">Chonburi</option>
-                        <option value="prachinburi">Prachinburi</option>
-                        <option value="rayong">Rayong</option>
-                        <option value="sa-kaeo">Sa Kaeo</option>
-                        <option value="trat">Trat</option>
-                        <option value="amnat-charoen">Amnat Charoen</option>
-                        <option value="bueng-kan">Bueng Kan</option>
-                        <option value="buriram">Buriram</option>
-                        <option value="chaiyaphum">Chaiyaphum</option>
-                        <option value="kalasin">Kalasin</option>
-                        <option value="khon-kaen">Khon Kaen</option>
-                        <option value="loei">Loei</option>
-                        <option value="maha-sarakham">Maha Sarakham</option>
-                        <option value="mukdahan">Mukdahan</option>
-                        <option value="nakhon-phanom">Nakhon Phanom</option>
-                        <option value="nakhon-ratchasima">Nakhon Ratchasima</option>
-                        <option value="nong-bua-lamphu">Nong Bua Lamphu</option>
-                        <option value="nong-khai">Nong Khai</option>
-                        <option value="roi-et">Roi Et</option>
-                        <option value="sakon-nakhon">Sakon Nakhon</option>
-                        <option value="sisaket">Sisaket</option>
-                        <option value="surin">Surin</option>
-                        <option value="ubon-ratchathani">Ubon Ratchathani</option>
-                        <option value="udon-thani">Udon Thani</option>
-                        <option value="yasothon">Yasothon</option>
-                        <option value="ang-thong">Ang Thong</option>
-                        <option value="chai-nat">Chai Nat</option>
-                        <option value="kanchanaburi">Kanchanaburi</option>
-                        <option value="lopburi">Lopburi</option>
-                        <option value="nakhon-nayok">Nakhon Nayok</option>
-                        <option value="nakhon-pathom">Nakhon Pathom</option>
-                        <option value="nonthaburi">Nonthaburi</option>
-                        <option value="pathum-thani">Pathum Thani</option>
-                        <option value="phra-nakhon-si-ayutthaya">Phra Nakhon Si Ayutthaya</option>
-                        <option value="prachuap-khiri-khan">Prachuap Khiri Khan</option>
-                        <option value="ratchaburi">Ratchaburi</option>
-                        <option value="samut-prakan">Samut Prakan</option>
-                        <option value="samut-sakhon">Samut Sakhon</option>
-                        <option value="samut-songkhram">Samut Songkhram</option>
-                        <option value="saraburi">Saraburi</option>
-                        <option value="sing-buri">Sing Buri</option>
-                        <option value="suphan-buri">Suphan Buri</option>
+                        <option value="" disabled selected>Location</option>
+                        <option value="">Any</option>
+                        <option 
+                            v-for="location_option in location_options"
+                            :value="location_option.value"
+                        >
+                            {{ location_option.label }}
+                        </option>
 
                     </select>
                 </div>
