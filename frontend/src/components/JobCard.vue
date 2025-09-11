@@ -9,13 +9,13 @@ const props = defineProps<{
 <template>
   <router-link :to="'/posts/' + props.job.id">
     <div
-    class="w-full sm:h-[40vh] md:h-[30vh] lg:h-[25vh]
-         rounded-lg border border-gray-200 bg-white p-4 shadow-sm
-         flex flex-col items-start text-left
-         overflow-auto
-         transition-transform duration-200 ease-in-out
-         hover:-translate-y-1 hover:shadow-lg">
-    <!-- sm:h-[40vh]  -->
+        class="w-full 
+        h-full
+        rounded-lg border border-gray-200 bg-white p-4 shadow-sm
+        flex flex-col items-start text-left
+        overflow-auto
+        transition-transform duration-200 ease-in-out
+        hover:-translate-y-1 hover:shadow-lg">
       <img v-if="props.job?.image_url" :src="props.job.image_url" alt="Company logo"
           class="w-25 h-25 object-contain rounded-md mb-3" />
       <h2 class="text-xl font-semibold text-gray-900 mb-1">
