@@ -1,0 +1,25 @@
+export type User = {
+    id: number
+    email: string
+    firstName: string
+    lastName: string
+    role: 'admin' | 'user' | 'guest'
+    status: 'pending' | 'approved' | 'rejected'
+}
+
+export type AuthTokens = {
+    access: string
+    refresh: string
+}
+
+export type LoginCredentials = {
+    googleToken: string
+}
+
+export type RegisterData = {
+    email: string
+    firstName: string
+    lastName: string
+    password: string
+    confirmPassword: string
+}
