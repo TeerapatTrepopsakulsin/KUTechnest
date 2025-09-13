@@ -28,7 +28,7 @@ const fetchJob = async () => {
     error.value = null
 
     
-    const res = await fetch(`http://127.0.0.1:8000/api/posts/${jobId}`)
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/posts/${jobId}`)
     if (!res.ok) throw new Error("Failed to fetch job.");
     
     const data = await res.json()
