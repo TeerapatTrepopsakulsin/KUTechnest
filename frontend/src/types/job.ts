@@ -1,7 +1,8 @@
 export type Job = {
     id: number
-    jobTitle: string
-    company: string
+    title: string
+    company_name: string
     description: string
-    imageUrl?: string | null
+    image_url?: string | null
+    [key: string]: any
   }
