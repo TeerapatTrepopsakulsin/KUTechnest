@@ -91,3 +91,8 @@ export const location_options = [
     { value: "udon-thani", label: "Udon Thani" },
     { value: "yasothon", label: "Yasothon" }
 ];
+
+export const employment_type_options = [
+    { value: "full_time", label: "Full Time" },
+    { value: "part_time", label: "Part Time" }, 
+];
