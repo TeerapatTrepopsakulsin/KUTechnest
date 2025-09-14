@@ -7,13 +7,7 @@
 
 <script setup lang="ts">
 import JobPostForm from '../components/JobPostForm.vue'
-
-interface JobPostResponse {
-  id: string
-  status: string
-  message: string
-  data: any
-}
+import type { JobPostResponse } from '../types/post';
 
 const handleJobCreated = (jobData: JobPostResponse) => {
   console.log('New job created:', jobData)
