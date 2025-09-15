@@ -1,172 +1,112 @@
-from django.conf import settings
 from django.contrib.auth import get_user_model
-from rest_framework import permissions, status
-from rest_framework.response import Response
+from django.conf import settings
+from rest_framework import permissions
 from rest_framework.views import APIView
+from rest_framework.response import Response
+
+from google.oauth2 import id_token
+from google.auth.transport import requests as g_requests
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework_simplejwt.views import TokenRefreshView
-
-
-# Google verification libs
-from google.oauth2 import id_token as google_id_token
-from google.auth.transport import requests as google_requests
-#from authapp.views import GoogleAuthView
-
-from .serializers import LoginSerializer
+from jobs.models import Student, Company
 
 User = get_user_model()
 
-def get_user_role_and_profile(user):
-    """
-    Return ('student'|'company'|'user', profile_dict).
-    Adjust attribute access to your actual profile models.
-    """
-    role = "user"
-    profile = {}
 
-    # Example: OneToOne relations with related_name 'student' and 'company'
+def _unique_username_from_email(email: str) -> str:
+    base = (email.split("@")[0] or "user").lower()[:150]
+    candidate = base
+    i = 1
+    while User.objects.filter(username=candidate).exists():
+        i += 1
+        candidate = (base + str(i))[:150]
+    return candidate
+
+
+def _resolve_role(user):
+    if user.is_superuser or user.is_staff:
+        return "admin"
+    if hasattr(user, "company"):
+        return "company"
     if hasattr(user, "student"):
-        role = "student"
-        profile = {"full_name": getattr(user.student, "full_name", "")}
-    elif hasattr(user, "company"):
-        role = "company"
-        profile = {"company_name": getattr(user.company, "name", "")}
-
-    return role, profile
+        return "student"
+    return "user"
 
 
-class LoginView(APIView):
-    """
-    Email + password login that returns JWTs and basic user info.
-    """
+class GoogleLoginView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        serializer = LoginSerializer(data=request.data, context={"request": request})
-        serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data["user"]
+        idt = request.data.get("id_token")
+        role = (request.data.get("role") or "student").strip().lower()
+        if not idt:
+            return Response({"ok": False, "error": "id_token missing"}, status=400)
+
+        try:
+            info = id_token.verify_oauth2_token(idt, g_requests.Request(), audience=None)
+        except Exception as e:
+            return Response({"ok": False, "error": f"invalid token: {e}"}, status=400)
+
+        aud = info.get("aud")
+        allowed = getattr(settings, "GOOGLE_CLIENT_IDS", [])
+        if aud not in allowed:
+            return Response({"ok": False, "error": "audience mismatch"}, status=400)
+
+        email = info.get("email")
+        if not email or not info.get("email_verified", False):
+            return Response({"ok": False, "error": "email not verified"}, status=400)
+
+        user, created = User.objects.get_or_create(
+            email=email,
+            defaults={"username": _unique_username_from_email(email)},
+        )
+
+        name = (info.get("name") or "").strip()
+        if name and (not user.first_name and not user.last_name):
+            parts = name.split(" ", 1)
+            user.first_name = parts[0]
+            if len(parts) > 1:
+                user.last_name = parts[1]
+            user.save()
+
+        if role == "student" and not hasattr(user, "student"):
+            Student.objects.create(user=user, name=name or None)
+        elif role == "company" and not hasattr(user, "company"):
+            Company.objects.create(user=user, name=name or "Company")
 
         refresh = RefreshToken.for_user(user)
-        role, profile = get_user_role_and_profile(user)
+        access = str(refresh.access_token)
 
         return Response({
             "ok": True,
+            "created": created,
             "user": {
                 "id": user.id,
+                "username": user.username,
                 "email": user.email,
-                "first_name": getattr(user, "first_name", "") or "",
-                "last_name": getattr(user, "last_name", "") or "",
-                "role": role,
-                "profile": profile,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+                "role": _resolve_role(user),
             },
-            "access": str(refresh.access_token),
+            "access": access,
             "refresh": str(refresh),
-        }, status=status.HTTP_200_OK)
+            "google": {
+                "sub": info.get("sub"),
+                "aud": aud,
+                "picture": info.get("picture"),
+            }
+        }, status=200)
 
 
-class LogoutView(APIView):
-    """
-    Blacklist all refresh tokens for this user (logs out from all devices).
-    Requires a valid ACCESS token in Authorization header.
-    """
+class MeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-
-    def post(self, request):
-        from rest_framework_simplejwt.tokens import OutstandingToken, BlacklistedToken
-
-        for token in OutstandingToken.objects.filter(user=request.user):
-            BlacklistedToken.objects.get_or_create(token=token)
-
-        return Response({"ok": True, "message": "Logged out successfully."})
-
-
-class RefreshView(TokenRefreshView):
-    """
-    Standard SimpleJWT refresh. POST { "refresh": "<refresh_token>" }
-    """
-    permission_classes = [permissions.AllowAny]
-
-
-class GoogleAuthView(APIView):
-    """
-    Accept a Google ID token (from Google Identity Services).
-    Verifies it, creates/fetches a local user, and returns JWTs + role/profile.
-    Accepts 'credential' (GIS default) or 'id_token' in the request body.
-    """
-    permission_classes = [permissions.AllowAny]
-    authentication_classes = []  # allow anonymous calls
-
-    def post(self, request):
-        raw_token = request.data.get("credential") or request.data.get("id_token")
-        if not raw_token:
-            return Response({"ok": False, "error": "Missing Google ID token."},
-                            status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            claims = google_id_token.verify_oauth2_token(raw_token, google_requests.Request())
-
-            # Recommended audience check against your configured Client IDs
-            allowed = getattr(settings, "GOOGLE_OAUTH_CLIENT_IDS", []) or []
-            aud = claims.get("aud")
-            if allowed and aud not in allowed:
-                return Response({"ok": False, "error": "Invalid audience."}, status=400)
-
-            # Basic issuer check
-            if claims.get("iss") not in ("https://accounts.google.com", "accounts.google.com"):
-                return Response({"ok": False, "error": "Invalid token issuer."}, status=400)
-
-            email = claims.get("email")
-            if not email:
-                return Response({"ok": False, "error": "Email missing in Google token."}, status=400)
-
-            if not claims.get("email_verified", False):
-                return Response({"ok": False, "error": "Email not verified by Google."}, status=400)
-
-            given_name = claims.get("given_name") or ""
-            family_name = claims.get("family_name") or ""
-            picture = claims.get("picture", "") or ""
-
-            # Create or fetch the local user. Email is the unique identifier.
-            user, created = User.objects.get_or_create(
-                email=email,
-                defaults={"first_name": given_name, "last_name": family_name},
-            )
-
-            # Ensure an unusable password for new Google users
-            if created and hasattr(user, "set_unusable_password"):
-                user.set_unusable_password()
-                user.save(update_fields=["password"])
-
-            # Optionally fill empty names from Google
-            updated = False
-            if not getattr(user, "first_name", "") and given_name:
-                user.first_name = given_name; updated = True
-            if not getattr(user, "last_name", "") and family_name:
-                user.last_name = family_name; updated = True
-            if updated:
-                user.save()
-
-            refresh = RefreshToken.for_user(user)
-            role, profile = get_user_role_and_profile(user)
-
-            return Response({
-                "ok": True,
-                "created": created,
-                "user": {
-                    "id": user.id,
-                    "email": user.email,
-                    "first_name": user.first_name or "",
-                    "last_name": user.last_name or "",
-                    "role": role,
-                    "profile": profile,
-                    "avatar_url": picture,
-                },
-                "access": str(refresh.access_token),
-                "refresh": str(refresh),
-            }, status=200)
-
-        except ValueError as e:
-            return Response({"ok": False, "error": f"Invalid Google token: {e}"}, status=400)
-        except Exception as e:
-            return Response({"ok": False, "error": f"Unexpected error: {e}"}, status=500)
+    def get(self, request):
+        u = request.user
+        return Response({
+            "id": u.id,
+            "username": u.username,
+            "email": u.email,
+            "first_name": u.first_name,
+            "last_name": u.last_name,
+            "role": _resolve_role(u),
+        })
 

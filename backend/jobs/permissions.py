@@ -1,6 +1,7 @@
 # jobs/permissions.py
 from rest_framework.permissions import BasePermission, IsAdminUser
 
+
 class IsApprovedStudent(BasePermission):
     """
     Allow only authenticated users who have a Student profile approved.
@@ -13,6 +14,7 @@ class IsApprovedStudent(BasePermission):
             return False
         prof = getattr(user, "student_profile", None)
         return bool(prof and prof.is_approved)
+
 
 class IsApprovedCompany(BasePermission):
     """

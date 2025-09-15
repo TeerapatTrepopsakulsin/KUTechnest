@@ -9,13 +9,11 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-@1ct*-farz#ou3$dtso-a-4n&%yjz8#%y9fri%c8-dett($mj='
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
 
 # Application definition
 
@@ -31,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'jobs',
     'corsheaders',
+    'authapp',
 ]
 
 # DRF Configuration
@@ -38,12 +37,15 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
+
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE':12
+    'PAGE_SIZE': 12
 }
 
 MIDDLEWARE = [
@@ -76,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api.wsgi.application'
 
-
 # Database
 DATABASES = {
     'default': {
@@ -85,15 +86,17 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },
 ]
-
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
@@ -101,13 +104,22 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
-
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import os
 
-CORS_ALLOW_ALL_ORIGINS = True
+# ---- OAuth & CORS (define BEFORE using them) ----
+GOOGLE_CLIENT_IDS = [
+    os.getenv("GOOGLE_CLIENT_ID", "868183205305-elesch7f6611fp4b2sk4ubckekdgcg25.apps.googleusercontent.com"),
+]
+
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
+
+# Dev-friendly CORS (pick ONE of the two lines below)
+CORS_ALLOW_ALL_ORIGINS = True                # easiest for local dev
+# CORS_ALLOWED_ORIGINS = [FRONTEND_ORIGIN]   # use this if you want strict allowlist
+CORS_ALLOW_CREDENTIALS = True
