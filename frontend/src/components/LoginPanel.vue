@@ -28,7 +28,7 @@
     </div>
 
     <!-- Login Form -->
-    <form @submit.prevent="handleLogin">
+    <form @submit.prevent="handleGoogleLogin">
       <div class="mb-4">
         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
           Email Address
@@ -102,6 +102,7 @@
 import { ref } from 'vue'
 import { GoogleLogin, decodeCredential } from 'vue3-google-login'
 
+const emit = defineEmits(['google-login'])
 
 // Reactive variables
 const isCompany = ref(false)
@@ -117,7 +118,7 @@ const handleGoogleLogin = (response: any) => {
   // Decode the Google credential to get user info
   const googleCredential = response.credential
   const userData = decodeCredential(googleCredential)
-  
+
   // Prepare data to send to your backend
   const registrationData = {
     googleToken: googleCredential,
@@ -126,19 +127,9 @@ const handleGoogleLogin = (response: any) => {
     name: userData.name,
     picture: userData.picture
   }
-  
-  console.log('Sending to backend:', registrationData)
-  
-  // TODO: Send to your Django backend
-  // await authStore.registerWithGoogle(registrationData)
 
-  // TODO:
-  // 1. Validate the form data
-  // 2. Send a request to your authentication API
-  // 3. Handle the response (success or error)
-  // 4. Redirect the user or show error messages
+  emit('google-login', registrationData)
 }
-
 </script>
 
 <style scoped>
