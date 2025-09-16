@@ -9,15 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.18"
+    "dayjs": "^1.11.18",
+    "dompurify": "^3.2.6",
+    "markdown-it": "^14.1.0",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.12",
+    "@types/dompurify": "^3.0.5",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.7.0",
     "tailwindcss": "^4.1.12",
     "typescript": "~5.8.3",
-    "vite": "^7.1.2",
+    "vite": "^7.1.4",
     "vue-tsc": "^3.0.5"
   }
 }

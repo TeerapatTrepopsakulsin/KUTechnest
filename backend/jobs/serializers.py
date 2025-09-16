@@ -1,3 +1,4 @@
+
 from django.contrib.auth import get_user_model
 from rest_framework import serializers, exceptions
 from .models import Company, Post, Student
@@ -8,15 +9,17 @@ User = get_user_model()
 DEFAULT_IMG = "https://placehold.co/200x200?text=KU+TechNest"
 
 
-class CompanySerializer(serializers.ModelSerializer):
-    posts_count = serializers.SerializerMethodField()
 
+class CompanySerializer(serializers.ModelSerializer):
+    """Public representation of a Company."""
+    posts_count = serializers.SerializerMethodField()
     class Meta:
         model = Company
         fields = [
             "id", "name", "website", "location", "description",
             "created_at", "updated_at", "logo_url", "posts_count",
         ]
+
 
     def get_posts_count(self, obj):
         return obj.posts.count()
@@ -30,6 +33,7 @@ class CompanyRegisterSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
+
     company_name = serializers.CharField(source="company.name", read_only=True)
     company_logo = serializers.CharField(source="company.logo_url", read_only=True)
 
@@ -70,9 +74,11 @@ class PostListSerializer(serializers.ModelSerializer):
 
         ]
 
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         try:
+
             data["salary"] = f"{int(instance.salary):,}"
         except Exception:
             pass
@@ -80,6 +86,7 @@ class PostListSerializer(serializers.ModelSerializer):
             company_logo = getattr(getattr(instance, "company", None), "logo_url", None)
             if company_logo:
                 data["image_url"] = company_logo
+
         return data
 
 

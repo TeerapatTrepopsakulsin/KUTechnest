@@ -15,6 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -29,7 +30,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'jobs',
     'corsheaders',
-    'authapp',
+    'authapp'
 ]
 
 # DRF Configuration
@@ -46,6 +47,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 12
+
+
 }
 
 MIDDLEWARE = [
@@ -88,14 +91,11 @@ DATABASES = {
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },
+
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
 
 # Internationalization
@@ -110,6 +110,7 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 import os
 
 # ---- OAuth & CORS (define BEFORE using them) ----
@@ -123,3 +124,4 @@ FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
 CORS_ALLOW_ALL_ORIGINS = True                # easiest for local dev
 # CORS_ALLOWED_ORIGINS = [FRONTEND_ORIGIN]   # use this if you want strict allowlist
 CORS_ALLOW_CREDENTIALS = True
+

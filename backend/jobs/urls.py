@@ -1,5 +1,6 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+
+from django.urls import include, path
+from rest_framework.routers import DefaultRoute
 from .views import CompanyViewSet, PostViewSet, StudentViewSet
 from django.contrib import admin
 

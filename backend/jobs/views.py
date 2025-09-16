@@ -1,14 +1,16 @@
 # jobs/views.py
+
 from rest_framework import viewsets, filters, permissions, status, generics
+from django.db.models import F, IntegerField
+from django.db.models.functions import Cast, Replace
 from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Company, Post, Student
 from rest_framework_simplejwt.views import TokenViewBase
 from rest_framework_simplejwt.views import TokenObtainPairView
-
-
 from rest_framework.permissions import IsAdminUser
 from .serializers import (
     CompanySerializer,
@@ -20,6 +22,14 @@ from .serializers import (
     UserPublicSerializer,
     EmailTokenObtainPairSerializer,
 )
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.select_related("company").order_by("-id")
+    serializer_class = PostSerializer
+    permission_classes = [AllowAny]
+
+
+
 
 
 class CompanyRegisterView(generics.CreateAPIView):
@@ -78,6 +88,16 @@ class CompanyViewSet(viewsets.ModelViewSet):
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data)
 
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ["title", "description", "company__name", "location", "salary", "work_field"]
+    ordering_fields = ["id", "created_at"]  # salary käsitellään customissa
+    ordering = ["-id"]
+
+    def get_permissions(self)
+
+        if self.action in ["create", "update", "partial_update", "destroy"]:
+            return [IsAuthenticatedOrReadOnly()]
+        return [AllowAny()]
 
 class PostViewSet(viewsets.ModelViewSet):
     """CRUD for job posts with filtering, search and ordering."""
@@ -318,3 +338,5 @@ class EmailTokenObtainPairView(TokenViewBase):
     """
     serializer_class = EmailTokenObtainPairSerializer
     permission_classes = [permissions.AllowAny]
+
+ 

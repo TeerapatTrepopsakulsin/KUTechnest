@@ -39,13 +39,13 @@ POSSIBLE_LOCATIONS = [
 ]
 LOCATION_CHOICES = [(s, s.replace("-", " ").title()) for s in POSSIBLE_LOCATIONS]
 
+
 EMPLOYMENT_CHOICES = [
         ("full_time", "Full time"),
         ("part_time", "Part time"),
         ("internship", "Internship"),
         ("contract", "Contract"),
     ]
-
 
 class WorkField(models.TextChoices):
     """ Workfield for the search and the post """
@@ -153,11 +153,13 @@ class Post(models.Model):
         default=WorkField.OTHER,
         db_index=True,
     )
+
     employment_type = models.CharField(
         max_length=20,
         choices=EMPLOYMENT_CHOICES,
         default="full_time",
     )
+
     location = models.CharField(max_length=40, choices=LOCATION_CHOICES)
     onsite = models.BooleanField(default=False, help_text="True if onsite, False if remote")
     salary = models.IntegerField(help_text="Salary in your local currency")
