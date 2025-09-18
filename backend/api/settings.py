@@ -113,11 +113,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-# ---- OAuth & CORS (define BEFORE using them) ----
-GOOGLE_CLIENT_IDS = [
-    os.getenv("GOOGLE_CLIENT_ID", "868183205305-elesch7f6611fp4b2sk4ubckekdgcg25.apps.googleusercontent.com"),
-]
-
 FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
 
 # Dev-friendly CORS (pick ONE of the two lines below)
