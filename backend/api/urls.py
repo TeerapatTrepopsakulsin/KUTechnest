@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("jobs.urls")),
 
+    path("api/auth/", include("authapp.urls")),
+    path("api/auth/jwt/refresh/", TokenRefreshView.as_view(), name="jwt_refresh"),
+    path("api/auth/jwt/verify/", TokenVerifyView.as_view(), name="jwt_verify"),
 ]
-

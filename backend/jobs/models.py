@@ -39,6 +39,14 @@ POSSIBLE_LOCATIONS = [
 ]
 LOCATION_CHOICES = [(s, s.replace("-", " ").title()) for s in POSSIBLE_LOCATIONS]
 
+
+EMPLOYMENT_CHOICES = [
+        ("full_time", "Full time"),
+        ("part_time", "Part time"),
+        ("internship", "Internship"),
+        ("contract", "Contract"),
+    ]
+
 class WorkField(models.TextChoices):
     """ Workfield for the search and the post """
     IT_SUPPORT     = "it-support", "IT Support / Helpdesk"
@@ -96,7 +104,7 @@ class Student(models.Model):
     """A student profile with personal and academic information."""
     # Personal info
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, help_text="Full name")
+    name = models.CharField(max_length=200, blank=True, null=True, help_text="Full name")
     nick_name = models.CharField(max_length=30, null=True, blank=True, help_text="Preferred nickname")
     pronoun = models.CharField(max_length=20, null=True, blank=True)
     age = models.PositiveSmallIntegerField(
@@ -145,12 +153,20 @@ class Post(models.Model):
         default=WorkField.OTHER,
         db_index=True,
     )
+
+    employment_type = models.CharField(
+        max_length=20,
+        choices=EMPLOYMENT_CHOICES,
+        default="full_time",
+    )
+
     location = models.CharField(max_length=40, choices=LOCATION_CHOICES)
     onsite = models.BooleanField(default=False, help_text="True if onsite, False if remote")
     salary = models.IntegerField(help_text="Salary in your local currency")
     min_year = models.IntegerField(help_text="Minimum years of experience required")
     requirement = models.TextField(help_text="Job requirements and qualifications")
-    description = models.TextField(help_text="Detailed job description")
+    description = models.CharField(max_length=200, blank=True, default="")
+    long_description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image_url = models.URLField(blank=True, null=True)
