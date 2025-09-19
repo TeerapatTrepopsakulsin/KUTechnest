@@ -8,7 +8,7 @@
         <div v-if="!isAuthenticated" class="flex items-center gap-x-2">
           <a href="/login" class="nav-link">Sign In</a>
           <span class="divider">/</span>
-          <a href="/register" class="nav-link last:mr-0">Register</a>
+          <router-link :to="{ name:'RegisterPage' }">Register</router-link>
         </div>
         <div v-else class="profile-section">
           <img :src="userProfile.avatar || '/assets/default-avatar.png'" class="profile-avatar" :alt="userProfile.name" />
