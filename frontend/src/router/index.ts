@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
 import JobPostPage from '../views/JobPostPage.vue'
+import JobDetailPage from '../views/JobDetailPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,10 +15,15 @@ const routes: Array<RouteRecordRaw> = [
     name: 'JobPostPage',
     component: JobPostPage
   },
+  {
+    path: '/posts/:slug',
+    name: 'JobDetailPage',
+    component: JobDetailPage
+  },
   { 
     path: '/:pathMatch(.*)*',
     redirect: '/' 
-}
+  }
 ]
 
 const router = createRouter({

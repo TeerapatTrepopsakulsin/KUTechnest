@@ -1,0 +1,3976 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-08-25T06:34:53.056Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "example",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-08-25T06:34:56.737Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Example Inc",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-08-25T06:35:57.525Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Example at Example Inc",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-08-25T06:38:08.156Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Intern at ACME Co.",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-08-25T06:43:14.433Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Backend Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-08-25T06:43:27.656Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "DevOps Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-08-25T06:43:39.410Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-08-25T06:43:46.537Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "DevOps Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-08-25T06:43:54.285Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-08-25T06:44:06.295Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Product Designer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-08-25T06:44:47.580Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-08-25T06:45:06.836Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "Fullstack Dev at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-08-25T06:45:36.743Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "DevOps Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-08-25T06:45:42.649Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-08-25T06:45:48.498Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "DevOps Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-08-25T06:45:54.345Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-08-25T06:45:59.885Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "Frontend Developer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-08-25T06:46:08.840Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "Data Analyst at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-08-25T06:46:13.596Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "Backend Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-08-25T06:46:18.503Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "QA Engineer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-08-25T06:46:22.906Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "Backend Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-08-25T06:46:27.593Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "DevOps Intern at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-08-25T06:46:31.490Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "Product Designer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-08-25T06:46:35.871Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "Frontend Developer at ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-08-25T06:51:41.890Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Nokia Oyj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-08-30T08:05:35.823Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Example Inc",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-08-30T08:05:46.046Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-08-30T08:49:03.898Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "198",
+    "object_repr": "Customer Support (Other) at HelpDesk Co.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Onsite\", \"Requirement\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-08-30T08:50:44.281Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "41",
+    "object_repr": "Example Inc",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-08-30T08:50:50.734Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "ACME Co.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 7,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 7,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 7,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 7,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 8,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 8,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 8,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 8,
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add company",
+    "content_type": 9,
+    "codename": "add_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change company",
+    "content_type": 9,
+    "codename": "change_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete company",
+    "content_type": 9,
+    "codename": "delete_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view company",
+    "content_type": 9,
+    "codename": "view_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 10,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 10,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 10,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 10,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add student",
+    "content_type": 11,
+    "codename": "add_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change student",
+    "content_type": 11,
+    "codename": "change_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete student",
+    "content_type": 11,
+    "codename": "delete_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view student",
+    "content_type": 11,
+    "codename": "view_student"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$pEgFVWioZxkYhyyR4Pq1Sx$2Er09+ipxW5QFk6mcBtEqxwVBkX3LFPxaVDkQQehgC0=",
+    "last_login": "2025-08-27T02:32:40.582Z",
+    "is_superuser": true,
+    "username": "katharinaviik",
+    "first_name": "",
+    "last_name": "",
+    "email": "katharina.viik@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:23:20.578Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "acme",
+    "first_name": "",
+    "last_name": "",
+    "email": "acme@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:26:23.108Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "!ONK60NJcB2sefTZHNUq6WfqHpey5UxrgNI3kJsCc",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "example",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:34:53.050Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2yOcemIkZBeabSn7WNchww$JVJunvimBz6aubob81uAHu+Z+6o/hqG1fzI59s0iIa4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kbtgkasikornbusinesstechnologygroup",
+    "first_name": "",
+    "last_name": "",
+    "email": "kbtgkasikornbusinesstechnologygroup@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:32.032Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CUUO9zoPRITeJyRDRhgicq$b60/9slWR30jWpb1a0ldzi9foA5ZpQ5QbRTxED9vTD4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "scbtechx",
+    "first_name": "",
+    "last_name": "",
+    "email": "scbtechx@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:32.874Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$J2yJjyf8LiDRS5R85gQd8M$cln/JOG3y/VKZxCxNzyl1TXDGdjtAonqGeRyTmQq20M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pttdigital",
+    "first_name": "",
+    "last_name": "",
+    "email": "pttdigital@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:33.690Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qEzMLEMlGaJWm0UKZClO2z$PNX8YkCCp7vkRjwFIQ3L/31cJ1Ee5cJf3VfSZjnDwfU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "truedigitalgroup",
+    "first_name": "",
+    "last_name": "",
+    "email": "truedigitalgroup@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:34.502Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$0XkfV6tAdvhqLaqJTNyGvk$WfEn+yH9zw2ir/6K3iuI8ZFy2K+KItJzDXplOSnnetM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ais",
+    "first_name": "",
+    "last_name": "",
+    "email": "ais@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:35.259Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$l661qNsrTx1mHHH3MK0RD4$Tv99qKrlmyco7uTgAdHaWG96SxKIn75HMb4DZQ6b5SQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "linemanwongnai",
+    "first_name": "",
+    "last_name": "",
+    "email": "linemanwongnai@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:36.061Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kCC3Lu4ghaHK5KyLJ97MbJ$AJRvSUXUZPQIKIVI33giYQG16WdKohHvQU1y2M25+PA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "agoda",
+    "first_name": "",
+    "last_name": "",
+    "email": "agoda@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:36.825Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$w64p4fUF47xzMQjPTVL4Oc$8pBLwEXVUxjb0QOhcuUH8AnEn9CB4APRcaKjGKFRlWw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "grabthailand",
+    "first_name": "",
+    "last_name": "",
+    "email": "grabthailand@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:37.614Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$A4zHsf3syQHHfi9kAfio6x$27OVaIUF4AAbvnS6rLRxvSwouwQZs3gVrVJudvpNnwE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bluebik",
+    "first_name": "",
+    "last_name": "",
+    "email": "bluebik@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:38.392Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CBcdCnVpJwSj1Mwp5dLn3g$WCSkBNZJEFQMvzpYw/0pILOM2WZoU2izUHEZJ8M25Dg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bitkub",
+    "first_name": "",
+    "last_name": "",
+    "email": "bitkub@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:39.168Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2HLLOF1LAp1jzamhy7UtSl$5PnEpFQ/2Elsh5KRIUpYnfP3OHcj3OWW7XxSCUSsli4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gable",
+    "first_name": "",
+    "last_name": "",
+    "email": "gable@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:39.953Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jCUsSO2xYOaCY80ncLQKk7$P1WsPbef+t3+pMlkHOWYYOMQ1EKda0D7PuGmEJnksRg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "wisesight",
+    "first_name": "",
+    "last_name": "",
+    "email": "wisesight@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-25T06:55:40.751Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xAjQg7N7UaUYbfbJIgbwA6$X5HmjoAtbTc3gzgxaV8QPt3sEbVzYsc0ND0MC/OgNzg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gogo-bike",
+    "first_name": "",
+    "last_name": "",
+    "email": "gogo-bike@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:29.468Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$X5a7BQtVwj4LW3B2HY5iRD$nxlzXddOB/kR2++iSLOs+rAejFn3k6aF44bvTKHbgzk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gcoo",
+    "first_name": "",
+    "last_name": "",
+    "email": "gcoo@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:30.225Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$0InzX5ximaAAKSL3ypNAnU$D3+klM37e75MLvpNxw7vzA4jYSsGHY5aMjjc1LjIOGs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "company",
+    "first_name": "",
+    "last_name": "",
+    "email": "company@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:30.953Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yULuPaRbWxKePAcr3jtIrr$FtafmTOfy3eP1rugSZ832vkClwbI5ciCDpWq+lQFOAg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "foodietech",
+    "first_name": "",
+    "last_name": "",
+    "email": "foodietech@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:31.685Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$aqcKt6bskHXSOP7bMZAAXi$1owbVF392MFTOrmTh4ECjTIgrEaNh+U17YTB6wzK+v8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zenride",
+    "first_name": "",
+    "last_name": "",
+    "email": "zenride@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:32.414Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$frUwKrS0TSg4eR5UTDJL4b$eRg3HxSxUAe/U1dUfXVRZNlvZoYnokKG1bPah7TEU2U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "smartmart",
+    "first_name": "",
+    "last_name": "",
+    "email": "smartmart@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:33.173Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cExOmAMkjXgHFfjBnTDd1L$jMl5Gecx97L3Dcbw2r8+QD5kZOc6rVGbur7++52mlVE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "skynet-cloud",
+    "first_name": "",
+    "last_name": "",
+    "email": "skynet-cloud@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:33.905Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7xBsQKQDZkWyacRUasvS6r$nAqIwVlF6MOc2kNNb+z6nRQFDgMTiVrWZqlTruRAums=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "secureit",
+    "first_name": "",
+    "last_name": "",
+    "email": "secureit@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:34.640Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$VzhdlWGLnSgFlHrzz1Vv9n$KduaYGx9F2IW9epdchKuoc7V9PwVXKLckJJH2wKbPdw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "deepthink-labs",
+    "first_name": "",
+    "last_name": "",
+    "email": "deepthink-labs@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:35.370Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6SOIP7zUYBYUGWkerc2phP$L+l9CSVDFp752TlDw/C/Z3gfWAOB3zDmzuy9h7o0OiE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pixelplay-studio",
+    "first_name": "",
+    "last_name": "",
+    "email": "pixelplay-studio@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:36.117Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$8xOG0WhpmCDDYbg67QZK0t$h7vYTozzqOrELm1o1KphZ17LPko7p6yTIUhXi/Oy/nM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "brandify",
+    "first_name": "",
+    "last_name": "",
+    "email": "brandify@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:36.911Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rErIMejmVvop1UombXnb7o$OcR81qi9hUNbe4LqqBP/pq7/nAr5fspvOYIb77NnAEw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "innovatex",
+    "first_name": "",
+    "last_name": "",
+    "email": "innovatex@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:37.643Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$JoMDf1CU5x6QZo20rqnHC6$4+xYZtsgy9ZpdEuoqK2Q8PBg65o8ZKxjTr91PGRgga4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bugsquashers",
+    "first_name": "",
+    "last_name": "",
+    "email": "bugsquashers@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:38.375Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XFllaRop8eRLFybTSkzvFT$He6ViVBEdoq188pRYxnO9heiudNJVtf4ThFKQYOY72Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pipeops",
+    "first_name": "",
+    "last_name": "",
+    "email": "pipeops@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:39.106Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qZWwlkN0D7DAByABiIkbJl$YKZOOwgGt5G8+dxQdzWmjDf6G0mHb894PS/SfkuqG08=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "storyline-media",
+    "first_name": "",
+    "last_name": "",
+    "email": "storyline-media@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:39.842Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$KcPmosYCtMPQfYXvQyNOqG$pBogOsyY/gwZD17KErVr2uoE6FikOZju/dI3S4hdMVw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "colorlab",
+    "first_name": "",
+    "last_name": "",
+    "email": "colorlab@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:40.561Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2A5RqrACHJ90ZBtKYLBeOY$WtNOnKh2GgKJxoWawnGUlvegv8Y7qRQiDD3JnjznJfo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "peoplefirst",
+    "first_name": "",
+    "last_name": "",
+    "email": "peoplefirst@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:41.305Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7atEwRkcCTPR4gRaXsTL2b$TEZsfl8LGH/05iFwKHNDTuONWrf1y5I0ueG+FYV/nW0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "moneymind",
+    "first_name": "",
+    "last_name": "",
+    "email": "moneymind@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:42.095Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ZJ479IbyYRW3TyTKWPaZz2$ZU1aq862sIIgLumouia7fTXIyMynGl/0UjEeXpFkvnI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "helpdesk-co",
+    "first_name": "",
+    "last_name": "",
+    "email": "helpdesk-co@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:42.841Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$deg9L3ESS0SYXztzKYOrwR$1bnRKF2iGyT25kTC2+ohb25k4A8e7wx0tenQO549Xok=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "neuronet",
+    "first_name": "",
+    "last_name": "",
+    "email": "neuronet@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-28T07:02:43.571Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 41,
+  "fields": {
+    "password": "!FEzJ7VQs7RSsGYhBMGoeIzks12GkppWyA9jiEGPl",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "acme-co",
+    "first_name": "",
+    "last_name": "",
+    "email": "acme-co@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-30T08:29:17.107Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 42,
+  "fields": {
+    "password": "!q0nnpU9ILWum32ERokKfzIfA829d5aIlloEhIIMr",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "example-inc",
+    "first_name": "",
+    "last_name": "",
+    "email": "example-inc@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-30T08:29:17.113Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "jobs",
+    "model": "company"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "jobs",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "jobs",
+    "model": "student"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e4i4edcda4xb3a9woaiqm1ml1rv05xly",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgTOm4dO8ZCAyDVA0kpV0Z765NutDtf-_9l_BhW4vfOi9-TuIstDj9bjHQg-sO0j3UW5PU6rrMUe6KPGiX15b4eTncv4MSevnWMAGiytmQDhkn5CEzqQwKEDiNZgCjaUSnIzocFJAhZRUbl6wzWlvx_gDPrDbC:1uqQcL:6ZSlhgNEoCoX55VdHDEavjuqEDomdqsNrc2Ue65dBcQ",
+    "expire_date": "2025-09-08T06:23:45.623Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h69g78i3anuh046tzyufh5m39u76bl2a",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgTOm4dO8ZCAyDVA0kpV0Z765NutDtf-_9l_BhW4vfOi9-TuIstDj9bjHQg-sO0j3UW5PU6rrMUe6KPGiX15b4eTncv4MSevnWMAGiytmQDhkn5CEzqQwKEDiNZgCjaUSnIzocFJAhZRUbl6wzWlvx_gDPrDbC:1ur5xo:sG-e7HbCdifDxC_9OvUJlEUDKRoohVy2Pz3HBxgyh28",
+    "expire_date": "2025-09-10T02:32:40.584Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 8,
+  "fields": {
+    "user": 9,
+    "name": "KBTG (Kasikorn Business-Technology Group)",
+    "website": "https://www.kbtg.tech",
+    "logo_url": "https://logo.clearbit.com/kbtg.tech",
+    "location": "Bangkok",
+    "description": "KBTG (Kasikorn Business-Technology Group) autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:32.857Z",
+    "updated_at": "2025-08-25T06:55:32.857Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 9,
+  "fields": {
+    "user": 10,
+    "name": "SCB TechX",
+    "website": "https://www.scbtechx.io",
+    "logo_url": "https://logo.clearbit.com/scbtechx.io",
+    "location": "Bangkok",
+    "description": "SCB TechX autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:33.677Z",
+    "updated_at": "2025-08-25T06:55:33.677Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 10,
+  "fields": {
+    "user": 11,
+    "name": "PTT Digital",
+    "website": "https://www.pttdigital.com",
+    "logo_url": "https://logo.clearbit.com/pttdigital.com",
+    "location": "Bangkok",
+    "description": "PTT Digital autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:34.489Z",
+    "updated_at": "2025-08-25T06:55:34.489Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 11,
+  "fields": {
+    "user": 12,
+    "name": "True Digital Group",
+    "website": "https://www.truedigital.com",
+    "logo_url": "https://logo.clearbit.com/truedigital.com",
+    "location": "Bangkok",
+    "description": "True Digital Group autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:35.248Z",
+    "updated_at": "2025-08-25T06:55:35.248Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 12,
+  "fields": {
+    "user": 13,
+    "name": "AIS",
+    "website": "https://www.ais.th",
+    "logo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "location": "Bangkok",
+    "description": "AIS autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:36.051Z",
+    "updated_at": "2025-08-25T06:55:36.051Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 13,
+  "fields": {
+    "user": 14,
+    "name": "LINE MAN Wongnai",
+    "website": "https://www.lmwn.com",
+    "logo_url": "https://logo.clearbit.com/wongnai.com",
+    "location": "Bangkok",
+    "description": "LINE MAN Wongnai autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:36.817Z",
+    "updated_at": "2025-08-25T06:55:36.817Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 14,
+  "fields": {
+    "user": 15,
+    "name": "Agoda",
+    "website": "https://careers.agoda.com",
+    "logo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "location": "Bangkok",
+    "description": "Agoda autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:37.596Z",
+    "updated_at": "2025-08-25T06:55:37.596Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 15,
+  "fields": {
+    "user": 16,
+    "name": "Grab Thailand",
+    "website": "https://www.grab.com",
+    "logo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "location": "Bangkok",
+    "description": "Grab Thailand autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:38.376Z",
+    "updated_at": "2025-08-25T06:55:38.376Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 16,
+  "fields": {
+    "user": 17,
+    "name": "Bluebik",
+    "website": "https://www.bluebik.com",
+    "logo_url": "https://logo.clearbit.com/bluebik.com",
+    "location": "Bangkok",
+    "description": "Bluebik autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:39.153Z",
+    "updated_at": "2025-08-25T06:55:39.153Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 17,
+  "fields": {
+    "user": 18,
+    "name": "Bitkub",
+    "website": "https://www.bitkub.com",
+    "logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Bitkub_Capital_Logo.svg",
+    "location": "Bangkok",
+    "description": "Bitkub autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:39.939Z",
+    "updated_at": "2025-08-25T06:55:39.939Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 18,
+  "fields": {
+    "user": 19,
+    "name": "G-Able",
+    "website": "https://www.g-able.com",
+    "logo_url": "https://logo.clearbit.com/g-able.com",
+    "location": "Bangkok",
+    "description": "G-Able autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:40.740Z",
+    "updated_at": "2025-08-25T06:55:40.740Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 19,
+  "fields": {
+    "user": 20,
+    "name": "Wisesight",
+    "website": "https://wisesight.com",
+    "logo_url": "https://logo.clearbit.com/wisesight.com",
+    "location": "Bangkok",
+    "description": "Wisesight autogenerated for KUTechnest demo",
+    "contacts": null,
+    "created_at": "2025-08-25T06:55:41.501Z",
+    "updated_at": "2025-08-25T06:55:41.501Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 20,
+  "fields": {
+    "user": 21,
+    "name": "Gogo Bike",
+    "website": "",
+    "logo_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:30.216Z",
+    "updated_at": "2025-08-28T07:02:30.216Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 21,
+  "fields": {
+    "user": 22,
+    "name": "GCOO",
+    "website": "",
+    "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:30.947Z",
+    "updated_at": "2025-08-28T07:02:30.947Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 22,
+  "fields": {
+    "user": 23,
+    "name": "ทุเรียนสวนคุณยาย",
+    "website": "",
+    "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:31.679Z",
+    "updated_at": "2025-08-28T07:02:31.679Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 23,
+  "fields": {
+    "user": 24,
+    "name": "FoodieTech",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:32.409Z",
+    "updated_at": "2025-08-28T07:02:32.409Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 24,
+  "fields": {
+    "user": 25,
+    "name": "ZenRide",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:33.166Z",
+    "updated_at": "2025-08-28T07:02:33.166Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 25,
+  "fields": {
+    "user": 26,
+    "name": "SmartMart",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:33.901Z",
+    "updated_at": "2025-08-28T07:02:33.901Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 26,
+  "fields": {
+    "user": 27,
+    "name": "SkyNet Cloud",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:34.632Z",
+    "updated_at": "2025-08-28T07:02:34.632Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 27,
+  "fields": {
+    "user": 28,
+    "name": "SecureIT",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:35.366Z",
+    "updated_at": "2025-08-28T07:02:35.366Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 28,
+  "fields": {
+    "user": 29,
+    "name": "DeepThink Labs",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:36.109Z",
+    "updated_at": "2025-08-28T07:02:36.109Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 29,
+  "fields": {
+    "user": 30,
+    "name": "PixelPlay Studio",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/888/888879.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:36.906Z",
+    "updated_at": "2025-08-28T07:02:36.906Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 30,
+  "fields": {
+    "user": 31,
+    "name": "Brandify",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:37.637Z",
+    "updated_at": "2025-08-28T07:02:37.637Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 31,
+  "fields": {
+    "user": 32,
+    "name": "InnovateX",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:38.371Z",
+    "updated_at": "2025-08-28T07:02:38.371Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 32,
+  "fields": {
+    "user": 33,
+    "name": "BugSquashers",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:39.102Z",
+    "updated_at": "2025-08-28T07:02:39.102Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 33,
+  "fields": {
+    "user": 34,
+    "name": "PipeOps",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:39.838Z",
+    "updated_at": "2025-08-28T07:02:39.838Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 34,
+  "fields": {
+    "user": 35,
+    "name": "StoryLine Media",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:40.557Z",
+    "updated_at": "2025-08-28T07:02:40.557Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 35,
+  "fields": {
+    "user": 36,
+    "name": "ColorLab",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:41.299Z",
+    "updated_at": "2025-08-28T07:02:41.299Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 36,
+  "fields": {
+    "user": 37,
+    "name": "PeopleFirst",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:42.091Z",
+    "updated_at": "2025-08-28T07:02:42.091Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 37,
+  "fields": {
+    "user": 38,
+    "name": "MoneyMind",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:42.837Z",
+    "updated_at": "2025-08-28T07:02:42.837Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 38,
+  "fields": {
+    "user": 39,
+    "name": "HelpDesk Co.",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:43.566Z",
+    "updated_at": "2025-08-28T07:02:43.566Z"
+  }
+},
+{
+  "model": "jobs.company",
+  "pk": 39,
+  "fields": {
+    "user": 40,
+    "name": "NeuroNet",
+    "website": "",
+    "logo_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "location": "bangkok",
+    "description": "Imported",
+    "contacts": null,
+    "created_at": "2025-08-28T07:02:44.306Z",
+    "updated_at": "2025-08-28T07:02:44.306Z"
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 180,
+  "fields": {
+    "company": 20,
+    "title": "UI/UX Designer",
+    "work_field": "it-support",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 1800,
+    "min_year": 2,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T08:47:42.806Z",
+    "updated_at": "2025-08-30T14:31:25.865Z",
+    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 181,
+  "fields": {
+    "company": 21,
+    "title": "Backend Developer",
+    "work_field": "backend",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 32000,
+    "min_year": 2,
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
+    "created_at": "2025-08-30T08:47:43.806Z",
+    "updated_at": "2025-08-30T08:47:42.837Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 182,
+  "fields": {
+    "company": 22,
+    "title": "Frontend Developer",
+    "work_field": "frontend",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 46000,
+    "min_year": 0,
+    "requirement": "- Solid JavaScript/TypeScript and modern framework experience\n- Responsive, accessible UI implementation (ARIA, WCAG basics)\n- API integration and state management best practices\n- Tooling familiarity (bundlers, linters, tests)",
+    "description": "Build responsive UIs with modern JS frameworks.",
+    "created_at": "2025-08-30T08:47:44.806Z",
+    "updated_at": "2025-08-30T08:47:42.840Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a Frontend Developer, you’ll implement responsive, performant user interfaces, integrate APIs, and maintain component libraries. You ensure cross-browser/device compatibility and accessible UX using modern tooling."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 183,
+  "fields": {
+    "company": 23,
+    "title": "Fullstack Engineer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 59000,
+    "min_year": 2,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T08:47:45.806Z",
+    "updated_at": "2025-08-30T08:47:42.842Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 184,
+  "fields": {
+    "company": 24,
+    "title": "Mobile App Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 51000,
+    "min_year": 0,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T08:47:46.806Z",
+    "updated_at": "2025-08-30T08:47:42.844Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 185,
+  "fields": {
+    "company": 25,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 66000,
+    "min_year": 0,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T08:47:47.806Z",
+    "updated_at": "2025-08-30T08:47:42.847Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 186,
+  "fields": {
+    "company": 26,
+    "title": "Cloud Engineer",
+    "work_field": "cloud",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 38000,
+    "min_year": 1,
+    "requirement": "- Hands-on with a major cloud (AWS/GCP/Azure)\n- Networking, IAM, and security best practices\n- Observability and capacity planning\n- Automation with scripts or IaC",
+    "description": "Maintain cloud infrastructure and CI/CD pipelines.",
+    "created_at": "2025-08-30T08:47:48.806Z",
+    "updated_at": "2025-08-30T08:47:42.849Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "As a Cloud Engineer, you’ll design and operate cloud resources, enforce cost/security best practices, and support teams with reliable environments."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 187,
+  "fields": {
+    "company": 27,
+    "title": "Cybersecurity Specialist",
+    "work_field": "security",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 57000,
+    "min_year": 1,
+    "requirement": "- Threat modeling and control implementation\n- Vulnerability management and remediation\n- Identity/access, secrets, and network security\n- Compliance awareness and secure SDLC",
+    "description": "Implement and monitor enterprise security controls.",
+    "created_at": "2025-08-30T08:47:49.806Z",
+    "updated_at": "2025-08-30T08:47:42.851Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "You’ll harden systems, enforce security policies, perform reviews, and lead incident response to protect company data and infrastructure."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 188,
+  "fields": {
+    "company": 28,
+    "title": "AI Research Intern",
+    "work_field": "intern",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 37000,
+    "min_year": 2,
+    "requirement": "- Familiarity with NLP/ML literature and experimentation\n- Reproducible pipelines and result documentation\n- Model evaluation and error analysis\n- Collaboration with engineering for handoff",
+    "description": "Research models and assist with AI experiments.",
+    "created_at": "2025-08-30T08:47:50.806Z",
+    "updated_at": "2025-08-30T08:47:42.853Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "You’ll run experiments, evaluate models, tune hyperparameters, and document results. You’ll collaborate with senior researchers and help move promising ideas toward production."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 189,
+  "fields": {
+    "company": 29,
+    "title": "Game Developer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 46000,
+    "min_year": 1,
+    "requirement": "- Unity/Unreal experience (C# or C++ as relevant)\n- Gameplay systems and tools development\n- Performance profiling and optimization\n- Collaboration with art/design for polished feel",
+    "description": "Develop engaging gameplay and tools.",
+    "created_at": "2025-08-30T08:47:51.806Z",
+    "updated_at": "2025-08-30T08:47:42.855Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888879.png",
+    "long_description": "As a Game Developer, you’ll build gameplay systems, tools, and pipelines in Unity/Unreal, optimize performance, and collaborate with art/design for polished experiences."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 190,
+  "fields": {
+    "company": 30,
+    "title": "Marketing Specialist",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 45000,
+    "min_year": 2,
+    "requirement": "- Hands-on with ads platforms and analytics\n- Campaign planning, execution, and optimization\n- Copy, creatives, and landing page iteration\n- ROI mindset and clear reporting",
+    "description": "Plan and execute digital marketing campaigns.",
+    "created_at": "2025-08-30T08:47:52.806Z",
+    "updated_at": "2025-08-30T08:47:42.858Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
+    "long_description": "As a Marketing Specialist, you’ll run multi-channel campaigns, analyze performance, optimize spend/creatives, and grow brand awareness and conversions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 191,
+  "fields": {
+    "company": 31,
+    "title": "Product Manager",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 43000,
+    "min_year": 1,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T08:47:53.806Z",
+    "updated_at": "2025-08-30T08:47:42.859Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 192,
+  "fields": {
+    "company": 32,
+    "title": "QA Tester",
+    "work_field": "qa",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 44000,
+    "min_year": 1,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T08:47:54.806Z",
+    "updated_at": "2025-08-30T08:47:42.863Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 193,
+  "fields": {
+    "company": 33,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 57000,
+    "min_year": 3,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T08:47:55.806Z",
+    "updated_at": "2025-08-30T08:47:42.865Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 194,
+  "fields": {
+    "company": 34,
+    "title": "Content Writer",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 53000,
+    "min_year": 0,
+    "requirement": "- Strong writing and editing skills\n- SEO best practices and keyword research\n- Content briefs, outlines, and style guide adherence\n- Collaborate with design/marketing for distribution",
+    "description": "Write clear, SEO-friendly content.",
+    "created_at": "2025-08-30T08:47:56.806Z",
+    "updated_at": "2025-08-30T08:47:42.867Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll produce articles, landing pages, and in-product copy aligned with tone and SEO goals, collaborating with design/marketing for compelling narratives."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 195,
+  "fields": {
+    "company": 35,
+    "title": "Graphic Designer",
+    "work_field": "design",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 46000,
+    "min_year": 3,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:47:57.806Z",
+    "updated_at": "2025-08-30T08:47:42.869Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 196,
+  "fields": {
+    "company": 36,
+    "title": "HR Coordinator",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 62000,
+    "min_year": 1,
+    "requirement": "- Recruiting coordination and ATS familiarity\n- Interview scheduling and candidate experience\n- Onboarding checklist and documentation\n- Strong organization and communication",
+    "description": "Support hiring and onboarding processes.",
+    "created_at": "2025-08-30T08:47:58.806Z",
+    "updated_at": "2025-08-30T08:47:42.871Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "You’ll coordinate recruiting pipelines, schedule interviews, assist with onboarding, and help improve people operations and employee experience."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 197,
+  "fields": {
+    "company": 37,
+    "title": "Financial Analyst",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 38000,
+    "min_year": 2,
+    "requirement": "- Financial modeling and forecasting\n- Variance analysis and KPI tracking\n- Excel/Sheets proficiency; BI tools a plus\n- Clear executive-level reporting",
+    "description": "Analyze financials and support decisions.",
+    "created_at": "2025-08-30T08:47:59.806Z",
+    "updated_at": "2025-08-30T08:47:42.874Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "You’ll build models, track KPIs, support budgeting/forecasting, and prepare insights that guide strategic choices."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 198,
+  "fields": {
+    "company": 38,
+    "title": "Customer Support",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 52000,
+    "min_year": 1,
+    "requirement": "- Empathetic, clear customer communication\n- Ticket tooling and knowledge base updates\n- Troubleshooting and escalation judgment\n- Feedback loop with product/engineering",
+    "description": "Help users with troubleshooting and guidance.",
+    "created_at": "2025-08-30T08:48:00.806Z",
+    "updated_at": "2025-08-30T08:49:03.891Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+    "long_description": "You’ll resolve tickets, document solutions, escalate complex cases, and advocate for user needs to improve product quality."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 199,
+  "fields": {
+    "company": 39,
+    "title": "Machine Learning Engineer",
+    "work_field": "data-engineer",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 57000,
+    "min_year": 1,
+    "requirement": "- Feature engineering and model lifecycle management\n- Serving, monitoring, and retraining pipelines\n- Latency/throughput trade-offs in production\n- Practical MLOps tools familiarity",
+    "description": "Build and deploy ML models into production.",
+    "created_at": "2025-08-30T08:48:01.806Z",
+    "updated_at": "2025-08-30T08:47:42.881Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As an ML Engineer, you’ll take models from notebooks to production: feature pipelines, inference services, monitoring, and continuous improvement of accuracy and latency."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 200,
+  "fields": {
+    "company": 15,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 44000,
+    "min_year": 1,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T08:54:02.320Z",
+    "updated_at": "2025-08-30T08:54:02.322Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 201,
+  "fields": {
+    "company": 33,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 66000,
+    "min_year": 3,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T08:54:03.320Z",
+    "updated_at": "2025-08-30T08:54:02.325Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 202,
+  "fields": {
+    "company": 25,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 73000,
+    "min_year": 0,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T08:54:04.320Z",
+    "updated_at": "2025-08-30T08:54:02.326Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 203,
+  "fields": {
+    "company": 36,
+    "title": "QA Engineer",
+    "work_field": "qa",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 45000,
+    "min_year": 0,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T08:54:05.320Z",
+    "updated_at": "2025-08-30T08:54:02.328Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 204,
+  "fields": {
+    "company": 34,
+    "title": "Backend Engineer",
+    "work_field": "backend",
+    "location": "nakhon-sawan",
+    "onsite": false,
+    "salary": 64000,
+    "min_year": 2,
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
+    "created_at": "2025-08-30T08:54:06.320Z",
+    "updated_at": "2025-08-30T08:54:02.329Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 205,
+  "fields": {
+    "company": 9,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 87000,
+    "min_year": 2,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T08:54:07.320Z",
+    "updated_at": "2025-08-30T08:54:02.330Z",
+    "image_url": "https://logo.clearbit.com/scbtechx.io",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 206,
+  "fields": {
+    "company": 35,
+    "title": "Backend Engineer",
+    "work_field": "backend",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 48000,
+    "min_year": 0,
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
+    "created_at": "2025-08-30T08:54:08.320Z",
+    "updated_at": "2025-08-30T08:54:02.332Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 207,
+  "fields": {
+    "company": 35,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 54000,
+    "min_year": 2,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T08:54:09.320Z",
+    "updated_at": "2025-08-30T08:54:02.333Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 208,
+  "fields": {
+    "company": 16,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 50000,
+    "min_year": 2,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T08:54:10.320Z",
+    "updated_at": "2025-08-30T08:54:02.334Z",
+    "image_url": "https://logo.clearbit.com/bluebik.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 209,
+  "fields": {
+    "company": 23,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 74000,
+    "min_year": 1,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T08:54:11.320Z",
+    "updated_at": "2025-08-30T08:54:02.336Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 210,
+  "fields": {
+    "company": 27,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "ang-thong",
+    "onsite": false,
+    "salary": 60000,
+    "min_year": 0,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:54:12.320Z",
+    "updated_at": "2025-08-30T08:54:02.337Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 211,
+  "fields": {
+    "company": 31,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "sa-kaeo",
+    "onsite": true,
+    "salary": 61000,
+    "min_year": 1,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T08:54:13.320Z",
+    "updated_at": "2025-08-30T08:54:02.339Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 212,
+  "fields": {
+    "company": 14,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "loei",
+    "onsite": false,
+    "salary": 56000,
+    "min_year": 2,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:54:14.320Z",
+    "updated_at": "2025-08-30T08:54:02.341Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 213,
+  "fields": {
+    "company": 8,
+    "title": "Cloud Engineer",
+    "work_field": "cloud",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 79000,
+    "min_year": 1,
+    "requirement": "- Hands-on with a major cloud (AWS/GCP/Azure)\n- Networking, IAM, and security best practices\n- Observability and capacity planning\n- Automation with scripts or IaC",
+    "description": "Maintain cloud infrastructure and CI/CD pipelines.",
+    "created_at": "2025-08-30T08:54:15.320Z",
+    "updated_at": "2025-08-30T08:54:02.342Z",
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "As a Cloud Engineer, you’ll design and operate cloud resources, enforce cost/security best practices, and support teams with reliable environments."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 214,
+  "fields": {
+    "company": 31,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "chanthaburi",
+    "onsite": false,
+    "salary": 32000,
+    "min_year": 1,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:54:16.320Z",
+    "updated_at": "2025-08-30T08:54:02.343Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 215,
+  "fields": {
+    "company": 26,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 67000,
+    "min_year": 2,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T08:54:17.320Z",
+    "updated_at": "2025-08-30T08:54:02.345Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 216,
+  "fields": {
+    "company": 13,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 74000,
+    "min_year": 3,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T08:54:18.320Z",
+    "updated_at": "2025-08-30T08:54:02.347Z",
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 217,
+  "fields": {
+    "company": 38,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "nakhon-nayok",
+    "onsite": false,
+    "salary": 87000,
+    "min_year": 1,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T08:54:19.320Z",
+    "updated_at": "2025-08-30T08:54:02.349Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 218,
+  "fields": {
+    "company": 25,
+    "title": "ML Engineer",
+    "work_field": "fullstack",
+    "location": "prachinburi",
+    "onsite": true,
+    "salary": 41000,
+    "min_year": 0,
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
+    "created_at": "2025-08-30T08:54:20.320Z",
+    "updated_at": "2025-08-30T08:54:02.350Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 219,
+  "fields": {
+    "company": 25,
+    "title": "QA Engineer",
+    "work_field": "qa",
+    "location": "prachinburi",
+    "onsite": true,
+    "salary": 63000,
+    "min_year": 2,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T08:54:21.320Z",
+    "updated_at": "2025-08-30T08:54:02.351Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 220,
+  "fields": {
+    "company": 17,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "chonburi",
+    "onsite": false,
+    "salary": 60000,
+    "min_year": 3,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:54:22.320Z",
+    "updated_at": "2025-08-30T08:54:02.353Z",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Bitkub_Capital_Logo.svg",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 221,
+  "fields": {
+    "company": 37,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "pattani",
+    "onsite": true,
+    "salary": 53000,
+    "min_year": 2,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T08:54:23.320Z",
+    "updated_at": "2025-08-30T08:54:02.354Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 222,
+  "fields": {
+    "company": 19,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "mukdahan",
+    "onsite": false,
+    "salary": 65000,
+    "min_year": 1,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T08:54:24.320Z",
+    "updated_at": "2025-08-30T08:54:02.356Z",
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 223,
+  "fields": {
+    "company": 19,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 58000,
+    "min_year": 2,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T08:54:25.320Z",
+    "updated_at": "2025-08-30T08:54:02.357Z",
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 224,
+  "fields": {
+    "company": 28,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "chiang-mai",
+    "onsite": false,
+    "salary": 45000,
+    "min_year": 1,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T08:54:26.320Z",
+    "updated_at": "2025-08-30T08:54:02.358Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 225,
+  "fields": {
+    "company": 26,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "chiang-rai",
+    "onsite": false,
+    "salary": 47000,
+    "min_year": 1,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T08:54:27.320Z",
+    "updated_at": "2025-08-30T08:54:02.360Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 226,
+  "fields": {
+    "company": 39,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 49000,
+    "min_year": 3,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T08:54:28.320Z",
+    "updated_at": "2025-08-30T08:54:02.361Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 227,
+  "fields": {
+    "company": 10,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 74000,
+    "min_year": 2,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T08:54:29.320Z",
+    "updated_at": "2025-08-30T08:54:02.362Z",
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 228,
+  "fields": {
+    "company": 18,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "pattani",
+    "onsite": false,
+    "salary": 85000,
+    "min_year": 2,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T08:54:30.320Z",
+    "updated_at": "2025-08-30T08:54:02.364Z",
+    "image_url": "https://logo.clearbit.com/g-able.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 229,
+  "fields": {
+    "company": 34,
+    "title": "ML Engineer",
+    "work_field": "fullstack",
+    "location": "prachinburi",
+    "onsite": false,
+    "salary": 82000,
+    "min_year": 3,
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
+    "created_at": "2025-08-30T08:54:31.320Z",
+    "updated_at": "2025-08-30T08:54:02.365Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 230,
+  "fields": {
+    "company": 21,
+    "title": "UI/UX Designer",
+    "work_field": "other",
+    "location": "chai-nat",
+    "onsite": false,
+    "salary": 58000,
+    "min_year": 3,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T08:54:32.320Z",
+    "updated_at": "2025-08-30T08:54:02.367Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 231,
+  "fields": {
+    "company": 9,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "sing-buri",
+    "onsite": false,
+    "salary": 44000,
+    "min_year": 1,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T08:54:33.320Z",
+    "updated_at": "2025-08-30T08:54:02.368Z",
+    "image_url": "https://logo.clearbit.com/scbtechx.io",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 232,
+  "fields": {
+    "company": 28,
+    "title": "Backend Engineer",
+    "work_field": "backend",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 40000,
+    "min_year": 2,
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
+    "created_at": "2025-08-30T08:54:34.320Z",
+    "updated_at": "2025-08-30T08:54:02.369Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 233,
+  "fields": {
+    "company": 12,
+    "title": "Data Engineer",
+    "work_field": "data-engineer",
+    "location": "suphan-buri",
+    "onsite": false,
+    "salary": 71000,
+    "min_year": 0,
+    "requirement": "- ETL/ELT pipeline design and orchestration\n- Data quality, lineage, and schema management\n- Batch/stream processing and storage optimization\n- Infrastructure as code and CI for data workflows",
+    "description": "Build reliable data pipelines and warehouses.",
+    "created_at": "2025-08-30T08:54:35.320Z",
+    "updated_at": "2025-08-30T08:54:02.370Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Data Engineer, you’ll design ETL/ELT pipelines, manage schemas and orchestration, and ensure data quality, lineage, and performance for analytics and ML teams."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 234,
+  "fields": {
+    "company": 8,
+    "title": "UI/UX Designer",
+    "work_field": "other",
+    "location": "saraburi",
+    "onsite": true,
+    "salary": 41000,
+    "min_year": 2,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T08:54:36.320Z",
+    "updated_at": "2025-08-30T08:54:02.372Z",
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 235,
+  "fields": {
+    "company": 27,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 70000,
+    "min_year": 2,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T08:54:37.320Z",
+    "updated_at": "2025-08-30T08:54:02.373Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 236,
+  "fields": {
+    "company": 16,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "sisaket",
+    "onsite": false,
+    "salary": 34000,
+    "min_year": 3,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T08:54:38.320Z",
+    "updated_at": "2025-08-30T08:54:02.374Z",
+    "image_url": "https://logo.clearbit.com/bluebik.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 237,
+  "fields": {
+    "company": 28,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 65000,
+    "min_year": 2,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T08:54:39.320Z",
+    "updated_at": "2025-08-30T08:54:02.375Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 238,
+  "fields": {
+    "company": 10,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 34000,
+    "min_year": 2,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T08:54:40.320Z",
+    "updated_at": "2025-08-30T08:54:02.377Z",
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 239,
+  "fields": {
+    "company": 8,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "nong-bua-lamphu",
+    "onsite": false,
+    "salary": 65000,
+    "min_year": 3,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T08:54:41.320Z",
+    "updated_at": "2025-08-30T08:54:02.380Z",
+    "image_url": "https://logo.clearbit.com/kbtg.tech",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 240,
+  "fields": {
+    "company": 35,
+    "title": "ML Engineer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 79000,
+    "min_year": 1,
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
+    "created_at": "2025-08-30T13:54:01.500Z",
+    "updated_at": "2025-08-30T13:54:01.505Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 241,
+  "fields": {
+    "company": 22,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 60000,
+    "min_year": 2,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T13:54:02.500Z",
+    "updated_at": "2025-08-30T13:54:01.509Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 242,
+  "fields": {
+    "company": 22,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 58000,
+    "min_year": 3,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:03.500Z",
+    "updated_at": "2025-08-30T13:54:01.511Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 243,
+  "fields": {
+    "company": 36,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 52000,
+    "min_year": 0,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:04.500Z",
+    "updated_at": "2025-08-30T13:54:01.513Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 244,
+  "fields": {
+    "company": 34,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 81000,
+    "min_year": 2,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T13:54:05.500Z",
+    "updated_at": "2025-08-30T13:54:01.515Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 245,
+  "fields": {
+    "company": 22,
+    "title": "ML Engineer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 45000,
+    "min_year": 2,
+    "requirement": "- Write clean, tested, maintainable code\n- Code reviews, CI/CD, and documentation\n- Collaborate in a cross-functional team",
+    "description": "Build, maintain, and improve software systems.",
+    "created_at": "2025-08-30T13:54:06.500Z",
+    "updated_at": "2025-08-30T13:54:01.517Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "You’ll ship reliable features, review code, write tests, and collaborate across functions to deliver business value."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 246,
+  "fields": {
+    "company": 32,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "nakhon-nayok",
+    "onsite": false,
+    "salary": 56000,
+    "min_year": 1,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T13:54:07.500Z",
+    "updated_at": "2025-08-30T13:54:01.518Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 247,
+  "fields": {
+    "company": 12,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "bangkok",
+    "onsite": false,
+    "salary": 46000,
+    "min_year": 2,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T13:54:08.500Z",
+    "updated_at": "2025-08-30T13:54:01.520Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 248,
+  "fields": {
+    "company": 20,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 31000,
+    "min_year": 3,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T13:54:09.500Z",
+    "updated_at": "2025-08-30T13:54:01.522Z",
+    "image_url": "https://play-lh.googleusercontent.com/yAseCUtav8OBWf8pIUMO57YCBXDlTPuNF0JGhr1Tl4VvMihG406nrFJWkXGoz8Oxbz8L8cwG1N_YOIQ61oMooA8=w480-h960",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 249,
+  "fields": {
+    "company": 28,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "trat",
+    "onsite": false,
+    "salary": 43000,
+    "min_year": 1,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T13:54:10.500Z",
+    "updated_at": "2025-08-30T13:54:01.524Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 250,
+  "fields": {
+    "company": 10,
+    "title": "QA Engineer",
+    "work_field": "qa",
+    "location": "kanchanaburi",
+    "onsite": false,
+    "salary": 45000,
+    "min_year": 1,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T13:54:11.500Z",
+    "updated_at": "2025-08-30T13:54:01.525Z",
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 251,
+  "fields": {
+    "company": 13,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 82000,
+    "min_year": 3,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T13:54:12.500Z",
+    "updated_at": "2025-08-30T13:54:01.527Z",
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 252,
+  "fields": {
+    "company": 22,
+    "title": "QA Engineer",
+    "work_field": "qa",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 27000,
+    "min_year": 1,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T13:54:13.500Z",
+    "updated_at": "2025-08-30T13:54:01.528Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 253,
+  "fields": {
+    "company": 18,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "satun",
+    "onsite": true,
+    "salary": 66000,
+    "min_year": 1,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T13:54:14.500Z",
+    "updated_at": "2025-08-30T13:54:01.529Z",
+    "image_url": "https://logo.clearbit.com/g-able.com",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 254,
+  "fields": {
+    "company": 22,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 55000,
+    "min_year": 2,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T13:54:15.500Z",
+    "updated_at": "2025-08-30T13:54:01.531Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1uR-7MlN1gLLt-yUfzFCK4FCZoX3o0lNmg&s",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 255,
+  "fields": {
+    "company": 19,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "samut-sakhon",
+    "onsite": false,
+    "salary": 58000,
+    "min_year": 1,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T13:54:16.500Z",
+    "updated_at": "2025-08-30T13:54:01.532Z",
+    "image_url": "https://logo.clearbit.com/wisesight.com",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 256,
+  "fields": {
+    "company": 34,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 40000,
+    "min_year": 0,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T13:54:17.500Z",
+    "updated_at": "2025-08-30T13:54:01.533Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 257,
+  "fields": {
+    "company": 13,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "loei",
+    "onsite": false,
+    "salary": 48000,
+    "min_year": 2,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T13:54:18.500Z",
+    "updated_at": "2025-08-30T13:54:01.534Z",
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 258,
+  "fields": {
+    "company": 15,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 76000,
+    "min_year": 3,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T13:54:19.500Z",
+    "updated_at": "2025-08-30T13:54:01.535Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 259,
+  "fields": {
+    "company": 12,
+    "title": "Backend Engineer",
+    "work_field": "backend",
+    "location": "uthai-thani",
+    "onsite": true,
+    "salary": 42000,
+    "min_year": 0,
+    "requirement": "- Production experience with REST APIs and ORMs\n- Relational DB skills (migrations, indexing, transactions)\n- Background jobs, caching, and performance tuning\n- Observability (logs/metrics/traces) and security basics",
+    "description": "Develop REST APIs and scalable backend services.",
+    "created_at": "2025-08-30T13:54:20.500Z",
+    "updated_at": "2025-08-30T13:54:01.538Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Advanced%20Info%20Service%20logo.svg?width=200",
+    "long_description": "As a Backend Developer, you’ll design and build reliable APIs, own data models and business logic, and improve performance, security, and observability of services at scale."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 260,
+  "fields": {
+    "company": 14,
+    "title": "SRE",
+    "work_field": "devops",
+    "location": "chanthaburi",
+    "onsite": false,
+    "salary": 48000,
+    "min_year": 2,
+    "requirement": "- Collaborate with product, design, and engineering\n- Deliver maintainable, well-tested work\n- Communicate clearly and document decisions",
+    "description": "Contribute to product development in a cross-functional team.",
+    "created_at": "2025-08-30T13:54:21.500Z",
+    "updated_at": "2025-08-30T13:54:01.540Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "You will collaborate with product, design, and engineering to deliver user-facing value. Responsibilities include implementing features, reviewing code, writing tests, and continuously improving quality and performance."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 261,
+  "fields": {
+    "company": 37,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "yala",
+    "onsite": false,
+    "salary": 61000,
+    "min_year": 0,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T13:54:22.500Z",
+    "updated_at": "2025-08-30T13:54:01.541Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135673.png",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 262,
+  "fields": {
+    "company": 11,
+    "title": "DevOps Engineer",
+    "work_field": "devops",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 85000,
+    "min_year": 2,
+    "requirement": "- CI/CD design and maintenance\n- IaC (e.g., Terraform) and container orchestration\n- Monitoring/alerting and SLO/SLA practices\n- Cost, reliability, and scalability trade-offs",
+    "description": "Automate deployments and improve reliability.",
+    "created_at": "2025-08-30T13:54:23.500Z",
+    "updated_at": "2025-08-30T13:54:01.542Z",
+    "image_url": "https://logo.clearbit.com/truedigital.com",
+    "long_description": "As a DevOps Engineer, you’ll own CI/CD, infrastructure as code, observability, and scaling. You’ll reduce toil with automation and improve service SLOs."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 263,
+  "fields": {
+    "company": 28,
+    "title": "UI/UX Designer",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 50000,
+    "min_year": 1,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T13:54:24.500Z",
+    "updated_at": "2025-08-30T13:54:01.543Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 264,
+  "fields": {
+    "company": 32,
+    "title": "QA Engineer",
+    "work_field": "qa",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 57000,
+    "min_year": 1,
+    "requirement": "- Test planning and test case design\n- Automated functional/regression tests\n- Clear, reproducible bug reports\n- Cross-browser/device verification",
+    "description": "Test web/mobile apps and prevent regressions.",
+    "created_at": "2025-08-30T13:54:25.500Z",
+    "updated_at": "2025-08-30T13:54:01.544Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+    "long_description": "As a QA Engineer, you’ll design test plans, build automated suites, create reproducible bug reports, and partner with developers to ship quality features."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 265,
+  "fields": {
+    "company": 25,
+    "title": "Frontend Developer",
+    "work_field": "frontend",
+    "location": "nakhon-pathom",
+    "onsite": false,
+    "salary": 63000,
+    "min_year": 0,
+    "requirement": "- Solid JavaScript/TypeScript and modern framework experience\n- Responsive, accessible UI implementation (ARIA, WCAG basics)\n- API integration and state management best practices\n- Tooling familiarity (bundlers, linters, tests)",
+    "description": "Build responsive UIs with modern JS frameworks.",
+    "created_at": "2025-08-30T13:54:26.500Z",
+    "updated_at": "2025-08-30T13:54:01.546Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Frontend Developer, you’ll implement responsive, performant user interfaces, integrate APIs, and maintain component libraries. You ensure cross-browser/device compatibility and accessible UX using modern tooling."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 266,
+  "fields": {
+    "company": 27,
+    "title": "Data Engineer",
+    "work_field": "data-engineer",
+    "location": "nakhon-phanom",
+    "onsite": true,
+    "salary": 72000,
+    "min_year": 3,
+    "requirement": "- ETL/ELT pipeline design and orchestration\n- Data quality, lineage, and schema management\n- Batch/stream processing and storage optimization\n- Infrastructure as code and CI for data workflows",
+    "description": "Build reliable data pipelines and warehouses.",
+    "created_at": "2025-08-30T13:54:27.500Z",
+    "updated_at": "2025-08-30T13:54:01.547Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Data Engineer, you’ll design ETL/ELT pipelines, manage schemas and orchestration, and ensure data quality, lineage, and performance for analytics and ML teams."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 267,
+  "fields": {
+    "company": 24,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "chai-nat",
+    "onsite": true,
+    "salary": 49000,
+    "min_year": 0,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:28.500Z",
+    "updated_at": "2025-08-30T13:54:01.548Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/888/888859.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 268,
+  "fields": {
+    "company": 27,
+    "title": "UI/UX Designer",
+    "work_field": "other",
+    "location": "udon-thani",
+    "onsite": false,
+    "salary": 40000,
+    "min_year": 3,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T13:54:29.500Z",
+    "updated_at": "2025-08-30T13:54:01.549Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 269,
+  "fields": {
+    "company": 15,
+    "title": "UI/UX Designer",
+    "work_field": "other",
+    "location": "chaiyaphum",
+    "onsite": false,
+    "salary": 55000,
+    "min_year": 2,
+    "requirement": "- Experience with Figma or Sketch (components, auto-layout)\n- Strong grasp of usability, accessibility, and design systems\n- Ability to turn research/feedback into iterative designs\n- Basic HTML/CSS knowledge for handoff is a plus\n- Portfolio showcasing end-to-end product work",
+    "description": "Design intuitive and modern interfaces for mobile and web apps.",
+    "created_at": "2025-08-30T13:54:30.500Z",
+    "updated_at": "2025-08-30T13:54:01.550Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grab%20Logo.svg?width=220",
+    "long_description": "As a UI/UX Designer, you will craft intuitive, accessible, and visually consistent interfaces for our mobile and web products. You’ll work with product and engineering, run lightweight user tests, and iterate quickly to improve flows, layouts, and interaction patterns."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 270,
+  "fields": {
+    "company": 34,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 59000,
+    "min_year": 1,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:31.500Z",
+    "updated_at": "2025-08-30T13:54:01.551Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 271,
+  "fields": {
+    "company": 31,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 35000,
+    "min_year": 3,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:32.500Z",
+    "updated_at": "2025-08-30T13:54:01.552Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 272,
+  "fields": {
+    "company": 10,
+    "title": "Fullstack Developer",
+    "work_field": "fullstack",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 47000,
+    "min_year": 1,
+    "requirement": "- Comfortable across DB → API → UI\n- Write clean, tested, maintainable code\n- Collaborate with product/design; own features end-to-end\n- CI/CD familiarity and code review discipline",
+    "description": "Develop features across frontend and backend.",
+    "created_at": "2025-08-30T13:54:33.500Z",
+    "updated_at": "2025-08-30T13:54:01.555Z",
+    "image_url": "https://logo.clearbit.com/pttdigital.com",
+    "long_description": "As a Fullstack Engineer, you’ll deliver end-to-end features: database/model changes, API endpoints, and polished UI. You’ll collaborate with product/design and ensure quality via tests and code reviews."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 273,
+  "fields": {
+    "company": 21,
+    "title": "Security Analyst",
+    "work_field": "security",
+    "location": "phetchabun",
+    "onsite": false,
+    "salary": 46000,
+    "min_year": 1,
+    "requirement": "- SIEM/SOAR tools and alert triage proficiency\n- Incident response and root-cause analysis\n- Security hardening and policy enforcement\n- Clear, actionable reporting to stakeholders",
+    "description": "Monitor, detect, and respond to security events.",
+    "created_at": "2025-08-30T13:54:34.500Z",
+    "updated_at": "2025-08-30T13:54:01.556Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Security Analyst, you’ll manage detections, triage incidents, perform root-cause analysis, improve SIEM rules/playbooks, and partner with teams to reduce risk."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 274,
+  "fields": {
+    "company": 27,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "nan",
+    "onsite": true,
+    "salary": 46000,
+    "min_year": 2,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T13:54:35.500Z",
+    "updated_at": "2025-08-30T13:54:01.557Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/1048/1048941.png",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 275,
+  "fields": {
+    "company": 21,
+    "title": "Mobile Developer",
+    "work_field": "mobile",
+    "location": "yasothon",
+    "onsite": true,
+    "salary": 71000,
+    "min_year": 2,
+    "requirement": "- Experience with native or cross-platform frameworks\n- App store delivery and release management\n- Performance and offline-first considerations\n- Integrations (auth, payments, push notifications)",
+    "description": "Build cross-platform mobile apps with great UX.",
+    "created_at": "2025-08-30T13:54:36.500Z",
+    "updated_at": "2025-08-30T13:54:01.559Z",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tIhgxNOTnu5DnOEomC-2nNRLAbnnepte6A&s",
+    "long_description": "As a Mobile Developer, you’ll implement new app features, optimize performance and battery usage, integrate payments/notifications, and ensure smooth releases to app stores."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 276,
+  "fields": {
+    "company": 13,
+    "title": "Product Designer",
+    "work_field": "other",
+    "location": "loei",
+    "onsite": true,
+    "salary": 29000,
+    "min_year": 2,
+    "requirement": "- Create wireframes, mockups, and clickable prototypes\n- Maintain and extend the design system\n- Partner closely with PM and engineering\n- Excellent visual communication and documentation skills",
+    "description": "Create user-centered designs and collaborate across teams.",
+    "created_at": "2025-08-30T13:54:37.500Z",
+    "updated_at": "2025-08-30T13:54:01.560Z",
+    "image_url": "https://logo.clearbit.com/wongnai.com",
+    "long_description": "You will translate requirements into wireframes, mockups, and prototypes, uphold design systems, and partner with engineers to ensure a high-quality user experience from concept to delivery."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 277,
+  "fields": {
+    "company": 11,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 41000,
+    "min_year": 3,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T13:54:38.500Z",
+    "updated_at": "2025-08-30T13:54:01.561Z",
+    "image_url": "https://logo.clearbit.com/truedigital.com",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 278,
+  "fields": {
+    "company": 28,
+    "title": "Data Analyst",
+    "work_field": "data-analyst",
+    "location": "chanthaburi",
+    "onsite": false,
+    "salary": 69000,
+    "min_year": 3,
+    "requirement": "- SQL proficiency and dashboarding (e.g., Metabase/Looker)\n- Define and track KPIs, run ad-hoc analyses\n- Strong data storytelling and stakeholder communication\n- Basic statistics (experiments, significance, biases)",
+    "description": "Analyze data and deliver actionable insights.",
+    "created_at": "2025-08-30T13:54:39.500Z",
+    "updated_at": "2025-08-30T13:54:01.562Z",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png",
+    "long_description": "As a Data Analyst, you’ll build dashboards, define KPIs, analyze customer behavior and experiments, and communicate findings that inform product and business decisions."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 279,
+  "fields": {
+    "company": 14,
+    "title": "Product Manager",
+    "work_field": "other",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 66000,
+    "min_year": 3,
+    "requirement": "- Roadmap ownership and stakeholder alignment\n- Requirements definition and prioritization\n- Outcome-driven metrics and experiment mindset\n- Excellent communication and facilitation skills",
+    "description": "Define product vision and lead delivery.",
+    "created_at": "2025-08-30T13:54:40.500Z",
+    "updated_at": "2025-08-30T13:54:01.563Z",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agoda%20Logo%202022.svg?width=220",
+    "long_description": "As a Product Manager, you’ll own roadmap and outcomes: gather insights, set priorities, write specs, and partner with design/engineering to deliver value iteratively."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 280,
+  "fields": {
+    "company": 12,
+    "title": "IT Trainee",
+    "work_field": "it-support",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 15000,
+    "min_year": 0,
+    "requirement": "- Willingness to learn and take feedback\n- Basic familiarity with relevant tools/stack\n- Reliable communication and ownership",
+    "description": "Learn and contribute to real projects.",
+    "created_at": "2025-08-31T13:19:12.260Z",
+    "updated_at": "2025-08-31T13:19:12.260Z",
+    "image_url": null,
+    "long_description": "You’ll work with mentors, pick up tooling and best practices, and ship scoped tasks while growing your skills."
+  }
+},
+{
+  "model": "jobs.post",
+  "pk": 281,
+  "fields": {
+    "company": 12,
+    "title": "IT Trainee",
+    "work_field": "it-support",
+    "location": "bangkok",
+    "onsite": true,
+    "salary": 15000,
+    "min_year": 0,
+    "requirement": "- Willingness to learn and take feedback\n- Basic familiarity with relevant tools/stack\n- Reliable communication and ownership",
+    "description": "Learn and contribute to real projects.",
+    "created_at": "2025-08-31T13:21:12.179Z",
+    "updated_at": "2025-08-31T13:21:12.180Z",
+    "image_url": null,
+    "long_description": "You’ll work with mentors, pick up tooling and best practices, and ship scoped tasks while growing your skills."
+  }
+}
+]

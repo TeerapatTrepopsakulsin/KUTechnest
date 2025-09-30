@@ -10,9 +10,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="mx-auto w-3/4 my-10">
-    <h3 class="text-left text-2xl text-black font-semibold mb-4">Suggested For You</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  <div class="mx-auto px-[10vw] lg:px-[5vw] my-10">
+    <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[5vh] md:gap-y-[5vh] lg:gap-y-[5vh] auto-rows-[40vh] md:auto-rows-[30vh] lg:auto-rows-[30vh]">
       <JobCard
         v-for="job in props.jobs"
         :key="job.id"
