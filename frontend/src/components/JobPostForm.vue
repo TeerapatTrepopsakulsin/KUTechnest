@@ -243,21 +243,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, watch, toRefs } from 'vue'
 import { category_options, location_options, employment_type_options } from '../constants/options';
-import type { JobPostForm, JobPostResponse } from '../types/post';
-import { useRouter } from 'vue-router'
+import type { JobPostForm } from '../types/post';
 
-const router = useRouter()
+// Props
+const props = defineProps<{
+  isSubmitting?: boolean
+}>()
 
-// Define emits
+// Emits
 const emit = defineEmits<{
-  jobCreated: [job: JobPostResponse]
+  submit: [form: JobPostForm]
 }>()
 
 // Reactive state
-const isSubmitting = ref<boolean>(false)
-
 const form = reactive<JobPostForm>({
   title: '',
   work_field: '',
@@ -273,123 +273,8 @@ const form = reactive<JobPostForm>({
 })
 
 // Methods
-const submitForm = async (): Promise<void> => {
-  if (!validateForm()) {
-    return
-  }
-
-  isSubmitting.value = true
-  
-  try {
-    // Prepare the data for submission to match Django model
-    const jobPostData = {
-      title: form.title,
-      work_field: form.work_field,
-      location: form.location,
-      onsite: form.onsite,
-      salary: form.salary ? parseInt(form.salary.toString()) : 0,
-      min_year: form.min_year ? parseInt(form.min_year.toString()) : 0,
-      employment_type: form.employment_type,
-      requirement: form.requirement,
-      description: form.description || '',
-      image_url: form.image_url || null,
-      long_description: form.long_description || ''
-    }
-
-    // TODO: Replace this with actual API call
-    const response = await fetch('/api/posts/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Add authentication headers
-        // 'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify(jobPostData)
-    })
-
-    if (response.ok) {
-      const result: JobPostResponse = await response.json()
-      
-      // Emit success event to parent component
-      emit('jobCreated', result)
-      
-      // Show success message
-      alert(result.message || 'Job post created successfully!')
-      
-      // Reset form
-      resetForm()
-      
-      // TODO: Redirect to the newly created job post page
-      await router.push(`/posts/${result.id}`)
-      
-    } else {
-      const error = await response.json()
-      console.error('Error creating job post:', error)
-      alert(error.message || 'Failed to create job post. Please try again.')
-    }
-    
-  } catch (error) {
-    console.error('Network error:', error)
-    alert('Network error. Please check your connection and try again.')
-    
-  } finally {
-    isSubmitting.value = false
-  }
-}
-
-const validateForm = (): boolean => {
-  // Basic validation matching required fields in Django model
-  if (!form.title.trim()) {
-    alert('Job title is required')
-    return false
-  }
-  
-  if (!form.work_field) {
-    alert('Work field is required')
-    return false
-  }
-  
-  if (!form.location) {
-    alert('Location is required')
-    return false
-  }
-  
-  if (!form.employment_type) {
-    alert('Employment type is required')
-    return false
-  }
-  
-  if (!form.salary || form.salary <= 0) {
-    alert('Valid salary is required')
-    return false
-  }
-  
-  if (form.min_year === null || form.min_year < 0) {
-    alert('Minimum years of experience is required')
-    return false
-  }
-  
-  if (!form.requirement.trim()) {
-    alert('Job requirements are required')
-    return false
-  }
-  
-  // URL validation for image_url if provided
-  if (form.image_url && !isValidUrl(form.image_url)) {
-    alert('Please enter a valid URL for the image')
-    return false
-  }
-  
-  return true
-}
-
-const isValidUrl = (string: string): boolean => {
-  try {
-    new URL(string)
-    return true
-  } catch (_) {
-    return false
-  }
+const submitForm = () => {
+  emit('submit', { ...form })
 }
 
 const handleWorkModeChange = () => {
