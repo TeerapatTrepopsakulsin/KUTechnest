@@ -1,5 +1,5 @@
 from sqlalchemy.orm import sessionmaker
-from main import engine, Company, Post, User, WorkField, EmploymentType
+from .main import engine, Company, Post, User, WorkField, EmploymentType
 import random
 
 # Create session
