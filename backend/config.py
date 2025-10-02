@@ -1,4 +1,6 @@
+import os
 from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./app.db"
@@ -16,4 +18,6 @@ class Settings(BaseSettings):
         env_file = ".env"
         case_sensitive = True
 
-settings = Settings()
+
+dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
+settings = Settings(_env_file=dotenv_path)
