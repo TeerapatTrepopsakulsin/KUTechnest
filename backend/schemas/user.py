@@ -1,6 +1,8 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from datetime import datetime
+from .student import StudentResponse
+from .company import CompanyResponse
 
 
 class UserBase(BaseModel):
@@ -20,6 +22,12 @@ class UserResponse(UserBase):
         from_attributes = True
 
 
+class UserRoleResponse(BaseModel):
+    role: str
+    status: str
+    data: StudentResponse | CompanyResponse | None = None
+
+    
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str
