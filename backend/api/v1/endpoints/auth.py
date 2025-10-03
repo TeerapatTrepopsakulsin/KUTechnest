@@ -3,8 +3,10 @@ from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from typing import Optional
 from ....core.database import get_db
-from ....schemas.user import TokenResponse, GoogleLoginURLResponse, UserResponse
-from ....crud import user as crud_user
+from ....schemas.user import TokenResponse, GoogleLoginURLResponse, UserResponse, UserRoleResponse
+from ....schemas.company import CompanyResponse
+from ....schemas.student import StudentResponse
+from ....crud import user as crud_user, student as crud_student, company as crud_company
 from ....utils.google_oauth import GoogleOAuth
 from ....utils.auth import create_access_token, get_current_user
 from ....models.user import User
@@ -115,10 +117,26 @@ async def google_callback(
             student = crud_student.get_student_by_user_id(db, user.id)
             if student:
                 user_status = "approved"
+            # TODO: Tempory disable error while debugging
+            # --------------------------
+            else:
+                raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Have not authorized as student"
+            )
+            # --------------------------
         else:
             company = crud_company.get_company_by_user_id(db, user.id)
             if company:
                 user_status = "approved"
+            # TODO: Tempory disable error while debugging
+            # --------------------------
+            else:
+                raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Have not authorized as company"
+            )
+            # --------------------------
 
         jwt_token = create_access_token(data={"sub": user.id})
 
@@ -158,3 +176,35 @@ async def get_current_user_info(current_user: User = Depends(get_current_user)):
         UserResponse with the current user's information
     """
     return UserResponse.from_orm(current_user)
+
+
+@router.get("/user/{user_id}/role", response_model=UserRoleResponse)
+async def get_user_info(user_id: int, db: Session = Depends(get_db)):
+    """
+    Returns a user's role information by user ID.
+
+    This endpoint retrieves the user profile for the specified user ID.
+    It is useful for fetching public role based user information.
+
+    Args:
+        user_id: ID of the user to retrieve
+        db: Database session
+    Returns:
+        UserRoleResponse with the specified user's role information
+    """
+    company = crud_company.get_company_by_user_id(db, user_id)
+    student = crud_student.get_student_by_user_id(db, user_id)
+    if company:
+        role = "company"
+        status = "approved"
+        data = CompanyResponse.from_orm(company)
+    elif student:
+        role = "student"
+        status = "approved"
+        data = StudentResponse.from_orm(student)
+    else:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    roleData = {"role": role, "status": status, "data": data}
+    userRole = UserRoleResponse.model_validate(roleData)
+    return UserRoleResponse.from_orm(userRole)
