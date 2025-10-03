@@ -55,7 +55,8 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       setLoading(true);
 
-      const response = await fetch(`${backendUrl}/api/auth/google/login`);
+      const pendingRole = localStorage.getItem('pending_role') || 'student';
+      const response = await fetch(`${backendUrl}/api/auth/google/login?role=${pendingRole}`);
 
       if (!response.ok) {
         throw new Error('Failed to initialize Google login');
@@ -78,9 +79,12 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       setLoading(true);
 
+      const pendingRole = localStorage.getItem('pending_role') || 'student';
       const response = await fetch(
-        `${backendUrl}/api/auth/google/callback?code=${encodeURIComponent(code)}`
+        `${backendUrl}/api/auth/google/callback?code=${encodeURIComponent(code)}&role=${pendingRole}`
       );
+
+      localStorage.removeItem('pending_role');
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -90,7 +94,7 @@ export const useAuthStore = defineStore('auth', () => {
       const data = await response.json();
       console.log('OAuth callback response:', data);
 
-      if (data.access_token) {
+      if (!data.access_token) {
         throw new Error('No access token received');
       }
 
@@ -106,9 +110,9 @@ export const useAuthStore = defineStore('auth', () => {
         email: data.user.email,
         firstName: data.user.first_name,
         lastName: data.user.last_name,
-        role: data.user.role,       // Role from backend
-        status: data.user.status,    // Status from backend
-        picture: data.user.picture
+        role: data.user.role || 'user',
+        status: data.user.status || 'pending',
+        picture: data.user.profile_picture || ''
       };
 
       // Persist to localStorage

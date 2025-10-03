@@ -3,7 +3,7 @@ export type User = {
     email: string
     firstName: string
     lastName: string
-    role: 'admin' | 'user' | 'guest'
+    role: 'student' | 'company' | 'user'
     status: 'pending' | 'approved' | 'rejected'
     picture: string
 }

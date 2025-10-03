@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { useRouter } from "vue-router";
 import { useAuthStore } from "../stores/auth";
 import LoginPanel from "../components/LoginPanel.vue";
 
-const router = useRouter();
 const authStore = useAuthStore();
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 // Handle Google Login button click
-const handleGoogleLogin = () => {
+const handleGoogleLogin = (role: string) => {
+  localStorage.setItem('pending_role', role);
   authStore.initiateGoogleLogin();
 };
 
@@ -28,8 +26,8 @@ onMounted(async () => {
 
   // Handle OAuth success callback
   if (code) {
-    const success = await authStore.handleOAuthCallback(code);
-    
+    await authStore.handleOAuthCallback(code);
+
     // Clean up URL regardless of success
     window.history.replaceState({}, document.title, window.location.pathname);
   }

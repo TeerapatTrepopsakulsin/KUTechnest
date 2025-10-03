@@ -13,7 +13,7 @@ router = APIRouter()
 
 
 @router.get("/google/login", response_model=GoogleLoginURLResponse)
-async def google_login():
+async def google_login(role: str = Query("student")):
     """
     Returns the Google OAuth2 login URL for user authentication.
 
@@ -21,7 +21,7 @@ async def google_login():
     to Google's consent screen where they can grant permission to access their profile.
     """
     try:
-        auth_url = GoogleOAuth.get_authorization_url()
+        auth_url = GoogleOAuth.get_authorization_url(state=role)
         return GoogleLoginURLResponse(url=auth_url)
     except Exception as e:
         raise HTTPException(
@@ -33,6 +33,8 @@ async def google_login():
 @router.get("/google/callback", response_model=TokenResponse)
 async def google_callback(
     code: Optional[str] = Query(None),
+    state: Optional[str] = Query(None),
+    role: Optional[str] = Query(None),
     error: Optional[str] = Query(None),
     db: Session = Depends(get_db)
 ):
@@ -89,6 +91,7 @@ async def google_callback(
             )
 
         user = crud_user.get_user_by_google_id(db, google_id)
+        user_role = state or role or "student"
 
         if not user:
             user = crud_user.get_user_by_email(db, email)
@@ -104,13 +107,31 @@ async def google_callback(
                     profile_picture=picture
                 )
 
+        from ....crud import student as crud_student
+        from ....crud import company as crud_company
+
+        user_status = "pending"
+        if user_role == "student":
+            student = crud_student.get_student_by_user_id(db, user.id)
+            if student:
+                user_status = "approved"
+        else:
+            company = crud_company.get_company_by_user_id(db, user.id)
+            if company:
+                user_status = "approved"
+
         jwt_token = create_access_token(data={"sub": user.id})
 
-        return TokenResponse(
-            access_token=jwt_token,
-            token_type="bearer",
-            user=UserResponse.from_orm(user)
-        )
+        user_response = UserResponse.from_orm(user)
+        user_dict = user_response.model_dump()
+        user_dict["role"] = user_role
+        user_dict["status"] = user_status
+
+        return {
+            "access_token": jwt_token,
+            "token_type": "bearer",
+            "user": user_dict
+        }
 
     except HTTPException:
         raise
