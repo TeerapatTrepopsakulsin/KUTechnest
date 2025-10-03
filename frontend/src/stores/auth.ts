@@ -1,6 +1,10 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type { User, AuthTokens } from '../types/auth'
+import router from '../router'
+
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL
 
 export const useAuthStore = defineStore('auth', () => {
   // State
@@ -24,6 +28,7 @@ export const useAuthStore = defineStore('auth', () => {
   const setError = (message: string) => {
     error.value = message
     isLoading.value = false
+    console.error('Auth error:', message)
   }
 
   const setTokens = (newTokens: AuthTokens) => {
@@ -45,49 +50,126 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   // Main auth actions
-  const login = async (googleToken: string) => {
-    setLoading(true)
+  // Google Login - Redirect to Google
+  const initiateGoogleLogin = async () => {
     try {
-      const response = await fetch('/api/auth/google-login/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          google_token: googleToken
-        })
-      })
+      setLoading(true);
 
-      const data = await response.json()
+      const response = await fetch(`${backendUrl}/api/auth/google/login`);
 
-      if (response.ok) {
-        setTokens({
-          access: data.access_token,
-          refresh: data.refresh_token
-        })
-        
-        setUser({
-          id: data.user.id,
-          email: data.user.email,
-          name: data.user.name,
-          role: data.user.role,      //  Role from backend
-          status: data.user.status,   //  Status from backend  
-          picture: data.user.picture
-        })
-        
-        return { success: true }
-      } else {
-        setError(data.error || 'Login failed')
-        return { success: false, error: data.error }
+      if (!response.ok) {
+        throw new Error('Failed to initialize Google login');
       }
-      
+
+      const data = await response.json();
+
+      if (data.url) {
+        window.location.href = data.url;
+      }
     } catch (err) {
-      setError('Network error during login')
-      return { success: false, error: 'Network error' }
+      setError(err instanceof Error ? err.message : 'Failed to connect to authentication service');
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
+
+  // Handle OAuth Callback
+  const handleOAuthCallback = async (code: string) => {
+    try {
+      setLoading(true);
+
+      const response = await fetch(
+        `${backendUrl}/api/auth/google/callback?code=${encodeURIComponent(code)}`
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Authentication failed');
+      }
+
+      const data = await response.json();
+      console.log('OAuth callback response:', data);
+
+      if (data.access_token) {
+        throw new Error('No access token received');
+      }
+
+      // Store tokens
+      const tokensInfo = {
+        access: data.access_token,
+        refresh: data.refresh_token || ''
+      };
+
+      // Store user info
+      const userInfo = {
+        id: data.user.id,
+        email: data.user.email,
+        firstName: data.user.first_name,
+        lastName: data.user.last_name,
+        role: data.user.role,       // Role from backend
+        status: data.user.status,    // Status from backend
+        picture: data.user.picture
+      };
+
+      // Persist to localStorage
+      setTokens(tokensInfo);
+      setUser(userInfo);
+
+      // Navigate to home
+      router.push('/');
+      
+      return true;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to complete authentication');
+      return false;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // const login = async (googleToken: string) => {
+  //   setLoading(true)
+  //   try {
+  //     const response = await fetch('/api/auth/google-login/', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         google_token: googleToken
+  //       })
+  //     })
+
+  //     const data = await response.json()
+
+  //     if (response.ok) {
+  //       setTokens({
+  //         access: data.access_token,
+  //         refresh: data.refresh_token
+  //       })
+        
+  //       setUser({
+  //         id: data.user.id,
+  //         email: data.user.email,
+  //         name: data.user.name,
+  //         role: data.user.role,      //  Role from backend
+  //         status: data.user.status,   //  Status from backend  
+  //         picture: data.user.picture
+  //       })
+        
+  //       return { success: true }
+  //     } else {
+  //       setError(data.error || 'Login failed')
+  //       return { success: false, error: data.error }
+  //     }
+      
+  //   } catch (err) {
+  //     setError('Network error during login')
+  //     return { success: false, error: 'Network error' }
+  //   } finally {
+  //     setLoading(false)
+  //   }
+  // }
 
   return {
     // State
@@ -103,7 +185,8 @@ export const useAuthStore = defineStore('auth', () => {
     isApproved,
     
     // Actions
-    login,
+    initiateGoogleLogin,
+    handleOAuthCallback,
     clearAuth,
     setError
   }
