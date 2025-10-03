@@ -104,7 +104,7 @@ export const useAuthStore = defineStore('auth', () => {
       setLoading(true);
 
       const pendingRole = localStorage.getItem('pending_role') || 'student';
-      const response = await fetch(
+      var response = await fetch(
         `${backendUrl}/api/auth/google/callback?code=${encodeURIComponent(code)}&role=${pendingRole}`
       );
 
@@ -154,50 +154,6 @@ export const useAuthStore = defineStore('auth', () => {
       setLoading(false);
     }
   };
-
-  // const login = async (googleToken: string) => {
-  //   setLoading(true)
-  //   try {
-  //     const response = await fetch('/api/auth/google-login/', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         google_token: googleToken
-  //       })
-  //     })
-
-  //     const data = await response.json()
-
-  //     if (response.ok) {
-  //       setTokens({
-  //         access: data.access_token,
-  //         refresh: data.refresh_token
-  //       })
-        
-  //       setUser({
-  //         id: data.user.id,
-  //         email: data.user.email,
-  //         name: data.user.name,
-  //         role: data.user.role,      //  Role from backend
-  //         status: data.user.status,   //  Status from backend  
-  //         picture: data.user.picture
-  //       })
-        
-  //       return { success: true }
-  //     } else {
-  //       setError(data.error || 'Login failed')
-  //       return { success: false, error: data.error }
-  //     }
-      
-  //   } catch (err) {
-  //     setError('Network error during login')
-  //     return { success: false, error: 'Network error' }
-  //   } finally {
-  //     setLoading(false)
-  //   }
-  // }
 
   // Initialize on store creation
   initializeAuth()
