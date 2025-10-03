@@ -5,6 +5,7 @@ export type User = {
     lastName: string
     role: 'admin' | 'user' | 'guest'
     status: 'pending' | 'approved' | 'rejected'
+    picture: string
 }
 
 export type AuthTokens = {
