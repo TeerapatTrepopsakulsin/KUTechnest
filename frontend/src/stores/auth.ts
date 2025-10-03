@@ -134,6 +134,8 @@ export const useAuthStore = defineStore('auth', () => {
         email: data.user.email,
         firstName: data.user.first_name,
         lastName: data.user.last_name,
+        // TODO: Bypass role
+        // role: 'student',
         role: data.user.role || 'user',
         status: data.user.status || 'pending',
         picture: data.user.profile_picture || ''
