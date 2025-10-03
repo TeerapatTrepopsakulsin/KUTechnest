@@ -13,6 +13,30 @@ export const useAuthStore = defineStore('auth', () => {
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
+  // Initialize from localStorage
+  const initializeAuth = () => {
+    const storedTokens = localStorage.getItem('auth_tokens')
+    const storedUser = localStorage.getItem('auth_user')
+
+    if (storedTokens) {
+      try {
+        tokens.value = JSON.parse(storedTokens)
+      } catch (e) {
+        console.error('Failed to parse stored tokens:', e)
+        localStorage.removeItem('auth_tokens')
+      }
+    }
+
+    if (storedUser) {
+      try {
+        user.value = JSON.parse(storedUser)
+      } catch (e) {
+        console.error('Failed to parse stored user:', e)
+        localStorage.removeItem('auth_user')
+      }
+    }
+  }
+
   // Getters
   const isAuthenticated = computed(() => !!tokens.value?.access)
   const userRole = computed(() => user.value?.role)
@@ -175,23 +199,27 @@ export const useAuthStore = defineStore('auth', () => {
   //   }
   // }
 
+  // Initialize on store creation
+  initializeAuth()
+
   return {
     // State
     user,
     tokens,
     isLoading,
     error,
-    
+
     // Getters
     isAuthenticated,
     userRole,
     userStatus,
     isApproved,
-    
+
     // Actions
     initiateGoogleLogin,
     handleOAuthCallback,
     clearAuth,
-    setError
+    setError,
+    initializeAuth
   }
 })
