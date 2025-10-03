@@ -1,5 +1,7 @@
 from sqlalchemy.orm import sessionmaker
-from main import engine, Company, Post, User, WorkField, EmploymentType
+from .main import engine
+from .models import Company, Post, User, Student
+from .schemas import WorkField, EmploymentType
 import random
 
 # Create session
@@ -161,7 +163,9 @@ def seed_database():
     # Clear existing data
     db.query(Post).delete()
     db.query(Company).delete()
+    db.query(Student).delete()
     db.query(User).delete()
+    db.commit()
     
     # Create companies
     companies = []
@@ -195,6 +199,37 @@ def seed_database():
         db.add(post)
     
     db.commit()
+
+    # Create you as a student
+    me_user = User(
+        email="teerapat.tre@ku.th",
+        first_name="Teerapat",
+        last_name="TREPOPSAKULSIN"
+    )
+    db.add(me_user)
+    db.flush()  # Get the me_user ID
+    
+    student_data = {
+        "name": "Alice Johnson",
+        "nick_name": "Ally",
+        "pronoun": "She/Her",
+        "age": 20,
+        "year": 2,
+        "ku_generation": 60,
+        "faculty": "Science",
+        "major": "Computer Science",
+        "about_me": "Loves coding and AI research.",
+        "email": "alice.johnson@example.com",
+    }
+    # Create company
+    student = Student(
+        user_id=me_user.id,
+        **student_data
+    )
+    db.add(student)
+
+    db.commit()
+
     print("Database seeded successfully!")
 
 if __name__ == "__main__":

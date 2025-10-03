@@ -11,8 +11,6 @@ const error = ref(null)
 const totalPages = ref(1)
 const jobsPerPage = 12
 
-console.log(`${import.meta.env.BACKEND_URL}`)
-
 const fetchJobs = async (page = currentPage) => {
   try {
     loading.value = true
