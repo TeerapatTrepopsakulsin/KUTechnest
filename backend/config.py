@@ -14,6 +14,10 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
+    GROQ_API_KEY: str
+    LLM_MODEL: str = "llama-3.1-8b-instant"
+    LLM_TEMPERATURE: float = 0.0
+
     class Config:
         env_file = ".env"
         case_sensitive = True
