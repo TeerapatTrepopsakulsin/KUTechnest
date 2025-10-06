@@ -91,8 +91,8 @@ const validateForm = (form: JobPostFormType): boolean => {
     return false
   }
 
-  if (!form.location) {
-    alert('Location is required')
+  if (!form.location && form.onsite) {
+    alert('Location is required for onsite jobs')
     return false
   }
 
