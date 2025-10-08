@@ -30,6 +30,7 @@
             class="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[140px] z-50 flex flex-col"
           >
             <a href="/profile" class="px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Profile</a>
+            <a v-if="role === 'company'" href="/posts/create" class="px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Post your Job</a>
             <a href="#" class="px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm" @click.prevent="logout">Logout</a>
           </div>
         </div>

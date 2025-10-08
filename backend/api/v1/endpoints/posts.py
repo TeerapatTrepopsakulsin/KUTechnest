@@ -70,16 +70,16 @@ async def get_post(post_id: int, db: Session = Depends(get_db)):
         "updated_at": post.updated_at
     }
 
-@router.post("/", response_model=PostResponse)
+@router.post("", response_model=PostResponse)
 async def create_post(post: PostCreate, db: Session = Depends(get_db)):
     company = crud_company.get_company(db, post.company_id)
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
     
     db_post = crud_post.create_post(db, post)
-    
-    response_data = PostResponse.from_orm(db_post)
-    response_data.company_name = company.name
-    response_data.company_logo = company.logo_url
+
+    db_post.company_name = company.name
+    db_post.company_logo = company.logo_url
+    response_data = PostResponse.model_validate(db_post)
     
     return response_data
