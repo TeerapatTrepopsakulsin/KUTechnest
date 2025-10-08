@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import Optional
 from ....core.database import get_db
+from ....core.llm import validate_job_post
 from ....schemas.post import PostCreate, PostResponse
 from ....schemas.enums import WorkField
 from ....crud import post as crud_post
@@ -70,16 +71,61 @@ async def get_post(post_id: int, db: Session = Depends(get_db)):
         "updated_at": post.updated_at
     }
 
-@router.post("", response_model=PostResponse)
+@router.post("", response_model=dict)
 async def create_post(post: PostCreate, db: Session = Depends(get_db)):
     company = crud_company.get_company(db, post.company_id)
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
-    
+
+    validation_result = validate_job_post(
+        title=post.title,
+        work_field=post.work_field,
+        employment_type=post.employment_type,
+        location=post.location,
+        salary=post.salary,
+        min_year=post.min_year,
+        requirement=post.requirement,
+        description=post.description,
+        long_description=post.long_description
+    )
+
+    if not validation_result.is_valid:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "message": "Job posting validation failed",
+                "reason": validation_result.reason,
+                "issues": validation_result.issues,
+                "recommendations": validation_result.recommendations,
+                "confidence_score": validation_result.confidence_score
+            }
+        )
+
+    if validation_result.confidence_score < 0.7:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "message": "Job posting has low confidence score",
+                "reason": validation_result.reason,
+                "issues": validation_result.issues,
+                "recommendations": validation_result.recommendations,
+                "confidence_score": validation_result.confidence_score
+            }
+        )
+
     db_post = crud_post.create_post(db, post)
 
     db_post.company_name = company.name
     db_post.company_logo = company.logo_url
     response_data = PostResponse.model_validate(db_post)
-    
-    return response_data
+
+    return {
+        "post": response_data.model_dump(),
+        "validation": {
+            "is_valid": validation_result.is_valid,
+            "confidence_score": validation_result.confidence_score,
+            "issues": validation_result.issues,
+            "recommendations": validation_result.recommendations,
+            "reason": validation_result.reason
+        }
+    }
