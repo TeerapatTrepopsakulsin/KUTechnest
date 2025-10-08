@@ -30,7 +30,7 @@ const handleJobPostSubmit = async (form: JobPostFormType) => {
     // Prepare the data for submission to match Django model
     const jobPostData = {
       // TODO: use auth store to get the actual company ID
-      company: 1,  // Placeholder company ID
+      company_id: 1,  // Placeholder company ID
       title: form.title,
       work_field: form.work_field,
       location: form.location,
@@ -58,11 +58,10 @@ const handleJobPostSubmit = async (form: JobPostFormType) => {
     if (response.ok) {
       const result: JobPostResponse = await response.json()
 
+      await router.push(`/posts/${result.id}`)
+      
       // Show success message
       alert(result.message || 'Job post created successfully!')
-
-      // TODO: Redirect to the newly created job post page
-      await router.push(`/posts/${result.id}`)
 
     } else {
       const error = await response.json()
