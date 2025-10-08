@@ -94,5 +94,7 @@ export const location_options = [
 
 export const employment_type_options = [
     { value: "full_time", label: "Full Time" },
-    { value: "part_time", label: "Part Time" }, 
+    { value: "part_time", label: "Part Time" },
+    { value: "internship", label: "Internship" },
+    { value: "contract", label: "Contract" }
 ];
