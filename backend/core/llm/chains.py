@@ -8,11 +8,13 @@ def validate_job_post(
     work_field: str,
     employment_type: str,
     location: str,
+    onsite: bool,
     salary: int,
     min_year: int,
     requirement: str,
     description: str,
-    long_description: str = None
+    long_description: str = None,
+    *args, **kwargs
 ) -> JobPostValidation:
     llm = get_llm()
     parser = get_job_validation_parser()
@@ -26,6 +28,7 @@ def validate_job_post(
             "work_field": work_field,
             "employment_type": employment_type,
             "location": location,
+            "onsite": onsite,
             "salary": f"{salary:,}",
             "min_year": min_year,
             "requirement": requirement,
