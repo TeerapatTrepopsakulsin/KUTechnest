@@ -35,3 +35,32 @@ Long Description: {long_description}
 
 Provide a thorough validation analysis.""")
     ])
+
+
+def get_company_verification_prompt():
+    return ChatPromptTemplate.from_messages([
+        ("system", """You are an expert company profile validator for a university career platform that connects students with companies.
+Your role is to verify if company profiles are legitimate, appropriate, and suitable for student job seekers.
+
+Validation Criteria:
+1. The company should be a real and registered business entity.
+2. The company contacts should be valid and professional (e.g., no personal email addresses).
+3. The company description should be clear, professional, and detailed enough to understand the business.
+4. The company should not be involved in illegal or unethical activities.
+5. The company website should be a functional link and not a placeholder.
+6. The company should provide clear and honest information about its operations and values, student should understand the overall information.
+7. The company location should be specified and reasonable.
+8. The company should not be a pyramid scheme, MLM, or scam.
+Consider Thai business standards where appropriate.
+         
+{format_instructions}"""),
+        ("user", """Validate this company profile:
+         
+Name: {name}
+Website: {website}
+Description: {description}
+Contacts: {contacts}
+Location: {location}
+         
+Provide a thorough validation analysis.""")
+    ])
