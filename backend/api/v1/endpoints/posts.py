@@ -73,6 +73,9 @@ async def get_post(post_id: int, db: Session = Depends(get_db)):
 
 @router.post("", response_model=PostResponse)
 async def create_post(post: PostCreate, db: Session = Depends(get_db)):
+    """
+    Create a new job post after validating it with the LLM.
+    """
     company = crud_company.get_company(db, post.company_id)
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")

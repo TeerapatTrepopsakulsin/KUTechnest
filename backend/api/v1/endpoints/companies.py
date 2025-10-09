@@ -4,6 +4,7 @@ from typing import Optional, List
 from ....core.database import get_db
 from ....schemas.company import CompanyCreate, CompanyResponse
 from ....crud import company as crud_company
+from ....core.llm import validate_company_profile
 
 router = APIRouter()
 
@@ -34,8 +35,25 @@ async def get_company(company_id: int, db: Session = Depends(get_db)):
 
 @router.post("/", response_model=CompanyResponse)
 async def create_company(company: CompanyCreate, db: Session = Depends(get_db)):
-    db_company = crud_company.create_company(db, company)
+    """
+    Create a new company after verifying it with the LLM.
+    """
+    validation_result = validate_company_profile(**company.model_dump())
+
+    if not validation_result.is_valid or validation_result.confidence_score < 0.7:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "message": "company validation failed",
+                "reason": validation_result.reason,
+                "issues": validation_result.issues,
+                "recommendations": validation_result.recommendations,
+                "confidence_score": validation_result.confidence_score
+            }
+        )
     
-    response = CompanyResponse.from_orm(db_company)
+    db_company = crud_company.create_company(db, company)
+
+    response = CompanyResponse.model_validate(db_company)
     response.posts_count = 0
     return response
