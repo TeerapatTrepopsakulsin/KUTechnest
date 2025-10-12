@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "jwt-decode": "^4.0.0",
-    "pinia": "^3.0.3",
     "dayjs": "^1.11.18",
     "dompurify": "^3.2.6",
+    "jwt-decode": "^4.0.0",
     "markdown-it": "^14.1.0",
+    "pinia": "^3.0.3",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1",
     "vue3-google-login": "^2.0.34",
@@ -27,6 +27,7 @@
     "tailwindcss": "^4.1.12",
     "typescript": "~5.8.3",
     "vite": "^7.1.4",
+    "vite-plugin-vue-devtools": "^8.0.2",
     "vue-tsc": "^3.0.5"
   }
 }
