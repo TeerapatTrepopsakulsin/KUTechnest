@@ -1,0 +1,30 @@
+from enum import Enum
+
+class WorkField(str, Enum):
+    IT_SUPPORT = "it-support"
+    CLOUD = "cloud"
+    BACKEND = "backend"
+    FRONTEND = "frontend"
+    FULLSTACK = "fullstack"
+    DEVOPS = "devops"
+    QA = "qa"
+    MOBILE = "mobile"
+    DATA_ANALYST = "data-analyst"
+    DATA_ENGINEER = "data-engineer"
+    DATA_SCIENTIST = "data-scientist"
+    AI_ML = "ai-ml"
+    SECURITY = "security"
+    NETWORK = "network"
+    SYSADMIN = "sysadmin"
+    DATABASE = "database"
+    UI_UX = "ui-ux"
+    PRODUCT_DESIGN = "product-designer"
+    GAME_DEV = "game-dev"
+    EMBEDDED = "embedded"
+    OTHER = "other"
+
+class EmploymentType(str, Enum):
+    FULL_TIME = "full_time"
+    PART_TIME = "part_time"
+    INTERNSHIP = "internship"
+    CONTRACT = "contract"
