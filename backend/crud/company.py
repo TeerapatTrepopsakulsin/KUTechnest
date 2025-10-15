@@ -24,3 +24,10 @@ def create_company(db: Session, company: CompanyCreate):
     db.commit()
     db.refresh(db_company)
     return db_company
+
+def update_company(db: Session, db_company: Company, company_update: CompanyCreate):
+    for key, value in company_update.dict().items():
+        setattr(db_company, key, value)
+    db.commit()
+    db.refresh(db_company)
+    return db_company

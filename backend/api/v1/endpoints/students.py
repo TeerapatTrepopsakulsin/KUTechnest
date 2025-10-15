@@ -23,3 +23,12 @@ async def get_student(student_id: int, db: Session = Depends(get_db)):
 async def create_student(student: StudentCreate, db: Session = Depends(get_db)):
     db_student = crud_student.create_student(db, student)
     return StudentResponse.from_orm(db_student)
+
+@router.put("/{student_id}", response_model=StudentResponse)
+async def update_student(student_id: int, student: StudentCreate, db: Session = Depends(get_db)):
+    db_student = crud_student.get_student(db, student_id)
+    if not db_student:
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    updated_student = crud_student.update_student(db, db_student, student)
+    return StudentResponse.from_orm(updated_student)

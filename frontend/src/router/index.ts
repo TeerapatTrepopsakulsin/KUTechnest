@@ -3,6 +3,7 @@ import Frontpage from '../views/Frontpage.vue'
 import Loginpage from '../views/Loginpage.vue'
 import JobDetailPage from '../views/JobDetailPage.vue'
 import AuthCallback from '../views/AuthCallback.vue'
+import CompanyProfilePage from '../views/CompanyProfilePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/posts/:slug',
     name: 'JobDetailPage',
     component: JobDetailPage
+  },
+  {
+    path: '/companies/:id',
+    name: 'CompanyProfilePage',
+    component: CompanyProfilePage
   },
   {
     path: '/auth/callback',

@@ -39,3 +39,15 @@ async def create_company(company: CompanyCreate, db: Session = Depends(get_db)):
     response = CompanyResponse.from_orm(db_company)
     response.posts_count = 0
     return response
+
+@router.put("/{company_id}", response_model=CompanyResponse)
+async def update_company(company_id: int, company: CompanyCreate, db: Session = Depends(get_db)):
+    db_company = crud_company.get_company(db, company_id)
+    if not db_company:
+        raise HTTPException(status_code=404, detail="Company not found")
+    
+    updated_company = crud_company.update_company(db, db_company, company)
+    
+    response = CompanyResponse.from_orm(updated_company)
+    response.posts_count = len(updated_company.posts)
+    return response
