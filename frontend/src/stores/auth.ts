@@ -178,6 +178,7 @@ export const useAuthStore = defineStore('auth', () => {
     handleOAuthCallback,
     clearAuth,
     setError,
+    setLoading,
     initializeAuth
   }
 })

@@ -18,3 +18,10 @@ def create_student(db: Session, student: StudentCreate):
     db.commit()
     db.refresh(db_student)
     return db_student
+
+def update_student(db: Session, db_student: Student, student_update: StudentCreate):
+    for key, value in student_update.dict().items():
+        setattr(db_student, key, value)
+    db.commit()
+    db.refresh(db_student)
+    return db_student
