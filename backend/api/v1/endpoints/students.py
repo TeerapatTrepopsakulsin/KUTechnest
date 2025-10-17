@@ -1,11 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, relationship
 from typing import List
 from ....core.database import get_db
 from ....schemas.student import StudentCreate, StudentResponse
 from ....crud import student as crud_student
 
 router = APIRouter()
+applications = relationship("Application", back_populates="post", cascade="all, delete-orphan")
 
 @router.get("/", response_model=List[StudentResponse])
 async def get_students(db: Session = Depends(get_db)):
