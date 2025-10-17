@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
+import type { JobSearch } from '../types/job.ts'
 
 const category_options = [
   { value: "software-engineer", label: "Software Engineer" },
@@ -94,10 +96,26 @@ const location_options = [
     { value: "yasothon", label: "Yasothon" }
 ];
 
+// Emits
+const emit = defineEmits<{
+  submit: [form: JobSearch]
+}>()
+
+// Reactive state
+const form = reactive<JobSearch>({
+  title: '',
+  location: '',
+  category: ''
+})
+
+const handleSearch = () => {
+  emit('submit', { ...form })
+}
+
 </script>
 
 <template>
-<form class="pt-[100px] pr-[70px] pb-[70px] pl-[70px]">
+<form @submit.prevent="handleSearch" class="pt-[100px] pr-[70px] pb-[70px] pl-[70px]">
 <div class="max-w-6xl mx-auto">
 
         <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
@@ -111,6 +129,7 @@ const location_options = [
                             </svg>
                         </div>
                         <input 
+                            v-model="form.title"
                             type="text" 
                             placeholder="Search companies..." 
                             class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
@@ -120,11 +139,12 @@ const location_options = [
 
 
                 <div id="dropdown-position" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
-                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
+                    <select v-model="form.category" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
                         <option value="" disabled selected>Category</option>
                         <option value="">Any</option>
                         <option 
                             v-for="category_option in category_options"
+                            :key="category_option.value"
                             :value="category_option.value"
                         >
                             {{ category_option.label }}
@@ -133,11 +153,12 @@ const location_options = [
                 </div>
 
                 <div id="dropdown-location" class="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px]">
-                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
+                    <select v-model="form.location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white">
                         <option value="" disabled selected>Location</option>
                         <option value="">Any</option>
                         <option 
                             v-for="location_option in location_options"
+                            :key="location_option.value"
                             :value="location_option.value"
                         >
                             {{ location_option.label }}
@@ -147,7 +168,7 @@ const location_options = [
                 </div>
 
                 <div class="flex-shrink-0">
-                    <button id="search-button" class="px-8 py-3 bg-green-800 text-white font-medium rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors">
+                    <button type="submit" id="search-button" class="px-8 py-3 bg-green-800 text-white font-medium rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors">
                         Search
                     </button>
                 </div>
