@@ -56,13 +56,15 @@ const student_form = reactive({
 const company_form = reactive({
   company_name: '',
   website: '',
-  logo: '',
   location: '',
   contacts: '',
   description: '',
   password: '',
   confirmPassword: '',
 })
+const company_logo_file = ref<File | null>(null)
+const company_logo_error = ref<string | null>(null)
+
 
 const role = ref("")
 const role_step = ref<{ key: string; title: string }[]>([])
@@ -75,7 +77,7 @@ const selectRole = (r: string) => {
   }
 
 }
-const file = ref<File|null>(null)
+
 const preview = ref<string|undefined>()
 
 const pct = computed(() => (step.value / (role_step.value.length - 1)) * 100)
@@ -87,7 +89,6 @@ const company_rendered = computed(() => DOMPurify.sanitize(md.render(String(comp
 const company_contact_rendered = computed(() => DOMPurify.sanitize(md.render(String(company_form.contacts||''))))
 
 const canNextStudent = computed(() => {
-  // return true // TODO: Delet dis
   if (step.value === 0) return !!student_form.pronoun && !!student_form.firstName && !!student_form.lastName && !!student_form.studentId && !!student_form.dob
   if (step.value === 1) return emailOk.value(student_form) && student_form.phone.trim().length >= 9
   if (step.value === 2) return !!student_form.major && !!student_form.faculty && student_form.ku_generation >= 1
@@ -96,8 +97,7 @@ const canNextStudent = computed(() => {
   return false
 })
 const canNextCompany = computed(() => {
-  // return true // TODO: Delet dis
-  if (step.value === 0) return !!company_form.logo && !!company_form.company_name && !!company_form.website && !!company_form.location
+  if (step.value === 0) return !!preview.value && !!company_form.company_name && !!company_form.website && !!company_form.location
   if (step.value === 1) return !!company_form.contacts
   if (step.value === 2) return true // Profile (Optional)
   if (step.value === 3) return company_form.password.length >= 6 && company_form.password === company_form.confirmPassword
@@ -155,7 +155,6 @@ const submit = async () => {
       {
         company_name: company_form.company_name,
         website: company_form.website,
-        logo: company_form.logo,
         location: company_form.location,
         contacts: company_form.contacts,
         description: company_form.description,
@@ -164,6 +163,7 @@ const submit = async () => {
       null,
       2
     )
+    // send company_logo_file.value later
   )
   } 
   else {
@@ -173,11 +173,61 @@ const submit = async () => {
 
 const today = new Date().toLocaleDateString("fr-CA")
 
-const onPick = (e: Event) => {
-  const f = (e.target as HTMLInputElement).files?.[0] || null
-  file.value = f
-  preview.value = f ? URL.createObjectURL(f) : undefined
+const onPick = async (e: Event) => {
+  const input = e.target as HTMLInputElement
+  const f = input.files?.[0] ?? null
+  company_logo_error.value = ''
+
+  if (!f) {
+    if (preview.value) URL.revokeObjectURL(preview.value)
+    company_logo_file.value = null
+    preview.value = ''
+    return
+  }
+
+  if (f.type !== 'image/png') {
+    if (preview.value) URL.revokeObjectURL(preview.value)
+    company_logo_file.value = null
+    preview.value = ''
+    company_logo_error.value = 'Accepted format: PNG (image/png). Required dimensions: 1024 x 1024 px.'
+    input.value = ''
+    return
+  }
+
+  const ok = await validateLogo(f)
+  if (!ok) {
+    if (preview.value) URL.revokeObjectURL(preview.value)
+    company_logo_file.value = null
+    preview.value = ''
+    company_logo_error.value = 'Accepted format: PNG (image/png). Required dimensions: 1024 x 1024 px.'
+    return
+  }
+
+  if (preview.value) URL.revokeObjectURL(preview.value)
+  company_logo_file.value = f
+  preview.value = URL.createObjectURL(f)
+  input.value = '' 
 }
+
+
+async function validateLogo(file: File): Promise<boolean> {
+  if (!file || file.type !== 'image/png') return false
+  const url = URL.createObjectURL(file)
+  const ok: boolean = await new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      resolve(img.width === 1024 && img.height === 1024)
+    }
+    img.onerror = () => {
+      URL.revokeObjectURL(url)
+      resolve(false)
+    }
+    img.src = url
+  })
+  return ok
+}
+
 
 </script>
 
@@ -380,48 +430,19 @@ const onPick = (e: Event) => {
             <div class="text-gray-500">Student ID</div>
             <div class="font-medium">{{ student_form.studentId }}</div>
           </div>
-          <div class="p-3 rounded-xl border bg-gray-50">
-            <div class="text-gray-500">Email</div>
-            <div class="font-medium">{{ student_form.email }}</div>
-          </div>
-          <div class="p-3 rounded-xl border bg-gray-50">
-            <div class="text-gray-500">Phone</div>
-            <div class="font-medium">{{ student_form.phone }}</div>
-          </div>
         </div>
+
         <div>
-          <label class="text-sm text-gray-600" for="review_university">University</label>
+          <label class="text-sm text-gray-600" for="review_contacts">Contacts</label>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pb-5"
-            id="review_university">
+            id="review_contacts">
             <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">Major</div>
-              <div class="font-medium">{{ student_form.major }}</div>
+              <div class="text-gray-500">Email</div>
+              <div class="font-medium">{{ student_form.email }}</div>
             </div>
             <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">Faculty</div>
-              <div class="font-medium">{{ student_form.faculty }}</div>
-            </div>
-            <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">KU Generation</div>
-              <div class="font-medium">{{ student_form.ku_generation }}</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <label class="text-sm text-gray-600" for="review_university">University</label>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pb-5"
-            id="review_university">
-            <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">Major</div>
-              <div class="font-medium">{{ student_form.major }}</div>
-            </div>
-            <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">Faculty</div>
-              <div class="font-medium">{{ student_form.faculty }}</div>
-            </div>
-            <div class="p-3 rounded-xl border bg-gray-50">
-              <div class="text-gray-500">KU Generation</div>
-              <div class="font-medium">{{ student_form.ku_generation }}</div>
+              <div class="text-gray-500">Phone</div>
+              <div class="font-medium">{{ student_form.phone }}</div>
             </div>
           </div>
         </div>
@@ -444,6 +465,7 @@ const onPick = (e: Event) => {
             </div>
           </div>
         </div>
+        
 
         <div>
           <label class="text-sm text-gray-600" for="preview">About Me</label>
@@ -489,6 +511,7 @@ const onPick = (e: Event) => {
         <label class="text-sm text-gray-600" for="lastName">Company Logo</label>
         <input type="file" accept="image/*" @change="onPick" class="block">
         <img v-if="preview" :src="preview" alt="" class="mt-3 h-40 w-40 object-cover rounded-xl border">
+        <p v-if="company_logo_error" class="text-sm text-red-600 mt-1">{{ company_logo_error }}</p>
       </div>
       <div class="flex flex-col gap-1">
         <label class="text-sm text-gray-600" for="company_name">Company Name</label>
@@ -583,8 +606,9 @@ const onPick = (e: Event) => {
           id="review_basic">
           <div class="p-3 rounded-xl border bg-gray-50">
             <div class="text-gray-500">Logo</div>
-            <div class="font-medium">{{ company_form.logo }}</div>
+            <img :src="preview" alt="" class="mt-3 h-40 w-40 object-cover rounded-xl border">
           </div>
+          <span class="hidden sm:block"></span>
           <div class="p-3 rounded-xl border bg-gray-50">
             <div class="text-gray-500">Company Name</div>
             <div class="font-medium">{{ company_form.company_name}}</div>
