@@ -6,3 +6,9 @@ export type Job = {
     image_url?: string | null
     [key: string]: any
   }
+
+export type JobSearch = {
+    title?: string
+    category?: string
+    location?: string
+}
