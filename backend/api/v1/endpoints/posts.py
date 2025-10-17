@@ -13,11 +13,16 @@ router = APIRouter()
 async def get_posts(
     page: int = Query(1, ge=1),
     search: Optional[str] = None,
-    work_field: Optional[WorkField] = None,
+    work_field: Optional[str] = None,
     location: Optional[str] = None,
     onsite: Optional[bool] = None,
     db: Session = Depends(get_db)
 ):
+    # Clean and prepare query parameters
+    if location == "remote":
+        location = None
+        onsite = False
+
     posts, total = crud_post.get_posts(
         db, page=page, search=search, work_field=work_field,
         location=location, onsite=onsite
