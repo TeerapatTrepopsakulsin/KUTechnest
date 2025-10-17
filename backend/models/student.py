@@ -19,6 +19,12 @@ class Student(Base):
     about_me = Column(Text, nullable=True)
     email = Column(String)
     created_at = Column(DateTime, default=func.now())
+
+    applications = relationship(
+        "Application",
+        back_populates="student",
+        cascade="all, delete-orphan"
+    )
     
     # Relationships
     user = relationship("User", back_populates="student")
