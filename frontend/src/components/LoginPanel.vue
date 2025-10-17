@@ -28,7 +28,7 @@
     </div>
 
     <!-- Login Form -->
-    <form @submit.prevent="handleLogin">
+    <form @submit.prevent="handleGoogleLogin">
       <div class="mb-4">
         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
           Email Address
@@ -76,16 +76,13 @@
         </div>
       </div>
 
-      <!-- <button
-        type="submit"
+      <button
+        type="button"
+        @click="handleGoogleLogin"
         class="w-full bg-green-800 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200"
       >
-        Sign In as {{ isCompany ? 'Company' : 'Student' }}
-      </button> -->
-      
-      <div class="flex items-center justify-center mt-10">
-        <GoogleLogin :callback="handleGoogleLogin" />
-      </div>
+        Sign In with Google as {{ isCompany ? 'Company' : 'Student' }}
+      </button>
     </form>
     <div class="mt-6 text-center">
       <p class="text-sm text-gray-600">
@@ -100,8 +97,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { GoogleLogin, decodeCredential } from 'vue3-google-login'
 
+const emit = defineEmits(['google-login'])
 
 // Reactive variables
 const isCompany = ref(false)
@@ -113,32 +110,10 @@ const selectRole = (role: string) => {
   isCompany.value = role === 'company'
 }
 
-const handleGoogleLogin = (response: any) => {
-  // Decode the Google credential to get user info
-  const googleCredential = response.credential
-  const userData = decodeCredential(googleCredential)
-  
-  // Prepare data to send to your backend
-  const registrationData = {
-    googleToken: googleCredential,
-    role: isCompany.value ? 'company' : 'student',
-    email: userData.email,
-    name: userData.name,
-    picture: userData.picture
-  }
-  
-  console.log('Sending to backend:', registrationData)
-  
-  // TODO: Send to your Django backend
-  // await authStore.registerWithGoogle(registrationData)
-
-  // TODO:
-  // 1. Validate the form data
-  // 2. Send a request to your authentication API
-  // 3. Handle the response (success or error)
-  // 4. Redirect the user or show error messages
+const handleGoogleLogin = () => {
+  const role = isCompany.value ? 'company' : 'student'
+  emit('google-login', role)
 }
-
 </script>
 
 <style scoped>

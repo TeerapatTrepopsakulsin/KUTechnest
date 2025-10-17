@@ -1,4 +1,6 @@
-Django
-django-filter
-djangorestframework
-django-cors-headers
+fastapi==0.118.0
+pydantic==2.11.9
+pydantic_settings==2.11.0
+python_jose==3.3.0
+Requests==2.32.5
+SQLAlchemy==2.0.23
