@@ -8,7 +8,7 @@
         <div v-if="!isAuthenticated" class="flex items-center gap-x-2">
           <a href="/login" class="text-black text-base font-medium hover:text-blue-600 transition">Sign In</a>
           <span class="text-gray-600 text-base">/</span>
-          <a href="/register" class="text-black text-base font-medium hover:text-blue-600 transition last:mr-0">Register</a>
+          <router-link :to="{ name:'Registerpage' }">Register</router-link>
         </div>
         
         <div
