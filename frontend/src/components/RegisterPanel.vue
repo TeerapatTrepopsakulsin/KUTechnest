@@ -132,6 +132,7 @@ const submit = async () => {
     alert(
     JSON.stringify(
       {
+        role: "student",
         first_name: student_form.firstName,
         last_name: student_form.lastName,
         student_id: student_form.studentId,
@@ -153,6 +154,7 @@ const submit = async () => {
     alert(
     JSON.stringify(
       {
+        role: "company",
         company_name: company_form.company_name,
         website: company_form.website,
         location: company_form.location,
