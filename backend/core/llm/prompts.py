@@ -64,3 +64,33 @@ Location: {location}
          
 Provide a thorough validation analysis.""")
     ])
+
+
+def get_student_profile_validation_prompt():
+    return ChatPromptTemplate.from_messages([
+        ("system", """You are an expert student profile validator for a university career platform that connects students with companies.
+Your role is to verify if student profiles are legitimate, appropriate, and suitable for job seekers.
+Validation Criteria:
+1. The student's name should be realistic and appropriate.
+2. The academic background should be valid and correspond to the university's standards.
+3. The contacts should be professional and valid (e.g., university email addresses).
+4. The "About Me" section should be clear, professional, and detailed enough to understand
+    the student's background and aspirations.
+5. The date of birth should indicate that the student is of legal age to work.
+6. The profile should not contain any inappropriate content or language.
+7. The profile should be complete and provide enough information for potential employers to assess the student's suitability for job opportunities.
+8. KU Generation should be a valid number corresponding to the student's enrollment year (i.e., if the student enrolled in 2023, the KU Generation should be 83).
+9. The student ID should follow the standard format used by the university. (i.e., 10 digits long)
+Consider Thai academic standards where appropriate.
+         
+{format_instructions}"""),
+        ("user", """Validate this student profile:
+         
+Name: {name}
+Academic Background: {academic_background}
+Contacts: {contacts}
+About Me: {about_me}
+Date of Birth: {date_of_birth}
+         
+Provide a thorough validation analysis.""")
+    ])
