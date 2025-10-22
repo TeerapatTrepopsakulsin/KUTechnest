@@ -4,6 +4,8 @@ import JobPostPage from '../views/JobPostPage.vue'
 import Loginpage from '../views/Loginpage.vue'
 import JobDetailPage from '../views/JobDetailPage.vue'
 import AuthCallback from '../views/AuthCallback.vue'
+import CompanyProfilePage from '../views/CompanyProfilePage.vue'
+import StudentProfilePage from '../views/StudentProfilePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,6 +27,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/posts/:slug',
     name: 'JobDetailPage',
     component: JobDetailPage
+  },
+  {
+    path: '/companies/:id',
+    name: 'CompanyProfilePage',
+    component: CompanyProfilePage
+  },
+  {
+    path: '/students/:id',
+    name: 'StudentProfilePage',
+    component: StudentProfilePage
   },
   {
     path: '/auth/callback',
