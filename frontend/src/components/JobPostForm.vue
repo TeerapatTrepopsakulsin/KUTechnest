@@ -152,20 +152,6 @@
         </div>
       </div>
 
-      <!-- Image URL -->
-      <div>
-        <label for="image_url" class="block text-sm font-medium text-gray-700 mb-2">
-          Image URL
-        </label>
-        <input
-          id="image_url"
-          v-model="form.image_url"
-          type="url"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
-          placeholder="https://example.com/image.png"
-        />
-      </div>
-
       <!-- Requirements -->
       <div>
         <label for="requirement" class="block text-sm font-medium text-gray-700 mb-2">
@@ -219,6 +205,14 @@
         <span class="text-xs text-gray-500">Optional: Extended description for more detailed information</span>
       </div>
 
+      <!-- Image Upload -->
+      <div>
+        <label for="image" class="block text-sm font-medium text-gray-700 mb-2">
+          Image
+        </label>
+        <ImageUpload id="image" v-model="form.image_url" />
+      </div>
+
       <!-- Submit Buttons -->
       <div class="flex flex-col sm:flex-row gap-4 pt-6">
         <button
@@ -246,6 +240,7 @@
 import { ref, reactive, watch, toRefs } from 'vue'
 import { category_options, location_options, employment_type_options } from '../constants/options';
 import type { JobPostForm } from '../types/post';
+import ImageUpload from './ImageUpload.vue';
 
 // Props
 const props = defineProps<{

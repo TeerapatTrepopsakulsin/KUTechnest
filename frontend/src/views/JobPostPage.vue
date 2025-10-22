@@ -100,7 +100,7 @@ const validateForm = (form: JobPostFormType): boolean => {
     return false
   }
 
-  if (!form.salary || form.salary <= 0) {
+  if ((!form.salary && form.salary !== 0) || form.salary < 0) {
     alert('Valid salary is required')
     return false
   }
