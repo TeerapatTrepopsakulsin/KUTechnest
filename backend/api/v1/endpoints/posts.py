@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import Optional
 from ....core.database import get_db
+from ....core.llm import validate_job_post
 from ....schemas.post import PostCreate, PostResponse
 from ....schemas.enums import WorkField
 from ....crud import post as crud_post
@@ -75,16 +76,33 @@ async def get_post(post_id: int, db: Session = Depends(get_db)):
         "updated_at": post.updated_at
     }
 
-@router.post("/", response_model=PostResponse)
+@router.post("", response_model=PostResponse)
 async def create_post(post: PostCreate, db: Session = Depends(get_db)):
+    """
+    Create a new job post after validating it with the LLM.
+    """
     company = crud_company.get_company(db, post.company_id)
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
-    
+
+    validation_result = validate_job_post(**post.model_dump())
+
+    if not validation_result.is_valid or validation_result.confidence_score < 0.7:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "message": "Job posting validation failed",
+                "reason": validation_result.reason,
+                "issues": validation_result.issues,
+                "recommendations": validation_result.recommendations,
+                "confidence_score": validation_result.confidence_score
+            }
+        )
+
     db_post = crud_post.create_post(db, post)
-    
-    response_data = PostResponse.from_orm(db_post)
-    response_data.company_name = company.name
-    response_data.company_logo = company.logo_url
-    
+
+    db_post.company_name = company.name
+    db_post.company_logo = company.logo_url
+    response_data = PostResponse.model_validate(db_post)
+
     return response_data

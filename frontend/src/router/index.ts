@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
+import JobPostPage from '../views/JobPostPage.vue'
 import Loginpage from '../views/Loginpage.vue'
 import JobDetailPage from '../views/JobDetailPage.vue'
 import AuthCallback from '../views/AuthCallback.vue'
@@ -9,6 +10,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Frontpage',
     component: Frontpage
+  },
+  {
+    path: '/posts/create',
+    name: 'JobPostPage',
+    component: JobPostPage
   },
   {
     path: '/login',
