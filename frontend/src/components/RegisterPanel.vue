@@ -16,13 +16,13 @@
 import { computed, reactive, ref } from 'vue'
 import MarkdownIt from 'markdown-it'
 import DOMPurify from 'dompurify'
+import AlertModal from '../components/AlertModal.vue'
 
 const student_steps: { key: string; title: string }[] = [
   { key: 'basic', title: 'Basic' },
   { key: 'contact', title: 'Contact' },
   { key: 'uni', title: 'University' },
   { key: 'profile', title: 'Profile' },
-  { key: 'security', title: 'Security' },
   { key: 'review', title: 'Review' },
 ]
 
@@ -30,10 +30,14 @@ const company_steps: { key: string; title: string }[] = [
   { key: 'basic', title: 'Basic' },
   { key: 'contact', title: 'Contact' },
   { key: 'profile', title: 'Profile' },
-  { key: 'security', title: 'Security' },
   { key: 'review', title: 'Review' },
 ]
 
+const modal_open = ref(false)
+const modal_data = ref<{ title: string; message: string; okText: string } | null>(null)
+function onModalClose() {
+    modal_open.value = false
+}
 
 const step = ref(0)
 const submitting = ref(false)
@@ -48,9 +52,7 @@ const student_form = reactive({
   faculty: '',
   major: '',
   ku_generation: 0,
-  about_me: '',
-  password: '',
-  confirmPassword: '',
+  about_me: ''
 })
 
 const company_form = reactive({
@@ -58,13 +60,11 @@ const company_form = reactive({
   website: '',
   location: '',
   contacts: '',
-  description: '',
-  password: '',
-  confirmPassword: '',
+  description: ''
 })
+
 const company_logo_file = ref<File | null>(null)
 const company_logo_error = ref<string | null>(null)
-
 
 const role = ref("")
 const role_step = ref<{ key: string; title: string }[]>([])
@@ -89,18 +89,17 @@ const company_rendered = computed(() => DOMPurify.sanitize(md.render(String(comp
 const company_contact_rendered = computed(() => DOMPurify.sanitize(md.render(String(company_form.contacts||''))))
 
 const canNextStudent = computed(() => {
-  if (step.value === 0) return !!student_form.pronoun && !!student_form.firstName && !!student_form.lastName && !!student_form.studentId && !!student_form.dob
-  if (step.value === 1) return emailOk.value(student_form) && student_form.phone.trim().length >= 9
-  if (step.value === 2) return !!student_form.major && !!student_form.faculty && student_form.ku_generation >= 1
-  if (step.value === 3) return true // About Me (Optional)
-  if (step.value === 4) return student_form.password.length >= 6 && student_form.password === student_form.confirmPassword
-  return false
+  return step.value <= 3
+  // if (step.value === 0) return !!student_form.pronoun && !!student_form.firstName && !!student_form.lastName && !!student_form.studentId && !!student_form.dob
+  // if (step.value === 1) return emailOk.value(student_form) && student_form.phone.trim().length >= 9
+  // if (step.value === 2) return !!student_form.major && !!student_form.faculty && student_form.ku_generation >= 1
+  // if (step.value === 3) return true // About Me (Optional)
+  // return false
 })
 const canNextCompany = computed(() => {
   if (step.value === 0) return !!preview.value && !!company_form.company_name && !!company_form.website && !!company_form.location
   if (step.value === 1) return !!company_form.contacts
   if (step.value === 2) return true // Profile (Optional)
-  if (step.value === 3) return company_form.password.length >= 6 && company_form.password === company_form.confirmPassword
   return false
 })
 
@@ -125,13 +124,68 @@ const prev = () => {
   else if (step.value === 0) role.value = ""
 }
 
+async function postWithTimeout<T>(url: string, body: any, ms = 5000): Promise<T> {
+  const c = new AbortController()
+  const t = setTimeout(() => c.abort(), ms)
+  try {
+    body = JSON.stringify(body)
+    const r = await fetch(url, { 
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body,
+      credentials: 'include',
+      signal: c.signal 
+    })
+    if (!r.ok) {
+      throw Object.assign(new Error(r.statusText), {
+        status: r.status,
+        statusText: r.statusText
+      })
+    }
+    return r.json() as Promise<T>
+
+  } catch (err: any) {
+    console.log("Error:")
+    console.error(err)
+    throw err
+  } finally {
+    clearTimeout(t)
+  }
+}
+
+
+const submitTest = async () => {
+  submitting.value = true
+  const res = await fetch("http://127.0.0.1:8000/api/v1/auth/google/test_session/", {
+    method: "GET",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  const data = await res.json();
+  console.log(data.message);
+}
+
+const submitTestGet = async () => {
+  submitting.value = true 
+  const res = await fetch("http://127.0.0.1:8000/api/v1/auth/google/test_session_get/", {
+    method: "GET",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  const data = await res.json();
+  console.log(data.message);
+}
 
 const submit = async () => {
   submitting.value = true
   if (role.value === "student") {
-    alert(
-    JSON.stringify(
+    const res: any = await postWithTimeout(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/register/student`, 
       {
+        pronoun: student_form.pronoun,
         first_name: student_form.firstName,
         last_name: student_form.lastName,
         student_id: student_form.studentId,
@@ -141,15 +195,18 @@ const submit = async () => {
         faculty: student_form.faculty,
         major: student_form.major,
         ku_generation: student_form.ku_generation,
-        about_me: student_form.about_me,
-        password: student_form.password,
-      },
-      null,
-      2
+        about_me: student_form.about_me
+      }
     )
-  )
-  }
-  else if (role.value === "company") {
+
+    // handle redirecting response {url: str} object
+    if (res?.url) {
+      window.location.href = res.url
+    } else {
+      throw new Error('No auth url returned')
+    }
+
+  } else if (role.value === "company") {
     alert(
     JSON.stringify(
       {
@@ -157,8 +214,7 @@ const submit = async () => {
         website: company_form.website,
         location: company_form.location,
         contacts: company_form.contacts,
-        description: company_form.description,
-        password: company_form.password,
+        description: company_form.description
       },
       null,
       2
@@ -235,12 +291,26 @@ async function validateLogo(file: File): Promise<boolean> {
 <style scoped></style>
 
 <template>
+  <AlertModal
+        v-model="modal_open"
+        :title="modal_data?.title || 'Error'"
+        :message="modal_data?.message || 'There was an error processing your request.'"
+        :okText="modal_data?.okText || 'OK'"
+        :closeOnEsc="true"
+        :closeOnBackdrop="true"
+        :autoCloseMs="5000"
+        @close="onModalClose"
+  />
   <div v-if="role === ''" class="min-h-[40vh] grid place-items-center p-6">
     <div class="w-full max-w-xl rounded-3xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-lg p-6 sm:p-8">
       <h2 class="text-2xl font-semibold text-gray-900">Choose your role</h2>
       <p class="mt-1 text-gray-500">Tell us how you want to sign up.</p>
 
+      <button @click="submitTest">submitTest</button>
+      <button @click="submitTestGet">submitTestGet</button>
+
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <!-- <button @click="selectRole('student')" -->
         <button @click="selectRole('student')"
           class="group relative inline-flex h-28 flex-col items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 text-gray-900 transition
                 hover:bg-green-500 hover:text-white hover:border-green-600 hover:ring-4 hover:ring-green-300
@@ -393,26 +463,6 @@ async function validateLogo(file: File): Promise<boolean> {
     </div>
 
     <div v-else-if="step === 4" class="space-y-4">
-      <h2 class="text-xl font-semibold pt-5">Security</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="flex flex-col gap-1">
-          <label class="text-sm text-gray-600" for="password">Password</label>
-          <input id="password" type="password"
-            class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900"
-            v-model="student_form.password" />
-        </div>
-        <div class="flex flex-col gap-1 pb-5">
-          <label class="text-sm text-gray-600" for="confirm">Confirm password</label>
-          <input id="confirm" type="password"
-            class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900"
-            v-model="student_form.confirmPassword" />
-        </div>
-      </div>
-      <p v-if="student_form.password && student_form.confirmPassword && student_form.password !== student_form.confirmPassword"
-        class="text-sm text-red-600">Passwords do not match</p>
-    </div>
-
-    <div v-else-if="step === 5" class="space-y-4">
       <h2 class="text-xl font-semibold pt-5">Review</h2>
       <div>
         <label class="text-sm text-gray-600" for="review_basic">Basic Information</label>
@@ -579,26 +629,6 @@ async function validateLogo(file: File): Promise<boolean> {
     </div>
 
     <div v-else-if="step === 3" class="space-y-4">
-      <h2 class="text-xl font-semibold pt-5">Security</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="flex flex-col gap-1">
-          <label class="text-sm text-gray-600" for="password">Password</label>
-          <input id="password" type="password"
-            class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900"
-            v-model="company_form.password" />
-        </div>
-        <div class="flex flex-col gap-1 pb-5">
-          <label class="text-sm text-gray-600" for="confirm">Confirm password</label>
-          <input id="confirm" type="password"
-            class="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-900"
-            v-model="company_form.confirmPassword" />
-        </div>
-      </div>
-      <p v-if="company_form.password && company_form.confirmPassword && company_form.password !== company_form.confirmPassword"
-        class="text-sm text-red-600">Passwords do not match</p>
-    </div>
-
-    <div v-else-if="step === 4" class="space-y-4">
       <h2 class="text-xl font-semibold pt-5">Review</h2>
       <div>
         <label class="text-sm text-gray-600" for="review_basic">Basic Information</label>

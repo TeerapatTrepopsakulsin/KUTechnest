@@ -13,7 +13,7 @@ def get_student_by_user_id(db: Session, user_id: int) -> Optional[Student]:
     return db.query(Student).filter(Student.user_id == user_id).first()
 
 def create_student(db: Session, student: StudentCreate):
-    db_student = Student(**student.dict())
+    db_student = Student(**student.model_dump())
     db.add(db_student)
     db.commit()
     db.refresh(db_student)

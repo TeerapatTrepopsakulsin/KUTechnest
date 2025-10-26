@@ -10,8 +10,13 @@ class CompanyBase(BaseModel):
     description: Optional[str] = None
     contacts: Optional[str] = None
 
-class CompanyCreate(CompanyBase):
-    pass
+class CompanyCreate(BaseModel):
+    name: str
+    website: str
+    logo: str
+    location: str
+    contacts: str
+    description: str
 
 class CompanyResponse(CompanyBase):
     id: int

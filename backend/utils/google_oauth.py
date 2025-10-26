@@ -1,7 +1,13 @@
-import requests
 from typing import Dict, Optional
+from dotenv import load_dotenv
 from ..config import settings
+import requests
+import os
 
+load_dotenv()
+
+BACKEND_URL = settings.BACKEND_URL
+FRONTEND_URL = settings.FRONTEND_URL
 
 class GoogleOAuth:
 
@@ -10,12 +16,12 @@ class GoogleOAuth:
     GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v2/userinfo"
 
     @staticmethod
-    def get_authorization_url(state: Optional[str] = None) -> str:
+    def get_authorization_url(state: Optional[str] = None, redirect_uri: Optional[str] = settings.GOOGLE_REDIRECT_URI) -> str:
         params = {
             "client_id": settings.GOOGLE_CLIENT_ID,
-            "redirect_uri": settings.GOOGLE_REDIRECT_URI,
+            "redirect_uri": redirect_uri,
             "response_type": "code",
-            "scope": "openid email profile",
+            "scope": "openid%20email%20profile",
             "access_type": "offline",
         }
         if state:
@@ -25,12 +31,12 @@ class GoogleOAuth:
         return f"{GoogleOAuth.GOOGLE_AUTH_URL}?{query_string}"
 
     @staticmethod
-    def exchange_code_for_token(code: str) -> Dict:
+    def exchange_code_for_token(code: str, redirect_uri: str = settings.GOOGLE_REDIRECT_URI) -> Dict:
         data = {
             "code": code,
             "client_id": settings.GOOGLE_CLIENT_ID,
             "client_secret": settings.GOOGLE_CLIENT_SECRET,
-            "redirect_uri": settings.GOOGLE_REDIRECT_URI,
+            "redirect_uri": redirect_uri,
             "grant_type": "authorization_code",
         }
 

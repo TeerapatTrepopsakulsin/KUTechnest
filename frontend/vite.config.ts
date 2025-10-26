@@ -8,4 +8,12 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
+  // server: {
+  //   host: '127.0.0.1',
+  //   port: 5173,
+  //   // optional: proxy your API to avoid CORS
+  //   proxy: {
+  //     '/api': { target: 'http://localhost:8000', changeOrigin: true },
+  //   },
+  // },
 })

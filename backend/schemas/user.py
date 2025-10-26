@@ -36,3 +36,7 @@ class TokenResponse(BaseModel):
 
 class GoogleLoginURLResponse(BaseModel):
     url: str
+
+
+class GoogleRegisterURLResponse(BaseModel):
+    url: str

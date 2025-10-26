@@ -14,8 +14,18 @@ class StudentBase(BaseModel):
     about_me: Optional[str] = None
     email: str
 
-class StudentCreate(StudentBase):
-    pass
+class StudentCreate(BaseModel):
+    pronoun: str
+    first_name: str
+    last_name: str
+    student_id: str
+    dob: str
+    email: str
+    phone: str
+    faculty: str
+    major: str
+    ku_generation: int
+    about_me: str = ""
 
 class StudentResponse(StudentBase):
     id: int
