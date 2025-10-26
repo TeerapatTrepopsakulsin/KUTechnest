@@ -38,17 +38,16 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { useAuthStore } from '../stores/auth';
 
 const authStore = useAuthStore();
 const dropdownOpen = ref(false);
-const profileSection = ref(null);
+const profileSection = ref<HTMLElement | null>(null);
 
 const userAvatar = computed(() => authStore.user?.picture);
 const isAuthenticated = computed(() => authStore.isAuthenticated);
-const role = computed(() => authStore.userRole || 'user');
 
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
@@ -60,9 +59,8 @@ const logout = () => {
   window.location.href = '/login';
 };
 
-// Close dropdown when clicking outside
-const handleClickOutside = (e) => {
-  if (profileSection.value && !profileSection.value.contains(e.target)) {
+const handleClickOutside = (e: MouseEvent) => {
+  if (profileSection.value && !profileSection.value.contains(e.target as Node)) {
     dropdownOpen.value = false;
   }
 };

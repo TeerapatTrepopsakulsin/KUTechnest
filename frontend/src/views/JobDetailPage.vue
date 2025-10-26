@@ -7,18 +7,11 @@ import type {Job} from '../types/job.ts'
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 
-import MarkdownIt from 'markdown-it'
-import DOMPurify from 'dompurify'
-
 const route = useRoute()
 
 const job = ref<Job | null>(null)
 const loading = ref(false)
 const error = ref(null)
-
-const md = new MarkdownIt({ linkify: true, breaks: true })
-const source = ref('# Hello\n**bold** `code`')
-const mdhtml = computed(() => DOMPurify.sanitize(md.render(source.value)))
 
 const jobId = route.params.slug
 

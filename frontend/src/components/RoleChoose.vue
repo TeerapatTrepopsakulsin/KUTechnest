@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { useRoute } from 'vue-router'
-import { computed, reactive, ref } from 'vue'
+import { ref } from 'vue'
 import AlertModal from '../components/AlertModal.vue'
 
 const route = useRoute()
@@ -27,20 +27,32 @@ if (route?.query.error_message) {
 }
 
 const selectRole = async (r: string) => {
-  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/register/${r}`, {
-    method: "GET",
-    credentials: "include",
-    headers: { "Content-Type": "application/json" },
-  });
+  try {
+    localStorage.setItem('pending_role', r)
+    localStorage.setItem('registration_flow', 'true')
 
-  if (res.ok) {
-    const data = await res.json();
-    window.location.href = data.url;
-  } else {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/login?role=${r}`, {
+      method: "GET",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      window.location.href = data.url;
+    } else {
+      modal_open.value = true
+      modal_data.value = {
+        title: 'Error',
+        message: 'Something went wrong. Please try again later.',
+        okText: 'OK'
+      }
+    }
+  } catch (error) {
     modal_open.value = true
     modal_data.value = {
       title: 'Error',
-      message: 'Something went wrong. Please try again later.',
+      message: 'Failed to connect to authentication service.',
       okText: 'OK'
     }
   }

@@ -82,7 +82,6 @@ const preview = ref<string|undefined>()
 
 const pct = computed(() => (step.value / (role_step.value.length - 1)) * 100)
 
-const emailOk = computed(() => (form) => /.+@.+\..+/.test(form.email))
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })
 const student_rendered = computed(() => DOMPurify.sanitize(md.render(String(student_form.about_me||''))))
 const company_rendered = computed(() => DOMPurify.sanitize(md.render(String(company_form.description||''))))

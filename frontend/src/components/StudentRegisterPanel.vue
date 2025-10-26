@@ -52,7 +52,6 @@ const student_form = reactive({
 
 const pct = computed(() => (step.value / (role_step.length - 1)) * 100)
 
-const emailOk = computed(() => (form) => /.+@.+\..+/.test(form.email))
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })
 const student_rendered = computed(() => DOMPurify.sanitize(md.render(String(student_form.about_me||''))))
 
@@ -76,24 +75,27 @@ const prev = () => {
   if (step.value > 0) step.value-- 
 }
 
-async function postWithTimeout<T>(url: string, body: any, ms = 5000): Promise<T> {
+async function postWithTimeout<T>(url: string, body: any, token: string, ms = 5000): Promise<T> {
   const c = new AbortController()
   const t = setTimeout(() => c.abort(), ms)
   try {
     body = JSON.stringify(body)
-    const r = await fetch(url, { 
-      method: 'POST', 
+    const r = await fetch(url, {
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body,
       credentials: 'include',
-      signal: c.signal 
+      signal: c.signal
     })
     if (!r.ok) {
-      throw Object.assign(new Error(r.statusText), {
+      const errorData = await r.json().catch(() => ({}))
+      throw Object.assign(new Error(errorData.detail || r.statusText), {
         status: r.status,
-        statusText: r.statusText
+        statusText: r.statusText,
+        detail: errorData.detail
       })
     }
     return r.json() as Promise<T>
@@ -112,7 +114,23 @@ const submit = async () => {
   try {
     submitting.value = true
 
-    const res: any = await postWithTimeout(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/register/student`, 
+    const token = localStorage.getItem('auth_tokens')
+    if (!token) {
+      modal_open.value = true
+      modal_data.value = {
+        title: 'Authentication Required',
+        message: 'Please log in with Google first before completing registration.',
+        okText: 'OK'
+      }
+      submitting.value = false
+      return
+    }
+
+    const tokenData = JSON.parse(token)
+    const accessToken = tokenData.access
+
+    await postWithTimeout(
+      `${import.meta.env.VITE_BACKEND_URL}/api/v1/students/register`,
       {
         pronoun: student_form.pronoun,
         first_name: student_form.firstName,
@@ -125,18 +143,30 @@ const submit = async () => {
         major: student_form.major,
         ku_generation: student_form.ku_generation,
         about_me: student_form.about_me
-      }
+      },
+      accessToken
     )
 
-    // handle redirecting response {url: str} object
-    if (res?.url) {
-      window.location.href = res.url
-    } else {
-      throw new Error('No auth url returned')
+    modal_open.value = true
+    modal_data.value = {
+      title: 'Success',
+      message: 'Your student profile has been created successfully!',
+      okText: 'Continue'
     }
 
-  } catch (e) {
-    alert("Something went wrong. Please refresh and try again.")
+    setTimeout(() => {
+      window.location.href = '/'
+    }, 2000)
+
+  } catch (e: any) {
+    modal_open.value = true
+    modal_data.value = {
+      title: 'Error',
+      message: e?.detail || e?.message || 'Something went wrong. Please try again.',
+      okText: 'OK'
+    }
+  } finally {
+    submitting.value = false
   }
 }
 

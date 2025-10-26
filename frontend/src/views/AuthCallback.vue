@@ -19,9 +19,25 @@ onMounted(async () => {
 
   if (code) {
     const success = await authStore.handleOAuthCallback(code);
-    
+
     if (!success) {
       router.push('/login');
+      return;
+    }
+
+    const isRegistrationFlow = localStorage.getItem('registration_flow');
+    const pendingRole = localStorage.getItem('pending_role');
+
+    if (isRegistrationFlow === 'true' && pendingRole) {
+      localStorage.removeItem('registration_flow');
+
+      if (pendingRole === 'student') {
+        router.push('/register/student');
+      } else if (pendingRole === 'company') {
+        router.push('/register/company');
+      } else {
+        router.push('/');
+      }
     }
   } else {
     router.push('/login');
