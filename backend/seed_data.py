@@ -1,8 +1,10 @@
 from sqlalchemy.orm import sessionmaker
-from .main import engine
-from .models import Company, Post, User, Student
-from .schemas import WorkField, EmploymentType
+from backend.core.database import engine  # ✅ correct import
+from backend.models import Company, Post, User, Student  # ✅ make sure models/__init__.py imports all
+from backend.schemas.enums import WorkField, EmploymentType  # ✅ enums
 import random
+from backend.models import Company, Post, User, Student, Application  # Application import is key
+from backend.schemas.enums import WorkField, EmploymentType
 
 # Create session
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

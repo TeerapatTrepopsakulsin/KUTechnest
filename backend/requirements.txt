@@ -1,6 +1,27 @@
+# --- Core Framework ---
 fastapi==0.118.0
-pydantic==2.11.9
-pydantic_settings==2.11.0
-python_jose==3.3.0
-Requests==2.32.5
-SQLAlchemy==2.0.23
+uvicorn==0.37.0
+
+# --- Database & ORM ---
+SQLAlchemy==2.0.44
+alembic==1.17.0
+
+# --- Data validation & settings ---
+pydantic==2.11.10
+pydantic-settings==2.11.0
+email-validator==2.2.0
+
+# --- Auth & Security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# --- HTTP requests ---
+requests==2.32.3
+httpx==0.28.1
+
+# --- Testing ---
+pytest==8.4.2
+
+# --- Optional (development convenience) ---
+python-dotenv==1.0.1

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, relationship
 from typing import Optional
 from ....core.database import get_db
 from ....schemas.post import PostCreate, PostResponse
@@ -7,6 +7,7 @@ from ....schemas.enums import WorkField
 from ....crud import post as crud_post
 from ....crud import company as crud_company
 
+applications = relationship("Application", back_populates="post", cascade="all, delete-orphan")
 router = APIRouter()
 
 @router.get("/", response_model=dict)

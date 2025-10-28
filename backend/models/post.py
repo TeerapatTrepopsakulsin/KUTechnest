@@ -5,7 +5,7 @@ from ..core.database import Base
 
 class Post(Base):
     __tablename__ = "posts"
-    
+
     id = Column(Integer, primary_key=True, index=True)
     company_id = Column(Integer, ForeignKey("companies.id"))
     title = Column(String, index=True)
@@ -21,6 +21,11 @@ class Post(Base):
     image_url = Column(String, nullable=True)
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
-    
+
+    applications = relationship(
+        "Application",
+        back_populates="post",
+        cascade="all, delete-orphan"
+    )
     # Relationships
     company = relationship("Company", back_populates="posts")
