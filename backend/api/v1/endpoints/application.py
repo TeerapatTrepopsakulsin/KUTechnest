@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Path, Body
 from sqlalchemy.orm import Session
-from typing import List
-from datetime import datetime
+from typing import List, Optional
+from pydantic import BaseModel
 
 from ....core.database import get_db
 from ....crud import application as crud_application
@@ -14,32 +14,54 @@ from ....schemas.application import (
     ApplicationStatusUpdate,
 )
 
-router = APIRouter()
+router = APIRouter(prefix="/applications", tags=["Applications"])
+
 
 # -------------------------------------------------
-# Replace this with your real auth dependency
+# Auth placeholder (replace with JWT later)
 # -------------------------------------------------
+class CurrentUser(BaseModel):
+    id: int
+    role: str  # "student" | "company" | "admin"
+    company_id: Optional[int] = None
+
+
 def get_current_user():
-    """
-    Replace with your actual auth dependency.
-    It must return an object with:
-      - id (student_id)
-      - role ("student" | "company" | "admin")
-      - company_id (for company users)
-    """
-    return None
+    """Stub for real authentication dependency."""
+    return CurrentUser(id=1, role="student", company_id=None)
 
 
 # -------------------------------------------------
-# Prefill: auto-fetch CV and default cover letter
+# Response model for /prefill endpoint
 # -------------------------------------------------
-@router.get("/applications/prefill/{post_id}", response_model=dict)
+class ApplicationPrefillOut(BaseModel):
+    student_name: str
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    resume_url: Optional[str] = None
+    cover_letter: Optional[str] = None
+    post_title: Optional[str] = None
+    company_name: Optional[str] = None
+
+
+# -------------------------------------------------
+# Request model for /apply endpoint
+# -------------------------------------------------
+class ApplicationApplyIn(BaseModel):
+    cover_letter: Optional[str] = None
+    resume_url: Optional[str] = None
+
+
+# -------------------------------------------------
+# Prefill: student gets auto-filled data before applying
+# -------------------------------------------------
+@router.get("/prefill/{post_id}", response_model=ApplicationPrefillOut)
 async def prefill_application(
-    post_id: int,
+    post_id: int = Path(..., ge=1),
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
+    current_user: CurrentUser = Depends(get_current_user),
 ):
-    if not current_user or getattr(current_user, "role", None) != "student":
+    if current_user.role != "student":
         raise HTTPException(status_code=403, detail="Only students can prefill an application")
 
     student = db.query(Student).filter(Student.id == current_user.id).first()
@@ -50,30 +72,28 @@ async def prefill_application(
     if not post:
         raise HTTPException(status_code=404, detail="Post not found")
 
-    return {
-        "student_name": f"{student.firstname or ''} {student.lastname or ''}".strip(),
-        "email": student.email,
-        "phone": student.phone,
-        "resume_url": student.resume_url,
-        "cover_letter": student.cover_letter_default,
-        "post_title": post.title,
-        "company_name": post.company.name if post.company else None,
-    }
+    return ApplicationPrefillOut(
+        student_name=f"{student.firstname or ''} {student.lastname or ''}".strip(),
+        email=student.email,
+        phone=student.phone,
+        resume_url=student.resume_url,
+        cover_letter=student.cover_letter_default,
+        post_title=post.title,
+        company_name=post.company.name if post.company else None,
+    )
 
 
 # -------------------------------------------------
 # Apply: student submits an application
 # -------------------------------------------------
-@router.post("/posts/{post_id}/apply", response_model=ApplicationOut, status_code=201)
+@router.post("/posts/{post_id}/apply", response_model=ApplicationOut, status_code=status.HTTP_201_CREATED)
 async def apply_to_post(
     post_id: int = Path(..., ge=1),
-    payload: dict = Body(None),
+    post_data: ApplicationApplyIn = Body(...),
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
+    current_user: CurrentUser = Depends(get_current_user),
 ):
-    if not current_user:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-    if getattr(current_user, "role", None) != "student":
+    if current_user.role != "student":
         raise HTTPException(status_code=403, detail="Only students can apply")
 
     post = crud_post.get_post(db, post_id)
@@ -84,115 +104,101 @@ async def apply_to_post(
     if not student:
         raise HTTPException(status_code=404, detail="Student profile not found")
 
-    cover_letter = (payload or {}).get("cover_letter") or student.cover_letter_default
-    resume_url = (payload or {}).get("resume_url") or student.resume_url
+    cover_letter = post_data.cover_letter or student.cover_letter_default
+    resume_url = post_data.resume_url or student.resume_url
 
-    data = ApplicationCreate(post_id=post_id, cover_letter=cover_letter, resume_url=resume_url)
-    app = crud_application.create(db, data, student_id=current_user.id)
-    if app is None:
+    app_data = ApplicationCreate(
+        post_id=post_id,
+        cover_letter=cover_letter,
+        resume_url=resume_url,
+    )
+
+    new_app = crud_application.create(db, app_data, student_id=current_user.id)
+    if new_app is None:
         raise HTTPException(status_code=400, detail="You have already applied to this post")
 
-    out = ApplicationOut.model_validate(app)
+    out = ApplicationOut.model_validate(new_app)
     out.post_title = post.title
     out.company_name = post.company.name if post.company else None
     return out
 
 
 # -------------------------------------------------
-# List: show applications based on user role
+# List: applications based on role
 # -------------------------------------------------
-@router.get("/applications", response_model=List[ApplicationOut])
+@router.get("/", response_model=List[ApplicationOut])
 async def list_applications(
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
+    current_user: CurrentUser = Depends(get_current_user),
 ):
-    if not current_user:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-
-    role = getattr(current_user, "role", None)
+    role = current_user.role
     if role == "admin":
         apps = crud_application.list_all(db)
     elif role == "student":
         apps = crud_application.list_by_student(db, current_user.id)
     elif role == "company":
-        company_id = getattr(current_user, "company_id", None)
-        apps = crud_application.list_by_company(db, company_id) if company_id else []
+        apps = crud_application.list_by_company(db, current_user.company_id)
     else:
         apps = []
 
     results = []
     for app in apps:
         item = ApplicationOut.model_validate(app)
-        if app.post:
-            item.post_title = app.post.title
-            item.company_name = app.post.company.name if app.post.company else None
+        item.post_title = app.post.title if app.post else None
+        item.company_name = app.post.company.name if app.post and app.post.company else None
         results.append(item)
     return results
 
 
 # -------------------------------------------------
-# Get a single application
+# Get single application
 # -------------------------------------------------
-@router.get("/applications/{application_id}", response_model=ApplicationOut)
+@router.get("/{application_id}", response_model=ApplicationOut)
 async def get_application(
     application_id: int,
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
+    current_user: CurrentUser = Depends(get_current_user),
 ):
-    if not current_user:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-
     app = crud_application.get(db, application_id)
     if not app:
         raise HTTPException(status_code=404, detail="Application not found")
 
-    role = getattr(current_user, "role", None)
-    if role == "student" and app.student_id != current_user.id:
+    if current_user.role == "student" and app.student_id != current_user.id:
         raise HTTPException(status_code=403, detail="Forbidden")
-    if role == "company":
-        if not app.post or getattr(current_user, "company_id", None) != getattr(app.post, "company_id", None):
+    if current_user.role == "company":
+        if not app.post or app.post.company_id != current_user.company_id:
             raise HTTPException(status_code=403, detail="Forbidden")
 
     out = ApplicationOut.model_validate(app)
-    if app.post:
-        out.post_title = app.post.title
-        out.company_name = app.post.company.name if app.post.company else None
+    out.post_title = app.post.title if app.post else None
+    out.company_name = app.post.company.name if app.post and app.post.company else None
     return out
 
 
 # -------------------------------------------------
-# Update status
+# Update application status
 # -------------------------------------------------
-@router.patch("/applications/{application_id}/status", response_model=ApplicationOut)
-async def set_application_status(
+@router.patch("/{application_id}/status", response_model=ApplicationOut)
+async def update_application_status(
     application_id: int,
-    data: ApplicationStatusUpdate,
+    update_data: ApplicationStatusUpdate,
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
+    current_user: CurrentUser = Depends(get_current_user),
 ):
-    if not current_user:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-
     app = crud_application.get(db, application_id)
     if not app:
         raise HTTPException(status_code=404, detail="Application not found")
 
-    role = getattr(current_user, "role", None)
-    new_status = data.status
+    if current_user.role == "student":
+        if app.student_id != current_user.id or update_data.status != ApplicationStatus.WITHDRAWN:
+            raise HTTPException(status_code=403, detail="Students may only withdraw their own applications")
 
-    # Students can only withdraw their own applications
-    if role == "student":
-        if app.student_id != current_user.id or new_status != ApplicationStatus.WITHDRAWN:
-            raise HTTPException(status_code=403, detail="Students may only withdraw their own application")
-
-    # Company users can update only their own post applications
-    if role == "company":
-        if not app.post or getattr(current_user, "company_id", None) != getattr(app.post, "company_id", None):
+    if current_user.role == "company":
+        if not app.post or app.post.company_id != current_user.company_id:
             raise HTTPException(status_code=403, detail="Forbidden")
 
-    updated = crud_application.set_status(db, application_id, new_status)
+    updated = crud_application.set_status(db, application_id, update_data.status)
     out = ApplicationOut.model_validate(updated)
-    if updated.post:
-        out.post_title = updated.post.title
-        out.company_name = updated.post.company.name if updated.post.company else None
+    out.post_title = updated.post.title if updated.post else None
+    out.company_name = updated.post.company.name if updated.post and updated.post.company else None
     return out
