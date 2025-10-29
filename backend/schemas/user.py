@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional
+from typing import Optional, Literal
 from datetime import datetime
 from .student import StudentResponse
 from .company import CompanyResponse
@@ -9,6 +9,8 @@ class UserBase(BaseModel):
     email: EmailStr
     first_name: str
     last_name: str
+    role: Optional[Literal["student", "company"]] = None
+    status: Optional[str] = "pending"
 
 
 class UserResponse(UserBase):
@@ -17,7 +19,7 @@ class UserResponse(UserBase):
     google_id: Optional[str] = None
     profile_picture: Optional[str] = None
     created_at: datetime
-
+    
     class Config:
         from_attributes = True
 

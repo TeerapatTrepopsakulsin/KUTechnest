@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from ..core.database import Base
+
 
 class User(Base):
     __tablename__ = "users"
@@ -12,6 +13,9 @@ class User(Base):
     last_name = Column(String)
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=func.now())
+
+    role = Column(String, nullable=True)
+    status = Column(String, default="pending")
 
     google_id = Column(String, unique=True, index=True, nullable=True)
     profile_picture = Column(String, nullable=True)

@@ -20,6 +20,7 @@ def create_user(
     email: str,
     first_name: str,
     last_name: str,
+    role: Optional[str] = None,
     google_id: Optional[str] = None,
     profile_picture: Optional[str] = None
 ) -> User:
@@ -29,7 +30,9 @@ def create_user(
         last_name=last_name,
         google_id=google_id,
         profile_picture=profile_picture,
-        is_active=True
+        is_active=True,
+        role=role if role else None,
+        status="active" if google_id else "pending"
     )
     db.add(db_user)
     db.commit()
