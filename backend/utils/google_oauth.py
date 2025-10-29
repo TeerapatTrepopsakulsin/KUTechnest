@@ -1,6 +1,8 @@
 from typing import Dict, Optional
 from dotenv import load_dotenv
+from urllib.parse import urlencode
 from ..config import settings
+
 import requests
 import os
 
@@ -21,17 +23,16 @@ class GoogleOAuth:
             "client_id": settings.GOOGLE_CLIENT_ID,
             "redirect_uri": redirect_uri,
             "response_type": "code",
-            "scope": "openid%20email%20profile",
+            "scope": "openid email profile",
             "access_type": "offline",
         }
         if state:
             params["state"] = state
 
-        query_string = "&".join([f"{k}={v}" for k, v in params.items()])
-        return f"{GoogleOAuth.GOOGLE_AUTH_URL}?{query_string}"
+        return f"{GoogleOAuth.GOOGLE_AUTH_URL}?{urlencode(params)}"
 
     @staticmethod
-    def exchange_code_for_token(code: str, redirect_uri: str = settings.GOOGLE_REDIRECT_URI) -> Dict:
+    def exchange_code_for_token(code: str, redirect_uri: Optional[str] = settings.GOOGLE_REDIRECT_URI) -> Dict:
         data = {
             "code": code,
             "client_id": settings.GOOGLE_CLIENT_ID,
@@ -40,7 +41,9 @@ class GoogleOAuth:
             "grant_type": "authorization_code",
         }
 
-        response = requests.post(GoogleOAuth.GOOGLE_TOKEN_URL, data=data)
+        response = requests.post(GoogleOAuth.GOOGLE_TOKEN_URL, 
+                                 headers={"Content-Type": "application/x-www-form-urlencoded"}, 
+                                 data=data)
 
         if response.status_code != 200:
             raise Exception(f"Failed to exchange code for token: {response.text}")

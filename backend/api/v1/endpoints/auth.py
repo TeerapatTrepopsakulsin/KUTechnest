@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status, Query, Request
+from fastapi import APIRouter, Depends, HTTPException, Response, status, Query, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from typing import Optional, Literal
@@ -23,9 +23,11 @@ load_dotenv()
 BACKEND_URL = settings.BACKEND_URL
 FRONTEND_URL = settings.FRONTEND_URL
 
+REGISTER_CALLBACK_URL = BACKEND_URL+"/api/v1/auth/google/register/callback"
 
-@router.get("/google/register/{role}", response_model=GoogleLoginURLResponse)
-async def google_register(request: Request, role: Literal["student", "company"]):
+
+@router.get("/google/register")
+async def google_register(request: Request, role: Literal["student", "company"] = Query("student")):
     """
     Returns the Google OAuth2 registration URL for user authentication.
 
@@ -39,8 +41,18 @@ async def google_register(request: Request, role: Literal["student", "company"])
                 detail="Invalid role specified"
             )
 
-        auth_url = GoogleOAuth.get_authorization_url(state=role, redirect_uri=FRONTEND_URL+"/register/"+role)
-        return GoogleRegisterURLResponse(url=auth_url)
+        test = secrets.token_urlsafe(16)
+        auth_url = GoogleOAuth.get_authorization_url(state=test, redirect_uri=REGISTER_CALLBACK_URL)
+
+        print("state:", test)
+        request.session[test] = {"role": role}
+
+        # no-store to avoid any caching
+        return Response(
+            content=f'{{"url":"{auth_url}"}}',
+            media_type="application/json",
+            headers={"Cache-Control": "no-store", "Pragma": "no-cache"}
+        )
 
     except Exception as e:
         raise HTTPException(
@@ -49,7 +61,7 @@ async def google_register(request: Request, role: Literal["student", "company"])
         )
     
 
-@router.get("/google/callback/register", response_model=TokenResponse)
+@router.get("/google/register/callback")
 async def google_register_callback(
     request: Request,
     code: Optional[str] = Query(None),
@@ -92,7 +104,9 @@ async def google_register_callback(
         )
     
     try:
-        token_data = GoogleOAuth.exchange_code_for_token(code, redirect_uri=BACKEND_URL+"/api/v1/auth/google/register/callback")
+        print('request_data ',request.session[state])
+        print('code ', code)
+        token_data = GoogleOAuth.exchange_code_for_token(code, redirect_uri=REGISTER_CALLBACK_URL)
         access_token = token_data.get("access_token")
 
         if not access_token:
@@ -102,6 +116,8 @@ async def google_register_callback(
             )
 
         user_info = GoogleOAuth.get_user_info(access_token)
+
+        print(user_info)
 
         email = user_info.get("email")
         google_id = user_info.get("id")
@@ -115,32 +131,39 @@ async def google_register_callback(
                 detail="Failed to retrieve user information from Google"
             )
 
+        # if crud_user.get_user_by_google_id(db, google_id):
+        #     raise HTTPException(
+        #         status_code=status.HTTP_409_CONFLICT,
+        #         detail="User already registered"
+        #     )
+
+        role = state
+
         user = crud_user.get_user_by_google_id(db, google_id)
-        if user:
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail="User already registered"
+
+        if not user:
+            user = crud_user.create_user(
+                db=db,
+                email=email,
+                first_name=given_name,
+                last_name=family_name,
+                google_id=google_id,
+                profile_picture=picture
             )
+            if role == "student":
+                crud_student.create_student(
+                    db=db,
+                    user_id=user.id,
+                    student_create=StudentCreate()
+                )
+            elif role == "company":
+                crud_company.create_company(
+                    db=db,
+                    user_id=user.id,
+                    company_create=CompanyCreate()
+                )
 
-        session_data = request.session.pop(state, None)
-        if not session_data:
-            raise HTTPException(
-                status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Session data not found or expired"
-            )
-
-        role = session_data.pop("role")
-
-        user = crud_user.create_user(
-            db=db,
-            email=email,
-            first_name=given_name,
-            last_name=family_name,
-            google_id=google_id,
-            profile_picture=picture
-        )
-
-        return RedirectResponse(FRONTEND_URL+'register/'+role)
+        return RedirectResponse(FRONTEND_URL+'register/'+role+f'?token={create_access_token(data={"sub": user.id})}')
     
     except HTTPException:
         raise

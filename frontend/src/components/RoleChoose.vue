@@ -27,24 +27,25 @@ if (route?.query.error_message) {
 }
 
 const selectRole = async (r: string) => {
-  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/register/${r}`, {
+  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/google/register?role=${r}`, {
     method: "GET",
     credentials: "include",
-    headers: { "Content-Type": "application/json" },
-  });
+  })
 
-  if (res.ok) {
-    const data = await res.json();
-    window.location.href = data.url;
+  const data = await res.json()
+  
+  const u = new URL(data.url)
+  const state = u.searchParams.get("state")
+  console.log("state:", state)
+
+  if (res.ok && data?.url) {
+    window.location.assign(data.url)
   } else {
     modal_open.value = true
-    modal_data.value = {
-      title: 'Error',
-      message: 'Something went wrong. Please try again later.',
-      okText: 'OK'
-    }
+    modal_data.value = { title: "Error", message: "Something went wrong. Please try again later.", okText: "OK" }
   }
 }
+
 
 
 </script>
@@ -67,7 +68,6 @@ const selectRole = async (r: string) => {
       <p class="mt-1 text-gray-500">Tell us how you want to sign up.</p>
 
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <!-- <button @click="selectRole('student')" -->
         <button @click="selectRole('student')"
           class="group relative inline-flex h-28 flex-col items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 text-gray-900 transition
                 hover:bg-green-500 hover:text-white hover:border-green-600 hover:ring-4 hover:ring-green-300
